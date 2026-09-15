@@ -2567,6 +2567,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07bcb5200d62986428ef52fea0508b66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  LeftAction:
+    m_Name: Left
+    m_Type: 1
+    m_ExpectedControlType: Button
+    m_Id: c384a6c9-0ab0-4abf-9548-76ac5a49990d
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+    m_Priority: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
