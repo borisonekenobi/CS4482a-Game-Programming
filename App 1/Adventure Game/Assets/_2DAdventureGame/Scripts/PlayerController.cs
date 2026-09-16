@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rigidbody2d;
     public int maxHealth = 5;
     public int health { get { return currentHealth; }}
-    int currentHealth = 1;
+    int currentHealth;
     Vector2 move;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     {
         MoveAction.Enable();
         rigidbody2d = GetComponent<Rigidbody2D>();
-        // currentHealth = maxHealth;
+        currentHealth = maxHealth;
     }
 
     // Update is called once per frame
