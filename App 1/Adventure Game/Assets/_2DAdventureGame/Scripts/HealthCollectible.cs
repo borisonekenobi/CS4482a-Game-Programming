@@ -7,7 +7,7 @@ public class HealthCollectible : MonoBehaviour
         Debug.Log("Object that entered the trigger: " + other);
         PlayerController controller = other.GetComponent<PlayerController>();
 
-        if (controller != null && controller.currentHealth < controller.maxHealth)
+        if (controller != null && controller.health < controller.maxHealth)
         {
             controller.ChangeHealth(1);
             Destroy(gameObject);
