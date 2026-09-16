@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public InputAction MoveAction;
     Rigidbody2D rigidbody2d;
     public int maxHealth = 5;
+    public int health { get { return currentHealth; }}
     int currentHealth = 1;
     Vector2 move;
 
