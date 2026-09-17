@@ -3,6 +3,8 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     public float speed;
+    public bool vertical;
+
     Rigidbody2D rigidbody2d;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -15,7 +17,16 @@ public class EnemyController : MonoBehaviour
     void FixedUpdate()
     {
         Vector2 position = rigidbody2d.position;
-        position.x = position.x + speed * Time.deltaTime;
+
+        if (vertical)
+        {
+            position.y = position.y + speed * Time.deltaTime;
+        }
+        else
+        {
+            position.x = position.x + speed * Time.deltaTime;
+        }
+
         rigidbody2d.MovePosition(position);
     }
 }
