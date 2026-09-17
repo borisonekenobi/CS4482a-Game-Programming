@@ -43,6 +43,10 @@ public class PlayerController : MonoBehaviour
             moveDirection.Normalize();
         }
 
+        animator.SetFloat("Look X", moveDirection.x);
+        animator.SetFloat("Look Y", moveDirection.y);
+        animator.SetFloat("Speed", move.magnitude);
+
         if (isInvincible)
         {
             damageCooldown -= Time.deltaTime;
@@ -70,6 +74,7 @@ public class PlayerController : MonoBehaviour
             }
             isInvincible = true;
             damageCooldown = timeInvincible;
+            animator.SetTrigger("Hit");
         }
 
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
