@@ -25,11 +25,13 @@ public class PlayerController : MonoBehaviour
 
     // Variables related to projectiles
     public GameObject projectilePrefab;
+    public InputAction LaunchAction;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         MoveAction.Enable();
+        LaunchAction.Enable();
         rigidbody2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         currentHealth = maxHealth;
@@ -57,6 +59,11 @@ public class PlayerController : MonoBehaviour
             {
                 isInvincible = false;
             }
+        }
+
+        if (LaunchAction.WasPressedThisFrame())
+        {
+            Launch();
         }
     }
 

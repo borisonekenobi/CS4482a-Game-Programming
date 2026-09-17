@@ -162,6 +162,24 @@ MonoBehaviour:
   maxHealth: 5
   timeInvincible: 2
   projectilePrefab: {fileID: 4733216288382505954, guid: de0aee4e0e87fce478904f9242bd7bdc, type: 3}
+  LaunchAction:
+    m_Name: Launch
+    m_Type: 1
+    m_ExpectedControlType: Button
+    m_Id: db7e06a8-240f-49c1-abc8-342b491fdbae
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 58d7a065-efb3-4911-a3c8-fca5972db2e2
+      m_Path: <Keyboard>/c
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Launch
+      m_Flags: 0
+    m_Flags: 0
+    m_Priority: 0
 --- !u!50 &2844059334335899310
 Rigidbody2D:
   serializedVersion: 5
