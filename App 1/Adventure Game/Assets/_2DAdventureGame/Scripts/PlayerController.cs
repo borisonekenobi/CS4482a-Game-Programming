@@ -1,16 +1,18 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 3.0f;
+    // Variables related to player character movement
     public InputAction MoveAction;
     Rigidbody2D rigidbody2d;
-    public int maxHealth = 5;
-    public int health { get { return currentHealth; }}
-    int currentHealth;
     Vector2 move;
+    public float speed = 3.0f;
+
+    // Variables related to the health system
+    public int maxHealth = 5;
+    public int health { get { return currentHealth; } }
+    int currentHealth;
 
     // Variables related to temporary invincibility
     public float timeInvincible = 2.0f;
@@ -30,7 +32,6 @@ public class PlayerController : MonoBehaviour
     {
         move = MoveAction.ReadValue<Vector2>();
         // Debug.Log(move);
-
         if (isInvincible)
         {
             damageCooldown -= Time.deltaTime;
@@ -41,6 +42,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // FixedUpdate has the same call rate as the physics system
     void FixedUpdate()
     {
         Vector2 position = (Vector2)rigidbody2d.position + move * speed * Time.deltaTime;
