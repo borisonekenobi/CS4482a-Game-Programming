@@ -2,75 +2,67 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    public float speed;
-    public bool vertical;
-    public float changeTime = 3.0f;
+    private static readonly int MoveXId = Animator.StringToHash("Move X");
+    private static readonly int MoveYId = Animator.StringToHash("Move Y");
 
-    Rigidbody2D rigidbody2d;
-    Animator animator;
-    float timer;
-    int direction = 1;
-    bool broken = true;
+    [SerializeField] private float speed;
+    [SerializeField] private bool vertical;
+    [SerializeField] private float changeTime = 3.0f;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private Animator _animator;
+    private bool _broken = true;
+    private int _direction = 1;
+    private Rigidbody2D _rigidbody2D;
+    private float _timer;
+
+    private void Start()
     {
-        rigidbody2d = GetComponent<Rigidbody2D>();
-        timer = changeTime;
-        animator = GetComponent<Animator>();
+        _rigidbody2D = GetComponent<Rigidbody2D>();
+        _timer = changeTime;
+        _animator = GetComponent<Animator>();
     }
 
-    // Update is called every frame
-    void Update()
+    private void Update()
     {
-        timer-= Time.deltaTime;
+        _timer -= Time.deltaTime;
+        if (_timer >= 0) return;
 
-        if (timer < 0)
-        {
-            direction = -direction;
-            timer = changeTime;
-        }
+        _direction = -_direction;
+        _timer = changeTime;
     }
 
-    // FixedUpdate has the same call rate as the physics system
-    void FixedUpdate()
+    private void FixedUpdate()
     {
-        if (!broken)
-        {
-            return;
-        }
+        if (!_broken) return;
 
-        Vector2 position = rigidbody2d.position;
+        var position = _rigidbody2D.position;
 
         if (vertical)
         {
-            position.y = position.y + speed * direction * Time.deltaTime;
-            animator.SetFloat("Move X", 0);
-            animator.SetFloat("Move Y", direction);
+            position.y += speed * _direction * Time.deltaTime;
+            _animator.SetFloat(MoveXId, 0);
+            _animator.SetFloat(MoveYId, _direction);
         }
         else
         {
-            position.x = position.x + speed * direction * Time.deltaTime;
-            animator.SetFloat("Move X", direction);
-            animator.SetFloat("Move Y", 0);
+            position.x += speed * _direction * Time.deltaTime;
+            _animator.SetFloat(MoveXId, _direction);
+            _animator.SetFloat(MoveYId, 0);
         }
 
-        rigidbody2d.MovePosition(position);
+        _rigidbody2D.MovePosition(position);
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        PlayerController player = other.gameObject.GetComponent<PlayerController>();
+        var player = other.gameObject.GetComponent<PlayerController>();
 
-        if (player != null)
-        {
-            player.ChangeHealth(-1);
-        }
+        if (player != null) player.ChangeHealth(-1);
     }
 
     public void Fix()
     {
-        broken = false;
-        rigidbody2d.simulated = false;
+        _broken = false;
+        _rigidbody2D.simulated = false;
     }
 }

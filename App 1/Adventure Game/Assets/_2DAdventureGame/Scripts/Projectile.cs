@@ -1,42 +1,33 @@
-using System;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    Rigidbody2D rigidbody2d;
+    private Rigidbody2D _rigidbody2D;
 
-    // Awake is called when the Projectile GameObject is instantiated
-    void Awake()
+    private void Awake()
     {
-        rigidbody2d = GetComponent<Rigidbody2D>();
+        _rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (transform.position.magnitude > 100.0f)
-        {
-            Destroy(gameObject);
-        }
+        if (transform.position.magnitude > 100.0f) Destroy(gameObject);
     }
 
-    public void Launch(Vector2 direction, float force)
+    private void OnCollisionEnter2D()
     {
-        rigidbody2d.AddForce(direction * force);
+        Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        EnemyController enemy = other.GetComponent<EnemyController>();
-        if (enemy != null)
-        {
-            enemy.Fix();
-        }
+        var enemy = other.GetComponent<EnemyController>();
+        if (enemy != null) enemy.Fix();
         Destroy(gameObject);
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    public void Launch(Vector2 direction, float force)
     {
-        Destroy(gameObject);
+        _rigidbody2D.AddForce(direction * force);
     }
 }

@@ -3,99 +3,86 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    // Variables related to player character movement
-    public InputAction MoveAction;
-    Rigidbody2D rigidbody2d;
-    Vector2 move;
-    public float speed = 3.0f;
+    private static readonly int LaunchId = Animator.StringToHash("Launch");
+    private static readonly int LookXId = Animator.StringToHash("Look X");
+    private static readonly int LookYId = Animator.StringToHash("Look Y");
+    private static readonly int SpeedId = Animator.StringToHash("Speed");
+    private static readonly int HitId = Animator.StringToHash("Hit");
 
-    // Variables related to the health system
-    public int maxHealth = 5;
-    public int health { get { return currentHealth; } }
-    int currentHealth;
+    [SerializeField] private InputAction moveAction;
+    [SerializeField] private float speed = 3.0f;
+    [SerializeField] public int maxHealth = 5;
+    [SerializeField] private float timeInvincible = 2.0f;
+    [SerializeField] private GameObject projectilePrefab;
+    [SerializeField] private InputAction launchAction;
 
-    // Variables related to temporary invincibility
-    public float timeInvincible = 2.0f;
-    bool isInvincible;
-    float damageCooldown;
+    private Animator _animator;
+    private float _damageCooldown;
+    private bool _isInvincible;
+    private Vector2 _move;
+    private Vector2 _moveDirection = new(1, 0);
+    private Rigidbody2D _rigidbody2D;
 
-    // Variables related to animation
-    Animator animator;
-    Vector2 moveDirection = new Vector2(1,0);
+    public int Health { get; private set; }
 
-    // Variables related to projectiles
-    public GameObject projectilePrefab;
-    public InputAction LaunchAction;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Start()
     {
-        MoveAction.Enable();
-        LaunchAction.Enable();
-        rigidbody2d = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
-        currentHealth = maxHealth;
+        moveAction.Enable();
+        launchAction.Enable();
+        _rigidbody2D = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
+        Health = maxHealth;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        move = MoveAction.ReadValue<Vector2>();
+        _move = moveAction.ReadValue<Vector2>();
 
-        if(!Mathf.Approximately(move.x, 0.0f) || !Mathf.Approximately(move.y,0.0f))
+        if (!Mathf.Approximately(_move.x, 0.0f) || !Mathf.Approximately(_move.y, 0.0f))
         {
-            moveDirection.Set(move.x, move.y);
-            moveDirection.Normalize();
+            _moveDirection.Set(_move.x, _move.y);
+            _moveDirection.Normalize();
         }
 
-        animator.SetFloat("Look X", moveDirection.x);
-        animator.SetFloat("Look Y", moveDirection.y);
-        animator.SetFloat("Speed", move.magnitude);
+        _animator.SetFloat(LookXId, _moveDirection.x);
+        _animator.SetFloat(LookYId, _moveDirection.y);
+        _animator.SetFloat(SpeedId, _move.magnitude);
 
-        if (isInvincible)
+        if (_isInvincible)
         {
-            damageCooldown -= Time.deltaTime;
-            if (damageCooldown < 0)
-            {
-                isInvincible = false;
-            }
+            _damageCooldown -= Time.deltaTime;
+            if (_damageCooldown < 0) _isInvincible = false;
         }
 
-        if (LaunchAction.WasPressedThisFrame())
-        {
-            Launch();
-        }
+        if (launchAction.WasPressedThisFrame()) Launch();
     }
 
-    // FixedUpdate has the same call rate as the physics system
-    void FixedUpdate()
+    private void FixedUpdate()
     {
-        Vector2 position = (Vector2)rigidbody2d.position + move * speed * Time.deltaTime;
-        rigidbody2d.MovePosition(position);
+        var position = _rigidbody2D.position + _move * (speed * Time.deltaTime);
+        _rigidbody2D.MovePosition(position);
     }
 
     public void ChangeHealth(int amount)
     {
         if (amount < 0)
         {
-            if (isInvincible)
-            {
-                return;
-            }
-            isInvincible = true;
-            damageCooldown = timeInvincible;
-            animator.SetTrigger("Hit");
+            if (_isInvincible) return;
+            _isInvincible = true;
+            _damageCooldown = timeInvincible;
+            _animator.SetTrigger(HitId);
         }
 
-        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
-        Debug.Log(currentHealth + "/" + maxHealth);
+        Health = Mathf.Clamp(Health + amount, 0, maxHealth);
+        Debug.Log(Health + "/" + maxHealth);
     }
 
-    void Launch()
+    private void Launch()
     {
-        GameObject projectileObject = Instantiate(projectilePrefab, rigidbody2d.position + Vector2.up * 0.5f, Quaternion.identity);
-        Projectile projectile = projectileObject.GetComponent<Projectile>();
-        projectile.Launch(moveDirection, 300);
-        animator.SetTrigger("Launch");
+        var projectileObject =
+            Instantiate(projectilePrefab, _rigidbody2D.position + Vector2.up * 0.5f, Quaternion.identity);
+        var projectile = projectileObject.GetComponent<Projectile>();
+        projectile.Launch(_moveDirection, 300);
+        _animator.SetTrigger(LaunchId);
     }
 }
