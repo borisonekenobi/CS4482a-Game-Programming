@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DamageZone : MonoBehaviour
 {
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerStay2D(Collider2D other)
     {
         PlayerController controller = other.GetComponent<PlayerController>();
 

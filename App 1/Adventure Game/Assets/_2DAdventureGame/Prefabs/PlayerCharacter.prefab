@@ -107,6 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07bcb5200d62986428ef52fea0508b66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  speed: 3
   MoveAction:
     m_Name: Move
     m_Type: 0
@@ -157,6 +158,7 @@ MonoBehaviour:
       m_Flags: 8
     m_Flags: 0
     m_Priority: 0
+  maxHealth: 5
 --- !u!50 &2844059334335899310
 Rigidbody2D:
   serializedVersion: 5
@@ -181,7 +183,7 @@ Rigidbody2D:
     serializedVersion: 2
     m_Bits: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!61 &1790940686508684792
