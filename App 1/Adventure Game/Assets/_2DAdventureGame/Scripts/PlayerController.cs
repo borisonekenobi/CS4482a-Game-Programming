@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float timeInvincible = 2.0f;
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private InputAction launchAction;
+    [SerializeField] private InputAction launchManyAction;
 
     private Animator _animator;
     private float _damageCooldown;
@@ -29,6 +30,7 @@ public class PlayerController : MonoBehaviour
     {
         moveAction.Enable();
         launchAction.Enable();
+        launchManyAction.Enable();
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
         Health = maxHealth;
@@ -55,6 +57,7 @@ public class PlayerController : MonoBehaviour
         }
 
         if (launchAction.WasPressedThisFrame()) Launch();
+        if (launchManyAction.WasPressedThisFrame()) LaunchMany();
     }
 
     private void FixedUpdate()
@@ -84,5 +87,20 @@ public class PlayerController : MonoBehaviour
         var projectile = projectileObject.GetComponent<Projectile>();
         projectile.Launch(_moveDirection, 300);
         _animator.SetTrigger(LaunchId);
+    }
+
+    private void LaunchMany()
+    {
+        Launch();
+
+        var projectileObject =
+            Instantiate(projectilePrefab, _rigidbody2D.position + Vector2.up * 0.5f, Quaternion.identity);
+        var projectile = projectileObject.GetComponent<Projectile>();
+        projectile.Launch(Quaternion.Euler(0, 0, 45f) * _moveDirection, 300);
+
+        projectileObject =
+            Instantiate(projectilePrefab, _rigidbody2D.position + Vector2.up * 0.5f, Quaternion.identity);
+        projectile = projectileObject.GetComponent<Projectile>();
+        projectile.Launch(Quaternion.Euler(0, 0, -45f) * _moveDirection, 300);
     }
 }

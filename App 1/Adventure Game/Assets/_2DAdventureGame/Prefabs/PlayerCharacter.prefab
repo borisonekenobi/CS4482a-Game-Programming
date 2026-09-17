@@ -180,6 +180,24 @@ MonoBehaviour:
       m_Flags: 0
     m_Flags: 0
     m_Priority: 0
+  launchManyAction:
+    m_Name: Launch Many
+    m_Type: 1
+    m_ExpectedControlType: Button
+    m_Id: 30256f3b-ef91-417a-8762-f18c8e96b6f3
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 0cd6d897-fea2-479a-9b25-3e3e8352a816
+      m_Path: <Keyboard>/x
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Launch Many
+      m_Flags: 0
+    m_Flags: 0
+    m_Priority: 0
 --- !u!50 &2844059334335899310
 Rigidbody2D:
   serializedVersion: 5
