@@ -2,15 +2,20 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    public float speed;
+    Rigidbody2D rigidbody2d;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        rigidbody2d = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    // FixedUpdate has the same call rate as the physics system
+    void FixedUpdate()
     {
-        
+        Vector2 position = rigidbody2d.position;
+        position.x = position.x + speed * Time.deltaTime;
+        rigidbody2d.MovePosition(position);
     }
 }
