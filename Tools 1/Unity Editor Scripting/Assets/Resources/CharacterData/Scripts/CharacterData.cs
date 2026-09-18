@@ -7,5 +7,5 @@ public class CharacterData : ScriptableObject
     public float maxEnergy;
     public float critChance;
     public float power;
-    public string name;
+    public new string name;
 }
