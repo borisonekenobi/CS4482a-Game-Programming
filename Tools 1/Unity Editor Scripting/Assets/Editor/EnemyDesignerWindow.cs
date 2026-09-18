@@ -280,6 +280,16 @@ public class GeneralSettings : EditorWindow
         charData.name = EditorGUILayout.TextField(charData.name);
         EditorGUILayout.EndHorizontal();
 
+        EditorGUILayout.BeginHorizontal();
+        GUILayout.Label("Collider");
+        charData.collider = (ColliderType)EditorGUILayout.EnumPopup(charData.collider);
+        EditorGUILayout.EndHorizontal();
+
+        EditorGUILayout.BeginHorizontal();
+        GUILayout.Label("Add Rigidbody");
+        charData.rigidbody = EditorGUILayout.Toggle(charData.rigidbody);
+        EditorGUILayout.EndHorizontal();
+
         if (charData.prefab == null)
         {
             EditorGUILayout.HelpBox("This enemy needs a [Prefab] before it can be created", MessageType.Warning);
@@ -318,6 +328,13 @@ public class GeneralSettings : EditorWindow
                     magePrefab.AddComponent(typeof(Mage));
                 magePrefab.GetComponent<Mage>().mageData = EnemyDesignerWindow.MageInfo;
 
+                AddColliderToPrefab(magePrefab, EnemyDesignerWindow.MageInfo.collider);
+
+                if (EnemyDesignerWindow.MageInfo.rigidbody)
+                {
+                    magePrefab.AddComponent<Rigidbody>();
+                }
+
                 break;
 
             case SettingsType.Warrior:
@@ -334,6 +351,13 @@ public class GeneralSettings : EditorWindow
                 if (!warriorPrefab.GetComponent<Warrior>())
                     warriorPrefab.AddComponent(typeof(Warrior));
                 warriorPrefab.GetComponent<Warrior>().warriorData = EnemyDesignerWindow.WarriorInfo;
+
+                AddColliderToPrefab(warriorPrefab, EnemyDesignerWindow.WarriorInfo.collider);
+
+                if (EnemyDesignerWindow.WarriorInfo.rigidbody)
+                {
+                    warriorPrefab.AddComponent<Rigidbody>();
+                }
 
                 break;
 
@@ -352,6 +376,42 @@ public class GeneralSettings : EditorWindow
                     roguePrefab.AddComponent(typeof(Rogue));
                 roguePrefab.GetComponent<Rogue>().rogueData = EnemyDesignerWindow.RogueInfo;
 
+                AddColliderToPrefab(roguePrefab, EnemyDesignerWindow.RogueInfo.collider);
+
+                if (EnemyDesignerWindow.RogueInfo.rigidbody)
+                {
+                    roguePrefab.AddComponent<Rigidbody>();
+                }
+
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
+    }
+
+    private static void AddColliderToPrefab(GameObject prefab, ColliderType colliderType)
+    {
+        switch (colliderType)
+        {
+            case ColliderType.None:
+                break;
+            case ColliderType.Box:
+                prefab.AddComponent<BoxCollider>();
+                break;
+            case ColliderType.Capsule:
+                prefab.AddComponent<CapsuleCollider>();
+                break;
+            case ColliderType.Mesh:
+                prefab.AddComponent<MeshCollider>();
+                break;
+            case ColliderType.Sphere:
+                prefab.AddComponent<SphereCollider>();
+                break;
+            case ColliderType.Terrain:
+                prefab.AddComponent<TerrainCollider>();
+                break;
+            case ColliderType.Wheel:
+                prefab.AddComponent<WheelCollider>();
                 break;
             default:
                 throw new ArgumentOutOfRangeException();

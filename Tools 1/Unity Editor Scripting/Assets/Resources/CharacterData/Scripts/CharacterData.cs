@@ -8,4 +8,17 @@ public class CharacterData : ScriptableObject
     public float critChance;
     public float power;
     public new string name;
+    public ColliderType collider;
+    public bool rigidbody;
+}
+
+public enum ColliderType
+{
+    None,
+    Box,
+    Capsule,
+    Mesh,
+    Sphere,
+    Terrain,
+    Wheel
 }
