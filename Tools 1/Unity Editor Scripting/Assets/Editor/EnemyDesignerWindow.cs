@@ -259,6 +259,62 @@ public class GeneralSettings : EditorWindow
 
     void SaveCharacterData()
     {
-        
+        string prefabPath; // path to the base prefab
+        string newPrefabPath = "Assets/Prefabs/Characters/";
+        string dataPath = "Assets/Resources/CharacterData/Data/";
+
+        switch (dataSetting)
+        {
+            case SettingsType.MAGE:
+                dataPath += "Mage/" + EnemyDesignerWindow.MageInfo.name + ".asset";
+                AssetDatabase.CreateAsset(EnemyDesignerWindow.MageInfo, dataPath);
+
+                newPrefabPath += "Mage/" + EnemyDesignerWindow.MageInfo.name + ".prefab";
+                prefabPath = AssetDatabase.GetAssetPath(EnemyDesignerWindow.MageInfo.prefab);
+                AssetDatabase.CopyAsset(prefabPath, newPrefabPath);
+                AssetDatabase.SaveAssets();
+                AssetDatabase.Refresh();
+
+                GameObject magePrefab = (GameObject)AssetDatabase.LoadAssetAtPath(newPrefabPath, typeof(GameObject));
+                if (!magePrefab.GetComponent<Mage>())
+                    magePrefab.AddComponent(typeof(Mage));
+                magePrefab.GetComponent<Mage>().mageData = EnemyDesignerWindow.MageInfo;
+
+                break;
+
+            case SettingsType.WARRIOR:
+                dataPath += "Warrior/" + EnemyDesignerWindow.WarriorInfo.name + ".asset";
+                AssetDatabase.CreateAsset(EnemyDesignerWindow.WarriorInfo, dataPath);
+
+                newPrefabPath += "Warrior/" + EnemyDesignerWindow.WarriorInfo.name + ".prefab";
+                prefabPath = AssetDatabase.GetAssetPath(EnemyDesignerWindow.WarriorInfo.prefab);
+                AssetDatabase.CopyAsset(prefabPath, newPrefabPath);
+                AssetDatabase.SaveAssets();
+                AssetDatabase.Refresh();
+
+                GameObject warriorPrefab = (GameObject)AssetDatabase.LoadAssetAtPath(newPrefabPath, typeof(GameObject));
+                if (!warriorPrefab.GetComponent<Warrior>())
+                    warriorPrefab.AddComponent(typeof(Warrior));
+                warriorPrefab.GetComponent<Warrior>().warriorData = EnemyDesignerWindow.WarriorInfo;
+
+                break;
+
+            case SettingsType.ROGUE:
+                dataPath += "Rogue/" + EnemyDesignerWindow.RogueInfo.name + ".asset";
+                AssetDatabase.CreateAsset(EnemyDesignerWindow.RogueInfo, dataPath);
+
+                newPrefabPath += "Rogue/" + EnemyDesignerWindow.RogueInfo.name + ".prefab";
+                prefabPath = AssetDatabase.GetAssetPath(EnemyDesignerWindow.RogueInfo.prefab);
+                AssetDatabase.CopyAsset(prefabPath, newPrefabPath);
+                AssetDatabase.SaveAssets();
+                AssetDatabase.Refresh();
+
+                GameObject roguePrefab = (GameObject)AssetDatabase.LoadAssetAtPath(newPrefabPath, typeof(GameObject));
+                if (!roguePrefab.GetComponent<Rogue>())
+                    roguePrefab.AddComponent(typeof(Rogue));
+                roguePrefab.GetComponent<Rogue>().rogueData = EnemyDesignerWindow.RogueInfo;
+
+                break;
+        }
     }
 }

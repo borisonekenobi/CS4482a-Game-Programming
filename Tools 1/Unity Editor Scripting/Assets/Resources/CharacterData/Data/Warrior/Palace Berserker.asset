@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0158d2d8723cff6499dcc4ebc00e080b, type: 3}
+  m_Name: Palace Berserker
+  m_EditorClassIdentifier: Assembly-CSharp::WarriorData
+  prefab: {fileID: 6475473771412381618, guid: 9e80726991c33314a85fecc48972fc4b, type: 3}
+  maxHealth: 1313
+  maxEnergy: 412
+  critChance: 0
+  power: 39.4
+  name: Palace Berserker
+  classType: 1
+  wpnType: 2
