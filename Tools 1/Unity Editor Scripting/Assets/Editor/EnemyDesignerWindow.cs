@@ -16,6 +16,8 @@ public class EnemyDesignerWindow : EditorWindow
     Rect warriorSection;
     Rect rogueSection;
 
+    GUISkin skin;
+
     static MageData mageData;
     static WarriorData warriorData;
     static RogueData rogueData;
@@ -36,6 +38,7 @@ public class EnemyDesignerWindow : EditorWindow
     {
         InitTextures();
         InitData();
+        skin = Resources.Load<GUISkin>("GUIStyles/EnemyDesignerSkin");
     }
 
     public static void InitData()
@@ -97,7 +100,7 @@ public class EnemyDesignerWindow : EditorWindow
     {
         GUILayout.BeginArea(headerSection);
 
-        GUILayout.Label("Enemy Designer");
+        GUILayout.Label("Enemy Designer", skin.GetStyle("Header1"));
 
         GUILayout.EndArea();
     }
@@ -106,15 +109,15 @@ public class EnemyDesignerWindow : EditorWindow
     {
         GUILayout.BeginArea(mageSection);
 
-        GUILayout.Label("Mage");
+        GUILayout.Label("Mage", skin.GetStyle("MageHeader"));
 
         EditorGUILayout.BeginHorizontal();
-        GUILayout.Label("Damage");
+        GUILayout.Label("Damage", skin.GetStyle("MageField"));
         mageData.dmgType = (MageDmgType)EditorGUILayout.EnumPopup(mageData.dmgType);
         EditorGUILayout.EndHorizontal();
 
         EditorGUILayout.BeginHorizontal();
-        GUILayout.Label("Weapon");
+        GUILayout.Label("Weapon", skin.GetStyle("MageField"));
         mageData.wpnType = (MageWpnType)EditorGUILayout.EnumPopup(mageData.wpnType);
         EditorGUILayout.EndHorizontal();
 
@@ -130,15 +133,15 @@ public class EnemyDesignerWindow : EditorWindow
     {
         GUILayout.BeginArea(warriorSection);
 
-        GUILayout.Label("Warrior");
+        GUILayout.Label("Warrior", skin.GetStyle("WarriorHeader"));
 
         EditorGUILayout.BeginHorizontal();
-        GUILayout.Label("Class");
+        GUILayout.Label("Class", skin.GetStyle("WarriorField"));
         warriorData.classType = (WarriorClassType)EditorGUILayout.EnumPopup(warriorData.classType);
         EditorGUILayout.EndHorizontal();
 
         EditorGUILayout.BeginHorizontal();
-        GUILayout.Label("Weapon");
+        GUILayout.Label("Weapon", skin.GetStyle("WarriorField"));
         warriorData.wpnType = (WarriorWpnType)EditorGUILayout.EnumPopup(warriorData.wpnType);
         EditorGUILayout.EndHorizontal();
 
@@ -154,15 +157,15 @@ public class EnemyDesignerWindow : EditorWindow
     {
         GUILayout.BeginArea(rogueSection);
 
-        GUILayout.Label("Rogue");
+        GUILayout.Label("Rogue", skin.GetStyle("RogueHeader"));
 
         EditorGUILayout.BeginHorizontal();
-        GUILayout.Label("Strategy");
+        GUILayout.Label("Strategy", skin.GetStyle("RogueField"));
         rogueData.strategyType = (RogueStrategyType)EditorGUILayout.EnumPopup(rogueData.strategyType);
         EditorGUILayout.EndHorizontal();
 
         EditorGUILayout.BeginHorizontal();
-        GUILayout.Label("Weapon");
+        GUILayout.Label("Weapon", skin.GetStyle("RogueField"));
         rogueData.wpnType = (RogueWpnType)EditorGUILayout.EnumPopup(rogueData.wpnType);
         EditorGUILayout.EndHorizontal();
 
