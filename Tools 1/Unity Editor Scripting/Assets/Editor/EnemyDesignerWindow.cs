@@ -8,6 +8,9 @@ public class EnemyDesignerWindow : EditorWindow
     Texture2D mageSectionTexture;
     Texture2D warriorSectionTexture;
     Texture2D rogueSectionTexture;
+    Texture2D mageTexture;
+    Texture2D warriorTexture;
+    Texture2D rogueTexture;
 
     Color headerSectionColor = new Color(13f/255f, 32f/255f, 44f/255f, 1f);
 
@@ -15,6 +18,9 @@ public class EnemyDesignerWindow : EditorWindow
     Rect mageSection;
     Rect warriorSection;
     Rect rogueSection;
+    Rect mageIconSection;
+    Rect warriorIconSection;
+    Rect rogueIconSection;
 
     GUISkin skin;
 
@@ -25,6 +31,8 @@ public class EnemyDesignerWindow : EditorWindow
     public static MageData MageInfo { get { return mageData; } }
     public static WarriorData WarriorInfo { get { return warriorData; } }
     public static RogueData RogueInfo { get { return rogueData; } }
+
+    float iconSize = 40f;
 
     [MenuItem("Window/Enemy Designer")]
     static void OpenWindow()
@@ -57,6 +65,10 @@ public class EnemyDesignerWindow : EditorWindow
         mageSectionTexture = Resources.Load<Texture2D>("icons/editor_mage_gradient");
         warriorSectionTexture = Resources.Load<Texture2D>("icons/editor_warrior_gradient");
         rogueSectionTexture = Resources.Load<Texture2D>("icons/editor_rogue_gradient");
+
+        mageTexture = Resources.Load<Texture2D>("icons/editor_mage_gradient");
+        warriorTexture = Resources.Load<Texture2D>("icons/editor_warrior_gradient");
+        rogueTexture = Resources.Load<Texture2D>("icons/editor_rogue_gradient");
     }
 
     void OnGUI()
@@ -80,20 +92,38 @@ public class EnemyDesignerWindow : EditorWindow
         mageSection.width = position.width / 3f;
         mageSection.height = position.height - 50;
 
+        mageIconSection.x = (mageSection.x + mageSection.width / 2f) - iconSize / 2f;
+        mageIconSection.y = mageSection.y + 8;
+        mageIconSection.width = iconSize;
+        mageIconSection.height = iconSize;
+
         warriorSection.x = position.width / 3f;
         warriorSection.y = 50;
         warriorSection.width = position.width / 3f;
         warriorSection.height = position.height - 50;
+
+        warriorIconSection.x = (warriorSection.x + warriorSection.width / 2f) - iconSize / 2f;
+        warriorIconSection.y = warriorSection.y + 8;
+        warriorIconSection.width = iconSize;
+        warriorIconSection.height = iconSize;
 
         rogueSection.x = 2 * position.width / 3f;
         rogueSection.y = 50;
         rogueSection.width = position.width / 3f;
         rogueSection.height = position.height - 50;
 
+        rogueIconSection.x = (rogueSection.x + rogueSection.width / 2f) - iconSize / 2f;
+        rogueIconSection.y = rogueSection.y + 8;
+        rogueIconSection.width = iconSize;
+        rogueIconSection.height = iconSize;
+
         GUI.DrawTexture(headerSection, headerSectionTexture);
         GUI.DrawTexture(mageSection, mageSectionTexture);
         GUI.DrawTexture(warriorSection, warriorSectionTexture);
         GUI.DrawTexture(rogueSection, rogueSectionTexture);
+        GUI.DrawTexture(mageIconSection, mageTexture);
+        GUI.DrawTexture(warriorIconSection, warriorTexture);
+        GUI.DrawTexture(rogueIconSection, rogueTexture);
     }
 
     void DrawHeader()
@@ -108,6 +138,8 @@ public class EnemyDesignerWindow : EditorWindow
     void DrawMageSettings()
     {
         GUILayout.BeginArea(mageSection);
+
+        GUILayout.Space(iconSize + 8);
 
         GUILayout.Label("Mage", skin.GetStyle("MageHeader"));
 
@@ -133,6 +165,8 @@ public class EnemyDesignerWindow : EditorWindow
     {
         GUILayout.BeginArea(warriorSection);
 
+        GUILayout.Space(iconSize + 8);
+
         GUILayout.Label("Warrior", skin.GetStyle("WarriorHeader"));
 
         EditorGUILayout.BeginHorizontal();
@@ -156,6 +190,8 @@ public class EnemyDesignerWindow : EditorWindow
     void DrawRogueSettings()
     {
         GUILayout.BeginArea(rogueSection);
+
+        GUILayout.Space(iconSize + 8);
 
         GUILayout.Label("Rogue", skin.GetStyle("RogueHeader"));
 
