@@ -44,6 +44,7 @@ public class LocalizationTool : EditorWindow
 		EditorGUILayout.BeginHorizontal();
 		EditorGUI.BeginDisabledGroup(_database == null);
 		if (GUILayout.Button("Add Key Row", GUILayout.ExpandWidth(false))) AddKeyRow();
+		if (GUILayout.Button("Remove Selected Key Row", GUILayout.ExpandWidth(false))) RemoveSelectedKeyRows();
 		GUILayout.FlexibleSpace();
 		if (GUILayout.Button("Save", GUILayout.ExpandWidth(false))) Save();
 		if (GUILayout.Button("Save and Close", GUILayout.ExpandWidth(false))) SaveAndClose();
@@ -57,6 +58,25 @@ public class LocalizationTool : EditorWindow
 		foreach (var language in _database.languages)
 			language.Translations.Add(new LocalizationRow { key = "NEW_KEY", value = string.Empty });
 
+		EditorUtility.SetDirty(_database);
+		_tableView.Rebuild();
+	}
+
+	private void RemoveSelectedKeyRows()
+	{
+		var selectedIndices = _tableView.selectedIndices as List<int> ?? new List<int>();
+		if (selectedIndices.Count == 0) return;
+		
+		foreach (var language in _database.languages)
+		{
+			for (var i = selectedIndices.Count - 1; i >= 0; i--)
+			{
+				var index = selectedIndices[i];
+				if (index >= 0 && index < language.Translations.Count)
+					language.Translations.RemoveAt(index);
+			}
+		}
+		
 		EditorUtility.SetDirty(_database);
 		_tableView.Rebuild();
 	}
