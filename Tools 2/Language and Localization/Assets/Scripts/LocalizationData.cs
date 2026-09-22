@@ -1,20 +1,46 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEditor;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "LocalizationDatabase", menuName = "Localization/Database")]
-public class LocalizationData : ScriptableObject
+public class LocalizationDatabase : ScriptableObject
 {
-	// List of active languages (Columns)
-	public List<string> languages = new List<string> { "English", "Spanish", "French" };
+	public List<LocalizationLanguage> languages = new();
 
-	// List of translation entries (Rows)
-	public List<LocalizationRow> rows = new List<LocalizationRow>();
+	public void AddLanguage()
+	{
+		var keys = languages.FirstOrDefault()?.Translations.Select(r => r.key) ?? Enumerable.Empty<string>();
+		languages.Add(new LocalizationLanguage());
+		foreach (var key in keys)
+			languages[^1].Translations.Add(new LocalizationRow { key = key, value = string.Empty });
+	}
 }
 
-[System.Serializable]
+[CustomEditor(typeof(LocalizationDatabase))]
+public class LocalizationDataEditor : Editor
+{
+	public override void OnInspectorGUI()
+	{
+		DrawDefaultInspector();
+		var localizationData = (LocalizationDatabase)target;
+		if (!GUILayout.Button("Add Language")) return;
+		localizationData.AddLanguage();
+		EditorUtility.SetDirty(localizationData);
+	}
+}
+
+[Serializable]
+public class LocalizationLanguage
+{
+	public string name;
+	public readonly List<LocalizationRow> Translations = new();
+}
+
+[Serializable]
 public class LocalizationRow
 {
 	public string key;
-	// Index matches the order of the 'languages' list above
-	public List<string> translations = new List<string>();
+	public string value;
 }

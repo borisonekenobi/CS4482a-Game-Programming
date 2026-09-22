@@ -8,25 +8,14 @@ public class LocalizationTool : EditorWindow
 {
 	private static LocalizationTool _window;
 
-	private string[] _languages;
-	private string _language;
-
-	private LocalizationData _database;
+	private LocalizationDatabase _database;
 	private MultiColumnListView _tableView;
-
-	private void OnEnable()
-	{
-		_languages = Settings.Instance.Languages;
-		_language = Settings.Instance.Language;
-
-		Debug.Log("Starting with language: " + _language);
-	}
 
 	private void CreateGUI()
 	{
 		var objectField = new ObjectField("Database File")
 		{
-			objectType = typeof(LocalizationData)
+			objectType = typeof(LocalizationDatabase)
 		};
 		rootVisualElement.Add(objectField);
 
@@ -34,7 +23,7 @@ public class LocalizationTool : EditorWindow
 		rootVisualElement.Add(tableContainer);
 		objectField.RegisterValueChangedCallback(evt =>
 		{
-			_database = evt.newValue as LocalizationData;
+			_database = evt.newValue as LocalizationDatabase;
 			tableContainer.Clear();
 			if (_database != null) BuildTable(tableContainer);
 		});
@@ -53,27 +42,34 @@ public class LocalizationTool : EditorWindow
 	private void DrawBottomButtons()
 	{
 		EditorGUILayout.BeginHorizontal();
+		EditorGUI.BeginDisabledGroup(_database == null);
 		if (GUILayout.Button("Add Key Row", GUILayout.ExpandWidth(false))) AddKeyRow();
 		GUILayout.FlexibleSpace();
 		if (GUILayout.Button("Save", GUILayout.ExpandWidth(false))) Save();
 		if (GUILayout.Button("Save and Close", GUILayout.ExpandWidth(false))) SaveAndClose();
+		EditorGUI.EndDisabledGroup();
 		if (GUILayout.Button("Cancel", GUILayout.ExpandWidth(false))) Cancel();
 		EditorGUILayout.EndHorizontal();
 	}
 
 	private void AddKeyRow()
 	{
-		_database.rows.Add(new LocalizationRow
-			{ key = "NEW_KEY", translations = new List<string>(new string[_database.languages.Count]) });
+		foreach (var language in _database.languages)
+			language.Translations.Add(new LocalizationRow { key = "NEW_KEY", value = string.Empty });
+
 		EditorUtility.SetDirty(_database);
 		_tableView.Rebuild();
 	}
 
 	private void BuildTable(VisualElement container)
 	{
+		var rowSource = _database.languages.Count > 0
+			? _database.languages[0].Translations
+			: new List<LocalizationRow>();
+
 		_tableView = new MultiColumnListView
 		{
-			itemsSource = _database.rows,
+			itemsSource = rowSource,
 			showAlternatingRowBackgrounds = AlternatingRowBackground.All,
 			virtualizationMethod = CollectionVirtualizationMethod.DynamicHeight,
 			showBorder = true,
@@ -88,7 +84,7 @@ public class LocalizationTool : EditorWindow
 			{
 				if (element is not TextField textField) return;
 
-				var rowData = _database.rows[rowIndex];
+				var rowData = _database.languages[0].Translations[rowIndex];
 				textField.value = rowData.key;
 				textField.RegisterValueChangedCallback(evt =>
 				{
@@ -103,7 +99,7 @@ public class LocalizationTool : EditorWindow
 		for (var i = 0; i < _database.languages.Count; i++)
 		{
 			var langIndex = i;
-			var langName = _database.languages[langIndex];
+			var langName = _database.languages[langIndex].name;
 
 			var langColumn = new Column
 			{
@@ -113,13 +109,14 @@ public class LocalizationTool : EditorWindow
 				{
 					if (element is not TextField textField) return;
 
-					var rowData = _database.rows[rowIndex];
-					while (rowData.translations.Count <= langIndex) rowData.translations.Add("");
+					var languageData = _database.languages[langIndex];
+					while (languageData.Translations.Count <= rowIndex)
+						languageData.Translations.Add(new LocalizationRow { key = string.Empty, value = string.Empty });
 
-					textField.value = rowData.translations[langIndex];
+					textField.value = languageData.Translations[rowIndex].value;
 					textField.RegisterValueChangedCallback(evt =>
 					{
-						rowData.translations[langIndex] = evt.newValue;
+						languageData.Translations[rowIndex].value = evt.newValue;
 						EditorUtility.SetDirty(_database);
 					});
 				},
@@ -134,7 +131,7 @@ public class LocalizationTool : EditorWindow
 
 	private void Save()
 	{
-		Debug.Log("Number of Languages: " + _tableView.columns.Count);
+		Debug.Log("Number of Languages: " + (_tableView.columns.Count - 1));
 		Debug.Log("Number of Keys: " + _tableView.itemsSource.Count);
 
 		// TODO: Save the data to the LocalizationData asset
