@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEditor.UIElements;
 using UnityEngine;
@@ -7,20 +8,17 @@ using UnityEngine.UIElements;
 public class LocalizationTool : EditorWindow
 {
 	private static LocalizationTool _window;
-
 	private LocalizationDatabase _database;
 	private MultiColumnListView _tableView;
 
 	private void CreateGUI()
 	{
-		var objectField = new ObjectField("Database File")
-		{
-			objectType = typeof(LocalizationDatabase)
-		};
+		var objectField = new ObjectField("Database File") { objectType = typeof(LocalizationDatabase) };
 		rootVisualElement.Add(objectField);
 
 		var tableContainer = new VisualElement { style = { flexGrow = 1, marginTop = 10 } };
 		rootVisualElement.Add(tableContainer);
+
 		objectField.RegisterValueChangedCallback(evt =>
 		{
 			_database = evt.newValue as LocalizationDatabase;
@@ -28,8 +26,7 @@ public class LocalizationTool : EditorWindow
 			if (_database != null) BuildTable(tableContainer);
 		});
 
-		var bottomButtonsContainer = new IMGUIContainer(DrawBottomButtons);
-		rootVisualElement.Add(bottomButtonsContainer);
+		rootVisualElement.Add(new IMGUIContainer(DrawBottomButtons));
 	}
 
 	[MenuItem("Window/Localization...")]
@@ -55,8 +52,11 @@ public class LocalizationTool : EditorWindow
 
 	private void AddKeyRow()
 	{
+		if (_database == null) return;
+
+		Undo.RecordObject(_database, "Add Localization Key Row");
 		foreach (var language in _database.languages)
-			language.Translations.Add(new LocalizationRow { key = "NEW_KEY", value = string.Empty });
+			language.translations.Add(new LocalizationRow { key = "NEW_KEY", value = string.Empty });
 
 		EditorUtility.SetDirty(_database);
 		_tableView.Rebuild();
@@ -64,19 +64,20 @@ public class LocalizationTool : EditorWindow
 
 	private void RemoveSelectedKeyRows()
 	{
+		if (_database == null) return;
+
 		var selectedIndices = _tableView.selectedIndices as List<int> ?? new List<int>();
 		if (selectedIndices.Count == 0) return;
-		
+
+		Undo.RecordObject(_database, "Remove Localization Key Row");
 		foreach (var language in _database.languages)
-		{
 			for (var i = selectedIndices.Count - 1; i >= 0; i--)
 			{
 				var index = selectedIndices[i];
-				if (index >= 0 && index < language.Translations.Count)
-					language.Translations.RemoveAt(index);
+				if (index >= 0 && index < language.translations.Count)
+					language.translations.RemoveAt(index);
 			}
-		}
-		
+
 		EditorUtility.SetDirty(_database);
 		_tableView.Rebuild();
 	}
@@ -84,7 +85,7 @@ public class LocalizationTool : EditorWindow
 	private void BuildTable(VisualElement container)
 	{
 		var rowSource = _database.languages.Count > 0
-			? _database.languages[0].Translations
+			? _database.languages[0].translations
 			: new List<LocalizationRow>();
 
 		_tableView = new MultiColumnListView
@@ -100,49 +101,64 @@ public class LocalizationTool : EditorWindow
 		{
 			title = "Localization Key",
 			width = 150,
+			makeCell = () => new TextField(),
 			bindCell = (element, rowIndex) =>
 			{
 				if (element is not TextField textField) return;
 
-				var rowData = _database.languages[0].Translations[rowIndex];
+				var rowData = _database.languages[0].translations[rowIndex];
 				textField.value = rowData.key;
-				textField.RegisterValueChangedCallback(evt =>
+
+				EventCallback<ChangeEvent<string>> callback = evt =>
 				{
-					rowData.key = evt.newValue;
+					Undo.RecordObject(_database, "Modify Localization Key");
+					foreach (var lang in _database.languages.Where(lang => rowIndex < lang.translations.Count))
+						lang.translations[rowIndex].key = evt.newValue;
 					EditorUtility.SetDirty(_database);
-				});
+				};
+
+				textField.userData = callback;
+				textField.RegisterValueChangedCallback(callback);
 			},
-			makeCell = () => new TextField()
+			unbindCell = (element, _) =>
+			{
+				if (element is TextField { userData: EventCallback<ChangeEvent<string>> cb } textField)
+					textField.UnregisterValueChangedCallback(cb);
+			}
 		};
 		_tableView.columns.Add(keyColumn);
 
 		for (var i = 0; i < _database.languages.Count; i++)
 		{
 			var langIndex = i;
-			var langName = _database.languages[langIndex].name;
-
 			var langColumn = new Column
 			{
-				title = langName,
+				title = _database.languages[langIndex].name,
 				width = 200,
+				makeCell = () => new TextField(),
 				bindCell = (element, rowIndex) =>
 				{
 					if (element is not TextField textField) return;
 
 					var languageData = _database.languages[langIndex];
-					while (languageData.Translations.Count <= rowIndex)
-						languageData.Translations.Add(new LocalizationRow { key = string.Empty, value = string.Empty });
+					textField.value = languageData.translations[rowIndex].value;
 
-					textField.value = languageData.Translations[rowIndex].value;
-					textField.RegisterValueChangedCallback(evt =>
+					EventCallback<ChangeEvent<string>> callback = evt =>
 					{
-						languageData.Translations[rowIndex].value = evt.newValue;
+						Undo.RecordObject(_database, "Modify Localization Value");
+						languageData.translations[rowIndex].value = evt.newValue;
 						EditorUtility.SetDirty(_database);
-					});
-				},
-				makeCell = () => new TextField()
-			};
+					};
 
+					textField.userData = callback;
+					textField.RegisterValueChangedCallback(callback);
+				},
+				unbindCell = (element, _) =>
+				{
+					if (element is TextField { userData: EventCallback<ChangeEvent<string>> cb } textField)
+						textField.UnregisterValueChangedCallback(cb);
+				}
+			};
 			_tableView.columns.Add(langColumn);
 		}
 
@@ -151,25 +167,17 @@ public class LocalizationTool : EditorWindow
 
 	private void Save()
 	{
-		Debug.Log("Number of Languages: " + (_tableView.columns.Count - 1));
-		Debug.Log("Number of Keys: " + _tableView.itemsSource.Count);
+		if (_database == null) return;
 
-		// TODO: Save the data to the LocalizationData asset
+		EditorUtility.SetDirty(_database);
+		AssetDatabase.SaveAssets();
+		AssetDatabase.Refresh();
 
-		Settings.Instance.Languages = new[]
-		{
-			"Bulgarian",
-			"Chinese (Simplified)",
-			"Chinese (Traditional)",
-			"English",
-			"French",
-			"German",
-			"Japanese",
-			"Korean",
-			"Polish",
-			"Russian"
-		};
+		Settings.Instance.Languages =
+			(from lang in _database.languages where !string.IsNullOrEmpty(lang.name) select lang.name).ToArray();
 		DynamicLanguageGenerator.RegenerateMenu(Settings.Instance.Languages);
+
+		Debug.Log("Changes saved successfully!");
 	}
 
 	private void SaveAndClose()

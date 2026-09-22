@@ -11,10 +11,10 @@ public class LocalizationDatabase : ScriptableObject
 
 	public void AddLanguage()
 	{
-		var keys = languages.FirstOrDefault()?.Translations.Select(r => r.key) ?? Enumerable.Empty<string>();
+		var keys = languages.FirstOrDefault()?.translations.Select(r => r.key) ?? Enumerable.Empty<string>();
 		languages.Add(new LocalizationLanguage());
 		foreach (var key in keys)
-			languages[^1].Translations.Add(new LocalizationRow { key = key, value = string.Empty });
+			languages[^1].translations.Add(new LocalizationRow { key = key, value = string.Empty });
 	}
 }
 
@@ -35,7 +35,7 @@ public class LocalizationDataEditor : Editor
 public class LocalizationLanguage
 {
 	public string name;
-	public readonly List<LocalizationRow> Translations = new();
+	public List<LocalizationRow> translations = new();
 }
 
 [Serializable]
