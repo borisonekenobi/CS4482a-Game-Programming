@@ -39,7 +39,7 @@ public class LocalizationTool : EditorWindow
 	private void DrawBottomButtons()
 	{
 		EditorGUILayout.BeginHorizontal();
-		EditorGUI.BeginDisabledGroup(_database == null);
+		EditorGUI.BeginDisabledGroup(_database == null || _database.languages.Count == 0);
 		if (GUILayout.Button("Add Key Row", GUILayout.ExpandWidth(false))) AddKeyRow();
 		if (GUILayout.Button("Remove Selected Key Row", GUILayout.ExpandWidth(false))) RemoveSelectedKeyRows();
 		GUILayout.FlexibleSpace();

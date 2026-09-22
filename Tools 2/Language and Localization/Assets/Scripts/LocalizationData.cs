@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
@@ -9,25 +8,15 @@ public class LocalizationDatabase : ScriptableObject
 {
 	public List<LocalizationLanguage> languages = new();
 
-	public void AddLanguage()
+	private void OnEnable()
 	{
-		var keys = languages.FirstOrDefault()?.translations.Select(r => r.key) ?? Enumerable.Empty<string>();
-		languages.Add(new LocalizationLanguage());
-		foreach (var key in keys)
-			languages[^1].translations.Add(new LocalizationRow { key = key, value = string.Empty });
-	}
-}
-
-[CustomEditor(typeof(LocalizationDatabase))]
-public class LocalizationDataEditor : Editor
-{
-	public override void OnInspectorGUI()
-	{
-		DrawDefaultInspector();
-		var localizationData = (LocalizationDatabase)target;
-		if (!GUILayout.Button("Add Language")) return;
-		localizationData.AddLanguage();
-		EditorUtility.SetDirty(localizationData);
+		if (languages != null && languages.Count != 0) return;
+		languages = new List<LocalizationLanguage>
+		{
+			new() { name = "English" }
+		};
+            
+		EditorUtility.SetDirty(this);
 	}
 }
 
@@ -35,6 +24,7 @@ public class LocalizationDataEditor : Editor
 public class LocalizationLanguage
 {
 	public string name;
+	[HideInInspector]
 	public List<LocalizationRow> translations = new();
 }
 
