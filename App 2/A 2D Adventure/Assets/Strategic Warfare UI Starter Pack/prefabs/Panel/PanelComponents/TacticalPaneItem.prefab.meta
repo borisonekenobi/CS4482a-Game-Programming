@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e3b54941602d1bf48bb9f0a17e2c7e77
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 391120
+  packageName: Strategic Warfare Sci-fi UI Starter Pack
+  packageVersion: 1.0
+  assetPath: Assets/Strategic Warfare UI Starter Pack/prefabs/Panel/PanelComponents/TacticalPaneItem.prefab
+  uploadId: 949416

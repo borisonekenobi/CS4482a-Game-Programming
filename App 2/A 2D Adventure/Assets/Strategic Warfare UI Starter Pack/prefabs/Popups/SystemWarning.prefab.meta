@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 728810aeab4c4d64a9cf29373d6ac3eb
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 391120
+  packageName: Strategic Warfare Sci-fi UI Starter Pack
+  packageVersion: 1.0
+  assetPath: Assets/Strategic Warfare UI Starter Pack/prefabs/Popups/SystemWarning.prefab
+  uploadId: 949416

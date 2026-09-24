@@ -1,0 +1,1547 @@
+fileFormatVersion: 2
+guid: b9e44409689396443976ea7dac94177c
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: UI Starter Pack_0
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 4208
+        width: 1398
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96e7d82e259fa424ba66dd63b61d7f0a
+      internalID: -1246648135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_1
+      rect:
+        serializedVersion: 2
+        x: 1865
+        y: 4127
+        width: 823
+        height: 283
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78abee56fd5834848a7d38a23ae829ad
+      internalID: 201268487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_2
+      rect:
+        serializedVersion: 2
+        x: 2757
+        y: 4133
+        width: 797
+        height: 272
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65f333aaff26d0b418a830089c524e3b
+      internalID: -1634719078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_3
+      rect:
+        serializedVersion: 2
+        x: 3629
+        y: 4132
+        width: 805
+        height: 273
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a62c85c130921224884de4b89eafaebc
+      internalID: -948997894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_4
+      rect:
+        serializedVersion: 2
+        x: 4593
+        y: 4359
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2168e0036f704e04c88e92aec2fec9a9
+      internalID: -589275399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_5
+      rect:
+        serializedVersion: 2
+        x: 4604
+        y: 4218
+        width: 1128
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83812b1c9ee9b184486555f72485b1b8
+      internalID: -313910346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_6
+      rect:
+        serializedVersion: 2
+        x: 2689
+        y: 4227
+        width: 9
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6636e172e02ba4b41aa543e5d079543f
+      internalID: 1665835206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_7
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 3037
+        width: 1555
+        height: 1133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d33ef4aa25dcbf54db4ac51a678cd957
+      internalID: 644217488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_8
+      rect:
+        serializedVersion: 2
+        x: 1865
+        y: 3784
+        width: 823
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c5f19380c6993b43bef86369847f667
+      internalID: -72238137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_9
+      rect:
+        serializedVersion: 2
+        x: 2753
+        y: 3784
+        width: 802
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb204e989345f8d438d22b872b72c559
+      internalID: -444834795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_10
+      rect:
+        serializedVersion: 2
+        x: 3615
+        y: 3784
+        width: 824
+        height: 279
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64b7f6c03ac1e2848a15991be64c5830
+      internalID: 1774640917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_11
+      rect:
+        serializedVersion: 2
+        x: 4603
+        y: 3898
+        width: 1129
+        height: 290
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d157e0eec320f834095c808d5f70af1c
+      internalID: -1116607385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_12
+      rect:
+        serializedVersion: 2
+        x: 1917
+        y: 2358
+        width: 1665
+        height: 1272
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca7acf2607738e84dbe219815b5e6418
+      internalID: 79809036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_13
+      rect:
+        serializedVersion: 2
+        x: 4599
+        y: 3584
+        width: 1133
+        height: 276
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bcf1c8571b9e5045bb53fb025375cfa
+      internalID: 551496116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_14
+      rect:
+        serializedVersion: 2
+        x: 3886
+        y: 3283
+        width: 182
+        height: 184
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccacb31facde7f945a1d5a126fe8b0d7
+      internalID: 1214584308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_15
+      rect:
+        serializedVersion: 2
+        x: 4252
+        y: 3290
+        width: 179
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed5f321d0cdb62b40a702ab5bfce9926
+      internalID: 186669118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_16
+      rect:
+        serializedVersion: 2
+        x: 4610
+        y: 3290
+        width: 181
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3912ec49307e1074987a274ae0d71072
+      internalID: -1996213162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_17
+      rect:
+        serializedVersion: 2
+        x: 5287
+        y: 2937
+        width: 421
+        height: 518
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d15ded0495afe5c41946281a2fad835c
+      internalID: -1254075181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_18
+      rect:
+        serializedVersion: 2
+        x: 3878
+        y: 3005
+        width: 207
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cffc916eb8ed55540b5e4146d00c4cf2
+      internalID: -972227639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_19
+      rect:
+        serializedVersion: 2
+        x: 4186
+        y: 3005
+        width: 204
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aa0b56744311f1448b9f91eb9c98f2b
+      internalID: -406391493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_20
+      rect:
+        serializedVersion: 2
+        x: 4490
+        y: 3005
+        width: 132
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98962b1af9b714c4084ed5221264a8ad
+      internalID: 442478798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_21
+      rect:
+        serializedVersion: 2
+        x: 4715
+        y: 3005
+        width: 126
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e1f3994f56bda6438f82766ff258d50
+      internalID: -754730066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_22
+      rect:
+        serializedVersion: 2
+        x: 4912
+        y: 3007
+        width: 202
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 692bd4da52d0e764c98e13ac14eeeace
+      internalID: -1562017918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_23
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 2790
+        width: 132
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 588e1d6da3ee5324592cefcbd4a511b3
+      internalID: 787420916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_24
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 2846
+        width: 1181
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb3dd5a3b7c95314e96bd3f338f01038
+      internalID: 2017801515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_25
+      rect:
+        serializedVersion: 2
+        x: 3886
+        y: 2336
+        width: 498
+        height: 527
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 623dce4d98598324fa665513628e60e4
+      internalID: -2072561068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_26
+      rect:
+        serializedVersion: 2
+        x: 4485
+        y: 2749
+        width: 415
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e622c90ac787c34dbadc131a04db89f
+      internalID: 1743553466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_27
+      rect:
+        serializedVersion: 2
+        x: 5556
+        y: 2272
+        width: 237
+        height: 527
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c80d5def52de9a4e885b42208b58ca4
+      internalID: -1265042181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_28
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 2709
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05fe75670da95c844a88b5df40299ad6
+      internalID: 2104676812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_29
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 2547
+        width: 135
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05fe752c90a794540bf331b3c8444d2b
+      internalID: -226814156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_30
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 2348
+        width: 1229
+        height: 360
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1eb87df6bed5d547b4044b9655554e2
+      internalID: 459433958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_31
+      rect:
+        serializedVersion: 2
+        x: 4484
+        y: 2536
+        width: 421
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8003cd71ffc940e48bc3795699ef2471
+      internalID: -1780720591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_32
+      rect:
+        serializedVersion: 2
+        x: 4959
+        y: 2539
+        width: 512
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adfe19b083d04484396c9046e74a78c5
+      internalID: -1627770773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_33
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 2281
+        width: 123
+        height: 167
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7caa0585805f404d8a2598e697b9394
+      internalID: -1643371948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_34
+      rect:
+        serializedVersion: 2
+        x: 4484
+        y: 2337
+        width: 416
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4560df55b0d6f94fb55ea92bd5ee739
+      internalID: -966595118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_35
+      rect:
+        serializedVersion: 2
+        x: 4967
+        y: 2340
+        width: 501
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc96a2a2b6d671a4eaadb39c1b4bccbc
+      internalID: -176972956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_36
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 1138
+        width: 1915
+        height: 987
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97802d85ce088bc4c84e8f8d1f9f8b68
+      internalID: -1065123956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_37
+      rect:
+        serializedVersion: 2
+        x: 2454
+        y: 1695
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1acd6bed9fc684e4c8a74049270cc332
+      internalID: -140782707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_38
+      rect:
+        serializedVersion: 2
+        x: 3007
+        y: 1721
+        width: 152
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4a6e6b45b7b5f24eb26e2da3457175a
+      internalID: 18664438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_39
+      rect:
+        serializedVersion: 2
+        x: 3538
+        y: 1750
+        width: 152
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38d2564b502976e46a858155c1720f59
+      internalID: 1106696054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_40
+      rect:
+        serializedVersion: 2
+        x: 4018
+        y: 1750
+        width: 152
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed36f20c1ca2619439be686377fd04c2
+      internalID: -978944091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_41
+      rect:
+        serializedVersion: 2
+        x: 4578
+        y: 1721
+        width: 93
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9be06bfd36d4eba46a9058f5529645f7
+      internalID: -925163469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_42
+      rect:
+        serializedVersion: 2
+        x: 4926
+        y: 1736
+        width: 91
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f966142e84db23b4f81bbbb9013ed747
+      internalID: -584964726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_43
+      rect:
+        serializedVersion: 2
+        x: 5292
+        y: 1710
+        width: 197
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 769eec74bf1e2e9478d8d05b1131624e
+      internalID: -804314727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_44
+      rect:
+        serializedVersion: 2
+        x: 5729
+        y: 1749
+        width: 155
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c417424e11da14f499512b000afeb3bd
+      internalID: 108482426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_45
+      rect:
+        serializedVersion: 2
+        x: 2469
+        y: 1308
+        width: 174
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2abbfaf85258a74e96c404c08ba4f92
+      internalID: 683115540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_46
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 1305
+        width: 152
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f10b10015dbbe64448fb2f3410805800
+      internalID: 1298256592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_47
+      rect:
+        serializedVersion: 2
+        x: 3526
+        y: 1317
+        width: 149
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cd0484bb3f50f04f8c7197aca1eda5d
+      internalID: 1535119398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_48
+      rect:
+        serializedVersion: 2
+        x: 3990
+        y: 1337
+        width: 172
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7444105e8bd3b85468e3e43aea0a9aca
+      internalID: -1992413677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_49
+      rect:
+        serializedVersion: 2
+        x: 4496
+        y: 1396
+        width: 199
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d5f14ea92994e941a8d4447b3bf7d4a
+      internalID: 1432786332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_50
+      rect:
+        serializedVersion: 2
+        x: 4903
+        y: 1323
+        width: 164
+        height: 205
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 888a1e3c1b442f3489d66b87ec3fcbc2
+      internalID: -1316634438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_51
+      rect:
+        serializedVersion: 2
+        x: 5331
+        y: 1334
+        width: 140
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9bde0ce527efe746969895a39a927a5
+      internalID: 919041189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_52
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 1130
+        width: 80
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 100b06d17bb4cc34db127a0aa524faf6
+      internalID: 746520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_53
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 1130
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 983005a2b84dd3f4ebae696ec9591530
+      internalID: -1569079750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_54
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1096
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 716f2f4aad6ba7d45a063f970419765a
+      internalID: 733433080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_55
+      rect:
+        serializedVersion: 2
+        x: 3081
+        y: 221
+        width: 1426
+        height: 894
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58f963675cdab6f439d86bf51d4e4c9f
+      internalID: -2047477334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_56
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 245
+        width: 1013
+        height: 670
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 896e07594b8a1d84095474318a297761
+      internalID: 205145652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_57
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 204
+        width: 1078
+        height: 798
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aed49486578dfce468c8cf79faab8aa1
+      internalID: 963233766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_58
+      rect:
+        serializedVersion: 2
+        x: 4704
+        y: 441
+        width: 430
+        height: 292
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32a5950ef330e054c97d91e9ad5b13b8
+      internalID: -1355077778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Starter Pack_59
+      rect:
+        serializedVersion: 2
+        x: 5253
+        y: 423
+        width: 464
+        height: 347
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3aa5e8fed97ffa48a148f81edfd9df0
+      internalID: 228843593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 484138482b1fe1644a9783a15d1e5b82
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+      - key: SpriteEditor.SliceOnImport
+        value: False
+    nameFileIdTable:
+      UI Starter Pack_0: -1246648135
+      UI Starter Pack_1: 201268487
+      UI Starter Pack_10: 1774640917
+      UI Starter Pack_11: -1116607385
+      UI Starter Pack_12: 79809036
+      UI Starter Pack_13: 551496116
+      UI Starter Pack_14: 1214584308
+      UI Starter Pack_15: 186669118
+      UI Starter Pack_16: -1996213162
+      UI Starter Pack_17: -1254075181
+      UI Starter Pack_18: -972227639
+      UI Starter Pack_19: -406391493
+      UI Starter Pack_2: -1634719078
+      UI Starter Pack_20: 442478798
+      UI Starter Pack_21: -754730066
+      UI Starter Pack_22: -1562017918
+      UI Starter Pack_23: 787420916
+      UI Starter Pack_24: 2017801515
+      UI Starter Pack_25: -2072561068
+      UI Starter Pack_26: 1743553466
+      UI Starter Pack_27: -1265042181
+      UI Starter Pack_28: 2104676812
+      UI Starter Pack_29: -226814156
+      UI Starter Pack_3: -948997894
+      UI Starter Pack_30: 459433958
+      UI Starter Pack_31: -1780720591
+      UI Starter Pack_32: -1627770773
+      UI Starter Pack_33: -1643371948
+      UI Starter Pack_34: -966595118
+      UI Starter Pack_35: -176972956
+      UI Starter Pack_36: -1065123956
+      UI Starter Pack_37: -140782707
+      UI Starter Pack_38: 18664438
+      UI Starter Pack_39: 1106696054
+      UI Starter Pack_4: -589275399
+      UI Starter Pack_40: -978944091
+      UI Starter Pack_41: -925163469
+      UI Starter Pack_42: -584964726
+      UI Starter Pack_43: -804314727
+      UI Starter Pack_44: 108482426
+      UI Starter Pack_45: 683115540
+      UI Starter Pack_46: 1298256592
+      UI Starter Pack_47: 1535119398
+      UI Starter Pack_48: -1992413677
+      UI Starter Pack_49: 1432786332
+      UI Starter Pack_5: -313910346
+      UI Starter Pack_50: -1316634438
+      UI Starter Pack_51: 919041189
+      UI Starter Pack_52: 746520
+      UI Starter Pack_53: -1569079750
+      UI Starter Pack_54: 733433080
+      UI Starter Pack_55: -2047477334
+      UI Starter Pack_56: 205145652
+      UI Starter Pack_57: 963233766
+      UI Starter Pack_58: -1355077778
+      UI Starter Pack_59: 228843593
+      UI Starter Pack_6: 1665835206
+      UI Starter Pack_7: 644217488
+      UI Starter Pack_8: -72238137
+      UI Starter Pack_9: -444834795
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 391120
+  packageName: Strategic Warfare Sci-fi UI Starter Pack
+  packageVersion: 1.0
+  assetPath: Assets/Strategic Warfare UI Starter Pack/UI Kit/UI-png/HUF Pack.png
+  uploadId: 949416
