@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 	private static readonly int Speed = Animator.StringToHash("Speed");
 	private static readonly int Crouch = Animator.StringToHash("Crouch");
 
+	[SerializeField] private StopwatchController stopwatchController;
 	[SerializeField] private InputAction movementAction;
 	[SerializeField] private InputAction runAction;
 	[SerializeField] private InputAction crawlAction;
@@ -19,6 +20,7 @@ public class PlayerController : MonoBehaviour
 
 	private bool _facingLeft = true;
 	private Vector2 _move;
+	private bool _timerStarted;
 
 	private void Start()
 	{
@@ -31,6 +33,12 @@ public class PlayerController : MonoBehaviour
 	{
 		_move = movementAction.ReadValue<Vector2>();
 		_move.Normalize();
+
+		if (!_timerStarted && _move.magnitude != 0)
+		{
+			_timerStarted = true;
+			stopwatchController.StartStopwatch();
+		}
 
 		var running = runAction.ReadValue<float>() > 0;
 		var crouching = crawlAction.ReadValue<float>() > 0;

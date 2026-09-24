@@ -38585,6 +38585,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5882796998422756016, guid: 6f8e293bcd69b1f47bb46442c2af83a7, type: 3}
+      propertyPath: stopwatchController
+      value: 
+      objectReference: {fileID: 328404826}
     - target: {fileID: 7995784205288961151, guid: 6f8e293bcd69b1f47bb46442c2af83a7, type: 3}
       propertyPath: m_Name
       value: Character

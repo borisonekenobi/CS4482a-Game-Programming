@@ -1,6 +1,6 @@
-using UnityEngine;
-using TMPro;
 using System;
+using TMPro;
+using UnityEngine;
 
 public class StopwatchController : MonoBehaviour
 {
@@ -8,15 +8,14 @@ public class StopwatchController : MonoBehaviour
 	[SerializeField] private float flashDuration = 0.5f;
 
 	private float _currentTime;
-	private bool _isTimerActive;
 	private float _flashTimer;
+	private bool _isTimerActive;
 
 	private void Start()
 	{
 		_currentTime = 0f;
 		_isTimerActive = false;
 		DisplayTime(_currentTime);
-		StartStopwatch();
 	}
 
 	private void Update()
@@ -41,13 +40,14 @@ public class StopwatchController : MonoBehaviour
 	private void DisplayTime(float timeToDisplay)
 	{
 		var timeSpan = TimeSpan.FromSeconds(timeToDisplay);
-        
+
 		timerText.text = $"{timeSpan.Minutes:00}:{timeSpan.Seconds:00}.{timeSpan.Milliseconds:000}";
 	}
 
-	private void StartStopwatch()
+	public void StartStopwatch()
 	{
 		_isTimerActive = true;
+		timerText.enabled = true;
 	}
 
 	public void StopStopwatch()

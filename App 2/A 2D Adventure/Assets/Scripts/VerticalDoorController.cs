@@ -32,6 +32,7 @@ public class VerticalDoorController : DoorController
 			errorText.SetText(LockedMessage);
 			return;
 		}
+
 		if (_doorCoroutine != null) StopCoroutine(_doorCoroutine);
 
 		_doorCoroutine = StartCoroutine(MoveDoors(_topOpenPos, _bottomOpenPos));
