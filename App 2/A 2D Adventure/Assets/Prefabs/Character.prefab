@@ -108,6 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd3618d69ad0c464b8f2c691aa0ef056, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  stopwatchController: {fileID: 0}
   movementAction:
     m_Name: Movement
     m_Type: 1
@@ -226,11 +227,30 @@ MonoBehaviour:
       m_Flags: 0
     m_Flags: 0
     m_Priority: 0
+  pauseAction:
+    m_Name: Pause
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 17f40a01-6640-4c37-924b-05fd2d67f8c3
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 691f84a4-77ff-4b81-9b8f-b16d20be67c8
+      m_Path: <Keyboard>/escape
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Pause
+      m_Flags: 0
+    m_Flags: 0
+    m_Priority: 0
   speed: 5
   runMultiplier: 2
   crawlMultiplier: 0.5
   rigidbody2D: {fileID: 7145169174936069677}
   animator: {fileID: 6314443523913079142}
+  pauseMenuController: {fileID: 0}
 --- !u!70 &3600787085069406945
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

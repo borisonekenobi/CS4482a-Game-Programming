@@ -9,9 +9,11 @@ public class PlayerController : MonoBehaviour
 	private static readonly int Crouch = Animator.StringToHash("Crouch");
 
 	[SerializeField] private StopwatchController stopwatchController;
+	[SerializeField] private PauseMenuController pauseMenuController;
 	[SerializeField] private InputAction movementAction;
 	[SerializeField] private InputAction runAction;
 	[SerializeField] private InputAction crawlAction;
+	[SerializeField] private InputAction pauseAction;
 	[SerializeField] private float speed;
 	[SerializeField] private float runMultiplier;
 	[SerializeField] private float crawlMultiplier;
@@ -27,10 +29,14 @@ public class PlayerController : MonoBehaviour
 		movementAction.Enable();
 		runAction.Enable();
 		crawlAction.Enable();
+		pauseAction.Enable();
 	}
 
 	private void Update()
 	{
+		if (pauseAction.triggered) pauseMenuController.Trigger();
+		if (pauseMenuController.isPaused) return;
+
 		_move = movementAction.ReadValue<Vector2>();
 		_move.Normalize();
 
@@ -80,6 +86,7 @@ public class PlayerController : MonoBehaviour
 		movementAction.Disable();
 		runAction.Disable();
 		crawlAction.Disable();
+		pauseAction.Disable();
 	}
 
 	private void Flip()
