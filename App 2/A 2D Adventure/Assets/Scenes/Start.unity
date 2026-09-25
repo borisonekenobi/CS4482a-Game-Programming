@@ -133,23 +133,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2571706492295594215, guid: 27991e803cd72404cb23d1e88b4fe22c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2571706492295594215, guid: 27991e803cd72404cb23d1e88b4fe22c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1822493522}
+      objectReference: {fileID: 1421004959}
     - target: {fileID: 2571706492295594215, guid: 27991e803cd72404cb23d1e88b4fe22c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2571706492295594215, guid: 27991e803cd72404cb23d1e88b4fe22c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: MoveToScene
+      value: Leaderboard
       objectReference: {fileID: 0}
     - target: {fileID: 2571706492295594215, guid: 27991e803cd72404cb23d1e88b4fe22c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SceneChanger, Assembly-CSharp
+      value: MenuController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2571706492295594215, guid: 27991e803cd72404cb23d1e88b4fe22c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
@@ -7447,6 +7447,7 @@ GameObject:
   - component: {fileID: 1822493520}
   - component: {fileID: 1822493519}
   - component: {fileID: 1822493518}
+  - component: {fileID: 1822493523}
   - component: {fileID: 1822493522}
   m_Layer: 5
   m_Name: FadeCanvas
@@ -7471,7 +7472,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
 --- !u!114 &1822493519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7553,6 +7554,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   fadeImage: {fileID: 1175356922}
   fadeDuration: 1
+--- !u!225 &1822493523
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822493517}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1001 &2044279812
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7647,23 +7660,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4578042634082743121, guid: bc181c9712f0bf24c8154f7dc6ce111a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4578042634082743121, guid: bc181c9712f0bf24c8154f7dc6ce111a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1822493522}
+      objectReference: {fileID: 1421004959}
     - target: {fileID: 4578042634082743121, guid: bc181c9712f0bf24c8154f7dc6ce111a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4578042634082743121, guid: bc181c9712f0bf24c8154f7dc6ce111a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: MoveToScene
+      value: StartGame
       objectReference: {fileID: 0}
     - target: {fileID: 4578042634082743121, guid: bc181c9712f0bf24c8154f7dc6ce111a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SceneChanger, Assembly-CSharp
+      value: MenuController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4578042634082743121, guid: bc181c9712f0bf24c8154f7dc6ce111a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument

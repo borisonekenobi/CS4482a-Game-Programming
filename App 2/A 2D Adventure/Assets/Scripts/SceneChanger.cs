@@ -10,6 +10,8 @@ public class SceneChanger : MonoBehaviour
 	[SerializeField] private Image fadeImage;
 	[SerializeField] private float fadeDuration = 1.0f;
 
+	private bool _isTransitioning;
+
 	private void Awake()
 	{
 		if (Instance == null)
@@ -26,17 +28,23 @@ public class SceneChanger : MonoBehaviour
 
 	public void MoveToScene(string sceneName)
 	{
+		if (_isTransitioning) return;
+
 		StartCoroutine(TransitionSequence(sceneName));
 	}
 
 	private IEnumerator TransitionSequence(string sceneName)
 	{
+		_isTransitioning = true;
+
 		yield return StartCoroutine(FadeOut());
 
 		var asyncLoad = SceneManager.LoadSceneAsync(sceneName);
 		while (asyncLoad?.isDone == false) yield return null;
 
 		yield return StartCoroutine(FadeIn());
+
+		_isTransitioning = false;
 	}
 
 	private IEnumerator FadeOut()
