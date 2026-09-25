@@ -4,6 +4,7 @@ public class MenuController : MonoBehaviour
 {
 	public void StartGame()
 	{
+		PlayerPrefs.SetFloat("Time", 0.0f);
 		SceneChanger.Instance.MoveToScene("Level0_0");
 	}
 

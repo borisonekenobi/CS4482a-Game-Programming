@@ -109,6 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   stopwatchController: {fileID: 0}
+  pauseMenuController: {fileID: 0}
   movementAction:
     m_Name: Movement
     m_Type: 1
@@ -250,7 +251,6 @@ MonoBehaviour:
   crawlMultiplier: 0.5
   rigidbody2D: {fileID: 7145169174936069677}
   animator: {fileID: 6314443523913079142}
-  pauseMenuController: {fileID: 0}
 --- !u!70 &3600787085069406945
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -313,7 +313,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!95 &6314443523913079142
 Animator:

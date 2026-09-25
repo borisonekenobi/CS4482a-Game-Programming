@@ -77,8 +77,7 @@ public class PlayerController : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		var position = rigidbody2D.position + speed * Time.fixedDeltaTime * _move;
-		rigidbody2D.MovePosition(position);
+		rigidbody2D.linearVelocity = _move * speed;
 	}
 
 	private void OnDisable()

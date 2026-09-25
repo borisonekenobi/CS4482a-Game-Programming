@@ -13,7 +13,7 @@ public class StopwatchController : MonoBehaviour
 
 	private void Start()
 	{
-		_currentTime = 0f;
+		_currentTime = PlayerPrefs.GetFloat("Time");
 		_isTimerActive = false;
 		DisplayTime(_currentTime);
 	}
@@ -53,6 +53,7 @@ public class StopwatchController : MonoBehaviour
 	public void StopStopwatch()
 	{
 		_isTimerActive = false;
+		PlayerPrefs.SetFloat("Time", _currentTime);
 	}
 
 	public void ResetStopwatch()
