@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d366623b29024e418ae124dcf0c3792, type: 3}
+  m_Name: LocalizationDatabase
+  m_EditorClassIdentifier: Localization::LocalizationDatabase
+  languages:
+  - name: Bulgarian
+    translations:
+    - key: key_where_have_you_been
+      value: Къде беше?
+    - key: key_at_home
+      value: Бях си вкъщи и гледах Big Brother.
+    - key: key_here
+      value: Бях тук през цялото време!
+    - key: key_who_got_voted
+      value: О, да, кой беше изгонен?
+    - key: key_drama
+      value: Изгонен? Аз го гледам само заради драмата!
+    - key: key_blind
+      value: Да не съм сляп?
+    - key: key_unnoticed
+      value: Всъщност се учудвам, че изобщо ме забелязваш.
+    - key: key_prescription
+      value: Е, щях да ти кажа да си вземеш силен диоптър.
+    - key: key_sure_drama
+      value: Да, бе, сигурно е заради „драмата“.
+    - key: key_continue
+      value: <Продължи>
+    - key: key_uhhh
+      value: Ъъъ....
+    - key: key_old
+      value: Хайде де, не съм чак *толкова* стар!
+  - name: English
+    translations:
+    - key: key_where_have_you_been
+      value: Where have you been?
+    - key: key_at_home
+      value: I've been at home watching Big Brother.
+    - key: key_here
+      value: I've been here the whole time!
+    - key: key_who_got_voted
+      value: Oh yeah, who got voted out?
+    - key: key_drama
+      value: Voted out? I just watch for the drama!
+    - key: key_blind
+      value: Am I just blind?
+    - key: key_unnoticed
+      value: I'm actually surprised you notice me at all.
+    - key: key_prescription
+      value: Well, I was going to tell you to get a strong prescription.
+    - key: key_sure_drama
+      value: Sure, it's the "drama"
+    - key: key_continue
+      value: <Continue>
+    - key: key_uhhh
+      value: Uhhh....
+    - key: key_old
+      value: Come on, I'm not *that* old!
+  - name: French
+    translations:
+    - key: key_where_have_you_been
+      value: Où étais-tu ?
+    - key: key_at_home
+      value: J'étais à la maison en train de regarder Big Brother.
+    - key: key_here
+      value: J'ai été là tout ce temps !
+    - key: key_who_got_voted
+      value: Ah oui, qui a été éliminé ?
+    - key: key_drama
+      value: Éliminé ? Je regarde juste pour les histoires !
+    - key: key_blind
+      value: Est-ce que je suis aveugle ?
+    - key: key_unnoticed
+      value: En fait, ça m'étonne que tu me remarques.
+    - key: key_prescription
+      value: Eh bien, j'allais te dire de t'acheter de bonnes lunettes.
+    - key: key_sure_drama
+      value: C'est ça, pour les « histoires ».
+    - key: key_continue
+      value: <Continuer>
+    - key: key_uhhh
+      value: Euh....
+    - key: key_old
+      value: Allez, je ne suis pas si vieux *que ça* !
+

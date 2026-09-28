@@ -18,14 +18,14 @@ public class StartNode : DialogueNode
 [Serializable]
 public class ChoiceNode : DialogueNode
 {
-	public string speakerKey;
+	public string key;
 	public List<DialogueChoiceData> choices = new();
 }
 
 [Serializable]
 public class DialogueChoiceData
 {
-	public string choiceKey;
+	public string key;
 	public string targetNodeGuid;
 }
 

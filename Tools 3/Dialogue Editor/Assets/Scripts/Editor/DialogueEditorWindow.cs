@@ -135,7 +135,7 @@ namespace Editor
 						};
 
 						var speakerField = node.extensionContainer.Q<TextField>();
-						choiceNode.speakerKey = speakerField != null ? speakerField.value : "";
+						choiceNode.key = speakerField != null ? speakerField.value : "";
 
 						var ports = node.outputContainer.Children().OfType<Port>().ToList();
 						foreach (var port in ports)
@@ -143,7 +143,7 @@ namespace Editor
 							var textInput = port.Q<TextField>();
 							var choice = new DialogueChoiceData
 							{
-								choiceKey = textInput != null ? textInput.value : "CHOICE_KEY",
+								key = textInput != null ? textInput.value : "CHOICE_KEY",
 								targetNodeGuid = ""
 							};
 
@@ -194,9 +194,9 @@ namespace Editor
 
 			foreach (var nodeData in _currentAsset.nodes)
 			{
-				var visualNode = _graphView.CreateStandardNode(nodeData.position, nodeData.guid, nodeData.speakerKey);
+				var visualNode = _graphView.CreateStandardNode(nodeData.position, nodeData.guid, nodeData.key);
 				foreach (var choice in nodeData.choices)
-					visualNode.AddChoiceOutputPort(choice.choiceKey);
+					visualNode.AddChoiceOutputPort(choice.key);
 
 				if (visualNode != null) spawnMap[nodeData.guid] = visualNode;
 			}

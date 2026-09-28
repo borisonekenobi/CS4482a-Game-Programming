@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7459f2f68d6242e6a5a8382d7b84fbb6, type: 3}
+  m_Name: DialogueGraph
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueGraphAsset
+  startNode:
+    guid: 5c59d1b3-1e2e-4f90-b429-911d82971a10
+    position: {x: -1163.2001, y: 200}
+    targetNodeGuid: 14bd50f0-09f7-4674-a539-7ceeb97e3d9b
+  nodes:
+  - guid: 14bd50f0-09f7-4674-a539-7ceeb97e3d9b
+    position: {x: -904, y: 200}
+    key: key_where_have_you_been
+    choices:
+    - key: key_at_home
+      targetNodeGuid: 3f465913-e45b-4b3b-95d4-7f06310555d6
+    - key: key_here
+      targetNodeGuid: 2bb78305-4437-43fa-a23f-b293f503bf34
+  - guid: 3f465913-e45b-4b3b-95d4-7f06310555d6
+    position: {x: -521.6, y: 152.8}
+    key: key_who_got_voted
+    choices:
+    - key: key_drama
+      targetNodeGuid: 03c37a25-2a5f-43f5-96a8-1d07476e5365
+  - guid: 2bb78305-4437-43fa-a23f-b293f503bf34
+    position: {x: -521.6, y: 276.8}
+    key: key_blind
+    choices:
+    - key: key_unnoticed
+      targetNodeGuid: de41d7e1-a009-49f0-a033-d156187eebec
+    - key: key_prescription
+      targetNodeGuid: a53257be-ad9e-4855-b718-200874f80925
+  - guid: 03c37a25-2a5f-43f5-96a8-1d07476e5365
+    position: {x: -156, y: 152.8}
+    key: key_sure_drama
+    choices:
+    - key: key_continue
+      targetNodeGuid: d59c1aca-8c7a-443e-ab57-d6c9f58804a4
+  - guid: de41d7e1-a009-49f0-a033-d156187eebec
+    position: {x: -156, y: 276.8}
+    key: key_uhhh
+    choices:
+    - key: key_continue
+      targetNodeGuid: 3f465913-e45b-4b3b-95d4-7f06310555d6
+  - guid: a53257be-ad9e-4855-b718-200874f80925
+    position: {x: -156, y: 416}
+    key: key_old
+    choices:
+    - key: key_continue
+      targetNodeGuid: 14bd50f0-09f7-4674-a539-7ceeb97e3d9b
+  endNode:
+    guid: d59c1aca-8c7a-443e-ab57-d6c9f58804a4
+    position: {x: 222.4, y: 152.8}
