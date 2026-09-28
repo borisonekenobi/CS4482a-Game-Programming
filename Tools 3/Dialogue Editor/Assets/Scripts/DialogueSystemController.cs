@@ -28,13 +28,13 @@ public class DialogueSystemController : MonoBehaviour
 		var node = dialogueGraphAsset.nodes.Find(x => x.guid == nodeGuid);
 		var dialogueText = new GameObject("DialogueText");
 		dialogueText.transform.SetParent(canvas.transform);
+		var dialogueTextRectTransform = dialogueText.AddComponent<RectTransform>();
+		dialogueTextRectTransform.anchoredPosition = new Vector2(0, 0);
+		dialogueTextRectTransform.sizeDelta = new Vector2(200, 50);
 		var dialogueTextText = dialogueText.AddComponent<Text>();
 		dialogueTextText.text = Localization.Get(node.key);
 		dialogueTextText.font = font;
 		dialogueTextText.color = Color.black;
-		var dialogueTextRectTransform = dialogueText.GetComponent<RectTransform>();
-		dialogueTextRectTransform.anchoredPosition = new Vector2(0, 0);
-		dialogueTextRectTransform.sizeDelta = new Vector2(200, 50);
 
 		foreach (var choice in node.choices)
 		{
@@ -43,12 +43,21 @@ public class DialogueSystemController : MonoBehaviour
 			var buttonRectTransform = button.AddComponent<RectTransform>();
 			buttonRectTransform.anchoredPosition = new Vector2(0, -55 * (_numChoices + 1));
 			buttonRectTransform.sizeDelta = new Vector2(200, 50);
-			var buttonText = button.AddComponent<Text>();
+			var buttonButton = button.AddComponent<Button>();
+			buttonButton.onClick.AddListener(() => GenerateDialogueUI(choice.targetNodeGuid));
+			var buttonImage = button.AddComponent<Image>();
+			buttonImage.color = Color.white;
+
+			var text = new GameObject("Text");
+			text.transform.SetParent(button.transform);
+			var textRectTransform = text.AddComponent<RectTransform>();
+			textRectTransform.anchoredPosition = new Vector2(0, 0);
+			textRectTransform.sizeDelta = new Vector2(200, 50);
+			var buttonText = text.AddComponent<Text>();
 			buttonText.text = Localization.Get(choice.key);
 			buttonText.font = font;
 			buttonText.color = Color.black;
-			var buttonButton = button.AddComponent<Button>();
-			buttonButton.onClick.AddListener(() => GenerateDialogueUI(choice.targetNodeGuid));
+
 			_numChoices++;
 		}
 	}
