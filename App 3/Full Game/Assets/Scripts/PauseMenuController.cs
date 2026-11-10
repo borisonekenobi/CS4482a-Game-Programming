@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
-public class PauseManager : MonoBehaviour
+public class PauseMenuController : MonoBehaviour
 {
     [SerializeField] private FirstPersonController firstPersonController;
     [SerializeField] private Canvas pauseMenuCanvas;
