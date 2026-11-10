@@ -33,6 +33,7 @@ namespace EasyPeasyFirstPersonController
         public Transform groundCheck;
         public LayerMask groundMask;
 
+        [HideInInspector] public bool paused;
         [HideInInspector] public CharacterController characterController;
         [HideInInspector] public IInputManager input;
         [HideInInspector] public Vector3 moveDirection;
@@ -140,6 +141,8 @@ namespace EasyPeasyFirstPersonController
 
         private void HandleRotation()
         {
+            if (paused) return;
+            
             float mouseX = input.lookInput.x * mouseSensitivity;
             float mouseY = input.lookInput.y * mouseSensitivity;
 
