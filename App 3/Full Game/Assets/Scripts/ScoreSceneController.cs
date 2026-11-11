@@ -6,6 +6,7 @@ using UnityEngine;
 public class ScoreSceneController : MonoBehaviour
 {
     [SerializeField] private TMP_Text scoreText;
+    [SerializeField] private TMP_Text highScoreText;
     [SerializeField] private TMP_Text statisticsText;
     [SerializeField] private TMP_Text resultsText;
 
@@ -15,7 +16,13 @@ public class ScoreSceneController : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
+        var score = CalculateScore();
+        var highScore = PlayerPrefs.GetInt("HighScore", 0);
+        var newHighScore = score > highScore;
+        if (newHighScore) PlayerPrefs.SetInt("HighScore", score);
+
         scoreText.text = CalculateScore().ToString();
+        highScoreText.text = newHighScore ? "New High Score!" : $"High Score: {highScore}";
 
         statisticsText.text = "";
         resultsText.text = "";
