@@ -108,4 +108,10 @@ public class ObjectiveManager : MonoBehaviour, IJournalPage
         if (objective.completedByAnyCollection) return HasCollectedAnything() ? objective.requiredAmount : 0;
         return objective.requiredItem is Item.None ? 0 : inventory.GetItemCount(objective.requiredItem);
     }
+
+    public void SaveToGameData()
+    {
+        GameData.Objectives = new List<ObjectiveDefinition>(_completedObjectives);
+        GameData.TotalObjectives = allObjectives.Length;
+    }
 }

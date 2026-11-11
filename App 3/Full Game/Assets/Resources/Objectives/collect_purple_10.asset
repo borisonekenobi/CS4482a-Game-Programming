@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObjectiveDefinition
   id: collect_purple_10
   title: Collect 10 Purple Mushrooms
+  points: 150
   unlockedAtStart: 0
   unlockOnAnyCollection: 0
   unlockOnFirstCollectionOf: 5

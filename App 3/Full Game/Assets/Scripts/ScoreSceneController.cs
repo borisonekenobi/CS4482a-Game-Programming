@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 
@@ -14,19 +15,39 @@ public class ScoreSceneController : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
-        var totalItems = GameData.Inventory.Sum(item => item.Value);
-        var score = totalItems * 10;
+        scoreText.text = CalculateScore().ToString();
 
-        scoreText.text = score.ToString();
         statisticsText.text = "";
         resultsText.text = "";
+
         foreach (var item in GameData.Inventory)
         {
             statisticsText.text += $"{item.Key}\n";
             resultsText.text += $"×{item.Value}\n";
         }
 
+        statisticsText.text += "\nObjectives Completed";
+        resultsText.text += $"\n{GameData.Objectives.Count}/{GameData.TotalObjectives}";
+
         GameData.Reset();
+    }
+
+    private static int CalculateScore()
+    {
+        var points = new Dictionary<Item, int>
+        {
+            { Item.None, 0 },
+            { Item.Daffodil, 10 },
+            { Item.Hyacinth, 10 },
+            { Item.Note, 50 },
+            { Item.OrangeMushroom, 100 },
+            { Item.PurpleMushroom, 70 },
+            { Item.Ruby, -100_000 }, // Negative points for cheaters
+            { Item.Sunflower, 20 }
+        };
+
+        return GameData.Inventory.Sum(item => points[item.Key] * item.Value) +
+               GameData.Objectives.Sum(objective => objective.points);
     }
 
     public void GoToMainMenu()

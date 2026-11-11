@@ -3,7 +3,9 @@ using UnityEngine;
 public class CampfireController : MonoBehaviour, IInteractable
 {
     [SerializeField] private ParticleSystem fireParticles;
+    [SerializeField] private AudioSource audioSource;
     [SerializeField] private Inventory playerInventory;
+    [SerializeField] private ObjectiveManager objectiveManager;
 
     private void Update()
     {
@@ -19,8 +21,9 @@ public class CampfireController : MonoBehaviour, IInteractable
 
         inventory.RemoveItem(Item.Ruby);
         inventory.SaveToGameData();
+        objectiveManager.SaveToGameData();
         
-        // TODO: play campfire whoosh sound
+        audioSource.Play();
 
         SceneFader.Instance.FadeToScene("Scenes/Finish");
     }

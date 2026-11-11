@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObjectiveDefinition
   id: find_hidden_note
   title: Find the Hidden Notes
+  points: 1250
   unlockedAtStart: 0
   unlockOnAnyCollection: 0
   unlockOnFirstCollectionOf: 0

@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObjectiveDefinition
   id: explore_valley
   title: Explore the Valley
+  points: 50
   unlockedAtStart: 1
   unlockOnAnyCollection: 0
-  unlockOnFirstCollectionOf: 
+  unlockOnFirstCollectionOf: 0
   prerequisites: []
   completedByAnyCollection: 1
-  requiredItemName: 
+  requiredItem: 0
   requiredAmount: 1

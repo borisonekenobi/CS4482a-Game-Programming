@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObjectiveDefinition
   id: collect_orange_150
   title: Collect 150 Orange Mushrooms
+  points: 2500
   unlockedAtStart: 0
   unlockOnAnyCollection: 0
   unlockOnFirstCollectionOf: 0
