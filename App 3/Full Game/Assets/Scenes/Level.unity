@@ -68518,7 +68518,7 @@ MonoBehaviour:
     m_SingletonActionBindings:
     - m_Name: 
       m_Id: 4eb7dabd-7a3e-40c6-9987-52a451f5e22d
-      m_Path: <Keyboard>/z
+      m_Path: <Keyboard>/x
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -68536,7 +68536,7 @@ MonoBehaviour:
     m_SingletonActionBindings:
     - m_Name: 
       m_Id: 87cd1ce4-04c1-4274-bbf5-32e7260385b0
-      m_Path: <Keyboard>/x
+      m_Path: <Keyboard>/z
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -138894,6 +138894,10 @@ PrefabInstance:
 
         Purple ones are particularly interesting. I wonder how many it would take to get someone''s attention...'
       objectReference: {fileID: 0}
+    - target: {fileID: 2526986516301822189, guid: ee5378d66382d9442b386b59bc629b43, type: 3}
+      propertyPath: journalController
+      value: 
+      objectReference: {fileID: 302505290}
     - target: {fileID: 5550441951888572841, guid: ee5378d66382d9442b386b59bc629b43, type: 3}
       propertyPath: m_Name
       value: A Small Discovery
@@ -240559,6 +240563,10 @@ PrefabInstance:
 
         Either way, I don''t think I''m ready to leave.'
       objectReference: {fileID: 0}
+    - target: {fileID: 4332605409348492368, guid: b2d5356848110ff4a98efe4e463ecac4, type: 3}
+      propertyPath: journalController
+      value: 
+      objectReference: {fileID: 302505290}
     - target: {fileID: 7943386602781851464, guid: b2d5356848110ff4a98efe4e463ecac4, type: 3}
       propertyPath: m_Name
       value: The Previous Explorer
@@ -245998,6 +246006,10 @@ PrefabInstance:
 
         Probably.'
       objectReference: {fileID: 0}
+    - target: {fileID: 4332605409348492368, guid: b2d5356848110ff4a98efe4e463ecac4, type: 3}
+      propertyPath: journalController
+      value: 
+      objectReference: {fileID: 302505290}
     - target: {fileID: 7943386602781851464, guid: b2d5356848110ff4a98efe4e463ecac4, type: 3}
       propertyPath: m_Name
       value: The Mushroom Incident
@@ -249569,6 +249581,10 @@ PrefabInstance:
 
         Good luck. You''ll need it...'
       objectReference: {fileID: 0}
+    - target: {fileID: 2526986516301822189, guid: ee5378d66382d9442b386b59bc629b43, type: 3}
+      propertyPath: journalController
+      value: 
+      objectReference: {fileID: 302505290}
     - target: {fileID: 5550441951888572841, guid: ee5378d66382d9442b386b59bc629b43, type: 3}
       propertyPath: m_Name
       value: A New Beginning
@@ -269261,6 +269277,10 @@ PrefabInstance:
 
         It seems the thing only appears after the sun goes down. I suppose I''ll have to become a night explorer... '
       objectReference: {fileID: 0}
+    - target: {fileID: 2526986516301822189, guid: ee5378d66382d9442b386b59bc629b43, type: 3}
+      propertyPath: journalController
+      value: 
+      objectReference: {fileID: 302505290}
     - target: {fileID: 5550441951888572841, guid: ee5378d66382d9442b386b59bc629b43, type: 3}
       propertyPath: m_Name
       value: An Unusual Ruby
@@ -282135,6 +282155,10 @@ PrefabInstance:
 
         I wonder if collecting different kinds of plants is the key to uncovering everything this place has to offer...'
       objectReference: {fileID: 0}
+    - target: {fileID: 2526986516301822189, guid: ee5378d66382d9442b386b59bc629b43, type: 3}
+      propertyPath: journalController
+      value: 
+      objectReference: {fileID: 302505290}
     - target: {fileID: 5550441951888572841, guid: ee5378d66382d9442b386b59bc629b43, type: 3}
       propertyPath: m_Name
       value: The Orange Ones
@@ -346000,6 +346024,10 @@ PrefabInstance:
 
         But if you want to leave this place, perhaps that''s what you need to do... '
       objectReference: {fileID: 0}
+    - target: {fileID: 2526986516301822189, guid: ee5378d66382d9442b386b59bc629b43, type: 3}
+      propertyPath: journalController
+      value: 
+      objectReference: {fileID: 302505290}
     - target: {fileID: 5550441951888572841, guid: ee5378d66382d9442b386b59bc629b43, type: 3}
       propertyPath: m_Name
       value: A Rather Important Discovery
@@ -387042,7 +387070,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CampfireController
   fireParticles: {fileID: 180135563}
-  inventory: {fileID: 1385876023}
+  playerInventory: {fileID: 1385876023}
 --- !u!1001 &1677623150
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -460618,6 +460646,10 @@ PrefabInstance:
 
         On the bright side, the flowers seem happy!'
       objectReference: {fileID: 0}
+    - target: {fileID: 4332605409348492368, guid: b2d5356848110ff4a98efe4e463ecac4, type: 3}
+      propertyPath: journalController
+      value: 
+      objectReference: {fileID: 302505290}
     - target: {fileID: 7943386602781851464, guid: b2d5356848110ff4a98efe4e463ecac4, type: 3}
       propertyPath: m_Name
       value: The Weather Report
@@ -471051,6 +471083,10 @@ PrefabInstance:
 
         before it destroys you...'
       objectReference: {fileID: 0}
+    - target: {fileID: 2526986516301822189, guid: ee5378d66382d9442b386b59bc629b43, type: 3}
+      propertyPath: journalController
+      value: 
+      objectReference: {fileID: 302505290}
     - target: {fileID: 5550441951888572841, guid: ee5378d66382d9442b386b59bc629b43, type: 3}
       propertyPath: m_Name
       value: The Final Warning

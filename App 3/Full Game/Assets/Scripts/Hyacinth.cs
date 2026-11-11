@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-public class Hyacinth : MonoBehaviour, ICollectible
+﻿public class Hyacinth : Collectible
 {
-    public string Name => "Hyacinth";
+    protected override Item Item => Item.Hyacinth;
 }

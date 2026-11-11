@@ -48,7 +48,7 @@ public class ObjectiveManager : MonoBehaviour, IJournalPage
         }
     }
 
-    private void OnItemAdded(string itemName, int newCount)
+    private void OnItemAdded(Item item, int newCount)
     {
         EvaluateObjectives();
     }
@@ -82,7 +82,7 @@ public class ObjectiveManager : MonoBehaviour, IJournalPage
     private bool CanUnlock(ObjectiveDefinition objective)
     {
         if (objective.unlockOnAnyCollection && !HasCollectedAnything()) return false;
-        if (!string.IsNullOrEmpty(objective.unlockOnFirstCollectionOf) &&
+        if (objective.unlockOnFirstCollectionOf is not Item.None &&
             inventory.GetItemCount(objective.unlockOnFirstCollectionOf) == 0) return false;
 
         return objective.prerequisites == null ||
@@ -98,15 +98,14 @@ public class ObjectiveManager : MonoBehaviour, IJournalPage
     private bool IsComplete(ObjectiveDefinition objective)
     {
         if (objective.completedByAnyCollection && HasCollectedAnything()) return true;
-        if (string.IsNullOrEmpty(objective.requiredItemName)) return false;
+        if (objective.requiredItem is Item.None) return false;
 
-        return inventory.GetItemCount(objective.requiredItemName) >= objective.requiredAmount;
+        return inventory.GetItemCount(objective.requiredItem) >= objective.requiredAmount;
     }
 
     private int GetProgress(ObjectiveDefinition objective)
     {
         if (objective.completedByAnyCollection) return HasCollectedAnything() ? objective.requiredAmount : 0;
-
-        return inventory.GetItemCount(objective.requiredItemName);
+        return objective.requiredItem is Item.None ? 0 : inventory.GetItemCount(objective.requiredItem);
     }
 }

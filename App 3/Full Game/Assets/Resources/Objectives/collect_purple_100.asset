@@ -16,9 +16,9 @@ MonoBehaviour:
   title: Collect 100 Purple Mushrooms
   unlockedAtStart: 0
   unlockOnAnyCollection: 0
-  unlockOnFirstCollectionOf: 
+  unlockOnFirstCollectionOf: 0
   prerequisites:
   - {fileID: 11400000, guid: fe6d58c534d9c314ea62d5f526ade4fd, type: 2}
   completedByAnyCollection: 0
-  requiredItemName: Purple Mushroom
+  requiredItem: 5
   requiredAmount: 100

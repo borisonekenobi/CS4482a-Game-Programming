@@ -16,10 +16,10 @@ MonoBehaviour:
   title: Find the Ruby
   unlockedAtStart: 0
   unlockOnAnyCollection: 0
-  unlockOnFirstCollectionOf: 
+  unlockOnFirstCollectionOf: 0
   prerequisites:
   - {fileID: 11400000, guid: fe6d58c534d9c314ea62d5f526ade4fd, type: 2}
   - {fileID: 11400000, guid: 2ad377755a3779f409eeadf0bed467dc, type: 2}
   completedByAnyCollection: 0
-  requiredItemName: Ruby
+  requiredItem: 6
   requiredAmount: 1

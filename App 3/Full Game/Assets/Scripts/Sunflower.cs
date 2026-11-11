@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-public class Sunflower : MonoBehaviour, ICollectible
+﻿public class Sunflower : Collectible
 {
-    public string Name => "Sunflower";
+    protected override Item Item => Item.Sunflower;
 }

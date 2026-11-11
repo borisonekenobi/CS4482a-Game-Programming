@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-public class Daffodil : MonoBehaviour, ICollectible
+﻿public class Daffodil : Collectible
 {
-    public string Name => "Daffodil";
+    protected override Item Item => Item.Daffodil;
 }

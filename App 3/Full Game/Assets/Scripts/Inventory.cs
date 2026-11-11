@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour, IJournalPage
 {
-    private readonly Dictionary<string, int> _items = new();
+    private readonly Dictionary<Item, int> _items = new();
 
     public string Title => "Inventory";
 
@@ -15,23 +15,31 @@ public class Inventory : MonoBehaviour, IJournalPage
         get
         {
             var summary = new StringBuilder();
-            foreach (var kvp in _items) summary.AppendLine($"{kvp.Key}: ×{kvp.Value}");
+            foreach (var kvp in _items) summary.AppendLine($"{ItemExtensions.ToString(kvp.Key)}: ×{kvp.Value}");
             return summary.ToString();
         }
     }
 
-    public event Action<string, int> ItemAdded;
+    public event Action<Item, int> ItemAdded;
 
-    public void AddItem(string itemName)
+    public void AddItem(Item item)
     {
-        if (!_items.TryAdd(itemName, 1)) _items[itemName]++;
+        if (!_items.TryAdd(item, 1)) _items[item]++;
 
-        ItemAdded?.Invoke(itemName, _items[itemName]);
+        ItemAdded?.Invoke(item, _items[item]);
     }
 
-    public int GetItemCount(string itemName)
+    public void RemoveItem(Item item)
     {
-        return _items.GetValueOrDefault(itemName, 0);
+        if (!_items.ContainsKey(item)) return;
+
+        _items[item]--;
+        if (_items[item] <= 0) _items.Remove(item);
+    }
+
+    public int GetItemCount(Item item)
+    {
+        return _items.GetValueOrDefault(item, 0);
     }
 
     public int GetTotalItemCount()
@@ -39,8 +47,8 @@ public class Inventory : MonoBehaviour, IJournalPage
         return _items.Values.Sum();
     }
 
-    public bool HasItem(string itemName)
+    public bool HasItem(Item item)
     {
-        return GetItemCount(itemName) > 0;
+        return GetItemCount(item) > 0;
     }
 }

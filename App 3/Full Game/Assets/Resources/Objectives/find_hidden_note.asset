@@ -16,9 +16,9 @@ MonoBehaviour:
   title: Find the Hidden Notes
   unlockedAtStart: 0
   unlockOnAnyCollection: 0
-  unlockOnFirstCollectionOf: 
+  unlockOnFirstCollectionOf: 0
   prerequisites:
   - {fileID: 11400000, guid: 376a649dbaf1c43419dd6201de4563bb, type: 2}
   completedByAnyCollection: 0
-  requiredItemName: Note
+  requiredItem: 3
   requiredAmount: 9

@@ -16,8 +16,8 @@ MonoBehaviour:
   title: Collect 10 Purple Mushrooms
   unlockedAtStart: 0
   unlockOnAnyCollection: 0
-  unlockOnFirstCollectionOf: Purple Mushroom
+  unlockOnFirstCollectionOf: 5
   prerequisites: []
   completedByAnyCollection: 0
-  requiredItemName: Purple Mushroom
+  requiredItem: 5
   requiredAmount: 10

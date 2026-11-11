@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-public class OrangeMushroom : MonoBehaviour, ICollectible
+﻿public class OrangeMushroom : Collectible
 {
-    public string Name => "Orange Mushroom";
+    protected override Item Item => Item.OrangeMushroom;
 }

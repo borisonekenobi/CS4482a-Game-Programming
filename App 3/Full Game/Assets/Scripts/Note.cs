@@ -1,8 +1,16 @@
 ﻿using UnityEngine;
 
-public class Note : MonoBehaviour, ICollectible
+public class Note : Collectible
 {
+    [SerializeField] private JournalController journalController;
     [SerializeField] public string noteTitle;
     [SerializeField] [TextArea] public string noteContent;
-    public string Name => "Note";
+    protected override Item Item => Item.Note;
+
+    public override void Interact(Inventory inventory)
+    {
+        inventory.AddItem(Item);
+        journalController.AddJournalPage(this);
+        Destroy(gameObject);
+    }
 }

@@ -16,9 +16,9 @@ MonoBehaviour:
   title: Collect 150 Orange Mushrooms
   unlockedAtStart: 0
   unlockOnAnyCollection: 0
-  unlockOnFirstCollectionOf: 
+  unlockOnFirstCollectionOf: 0
   prerequisites:
   - {fileID: 11400000, guid: 2ad377755a3779f409eeadf0bed467dc, type: 2}
   completedByAnyCollection: 0
-  requiredItemName: Orange Mushroom
+  requiredItem: 4
   requiredAmount: 150

@@ -10,11 +10,11 @@ public class ObjectiveDefinition : ScriptableObject
     [Header("Unlock Requirements")]
     public bool unlockedAtStart;
     public bool unlockOnAnyCollection;
-    public string unlockOnFirstCollectionOf;
+    public Item unlockOnFirstCollectionOf;
     public ObjectiveDefinition[] prerequisites;
 
     [Header("Completion Requirements")]
     public bool completedByAnyCollection;
-    public string requiredItemName;
+    public Item requiredItem;
     public int requiredAmount;
 }
