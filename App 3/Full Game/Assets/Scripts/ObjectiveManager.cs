@@ -9,14 +9,14 @@ public class ObjectiveManager : MonoBehaviour, IJournalPage
     [SerializeField] private Inventory inventory;
     [SerializeField] private ObjectiveDefinition[] allObjectives;
 
-    private readonly HashSet<ObjectiveDefinition> _completedObjectives = new();
-    private readonly HashSet<ObjectiveDefinition> _unlockedObjectives = new();
+    private readonly HashSet<ObjectiveDefinition> completedObjectives = new();
+    private readonly HashSet<ObjectiveDefinition> unlockedObjectives = new();
 
     private void Start()
     {
         foreach (var objective in allObjectives)
             if (objective.unlockedAtStart)
-                _unlockedObjectives.Add(objective);
+                unlockedObjectives.Add(objective);
 
         EvaluateObjectives();
     }
@@ -38,7 +38,7 @@ public class ObjectiveManager : MonoBehaviour, IJournalPage
         get
         {
             var summary = new StringBuilder();
-            foreach (var objective in _unlockedObjectives)
+            foreach (var objective in unlockedObjectives)
             {
                 summary.AppendLine($"{objective.title}: {GetProgress(objective)}/{objective.requiredAmount}");
                 summary.AppendLine();
@@ -63,17 +63,17 @@ public class ObjectiveManager : MonoBehaviour, IJournalPage
 
             foreach (var objective in allObjectives)
             {
-                if (_unlockedObjectives.Contains(objective)) continue;
+                if (unlockedObjectives.Contains(objective)) continue;
                 if (!CanUnlock(objective)) continue;
 
-                _unlockedObjectives.Add(objective);
+                unlockedObjectives.Add(objective);
                 changed = true;
             }
 
-            foreach (var objective in _unlockedObjectives.Where(objective => !_completedObjectives.Contains(objective))
+            foreach (var objective in unlockedObjectives.Where(objective => !completedObjectives.Contains(objective))
                          .Where(IsComplete))
             {
-                _completedObjectives.Add(objective);
+                completedObjectives.Add(objective);
                 changed = true;
             }
         } while (changed);
@@ -87,7 +87,7 @@ public class ObjectiveManager : MonoBehaviour, IJournalPage
 
         return objective.prerequisites == null ||
                objective.prerequisites.All(prerequisite =>
-                   prerequisite != null && _completedObjectives.Contains(prerequisite));
+                   prerequisite != null && completedObjectives.Contains(prerequisite));
     }
 
     private bool HasCollectedAnything()
@@ -111,7 +111,7 @@ public class ObjectiveManager : MonoBehaviour, IJournalPage
 
     public void SaveToGameData()
     {
-        GameData.Objectives = new List<ObjectiveDefinition>(_completedObjectives);
+        GameData.Objectives = new List<ObjectiveDefinition>(completedObjectives);
         GameData.TotalObjectives = allObjectives.Length;
     }
 }

@@ -14,20 +14,20 @@ public class PlayerFootsteps : MonoBehaviour
     [SerializeField] private LayerMask groundLayers;
     [SerializeField] private float groundCheckDistance = 1.5f;
 
-    private float _distanceTravelled;
-    private Vector3 _previousPosition;
+    private float distanceTravelled;
+    private Vector3 previousPosition;
 
     private void Awake()
     {
         if (audioSource == null) audioSource = GetComponent<AudioSource>();
 
-        _previousPosition = transform.position;
+        previousPosition = transform.position;
     }
 
     private void Update()
     {
-        var movement = transform.position - _previousPosition;
-        _previousPosition = transform.position;
+        var movement = transform.position - previousPosition;
+        previousPosition = transform.position;
 
         movement.y = 0f;
 
@@ -42,18 +42,18 @@ public class PlayerFootsteps : MonoBehaviour
 
         if (!grounded)
         {
-            _distanceTravelled = 0f;
+            distanceTravelled = 0f;
             return;
         }
 
         if (distance < movementThreshold) return;
 
-        _distanceTravelled += distance;
+        distanceTravelled += distance;
 
-        if (!(_distanceTravelled >= stepDistance)) return;
+        if (!(distanceTravelled >= stepDistance)) return;
 
         PlayFootstep();
-        _distanceTravelled = 0f;
+        distanceTravelled = 0f;
     }
 
     private void PlayFootstep()

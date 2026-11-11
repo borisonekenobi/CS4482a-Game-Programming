@@ -8,7 +8,7 @@ public class PauseMenuController : MonoBehaviour
     [SerializeField] private Canvas pauseMenuCanvas;
     [SerializeField] private InputAction pauseAction;
 
-    private bool _paused;
+    private bool paused;
 
     private void Start()
     {
@@ -20,7 +20,7 @@ public class PauseMenuController : MonoBehaviour
     {
         if (!pauseAction.triggered) return;
 
-        if (_paused) Resume();
+        if (paused) Resume();
         else Pause();
     }
 
@@ -31,7 +31,7 @@ public class PauseMenuController : MonoBehaviour
         Cursor.visible = true;
         pauseMenuCanvas.enabled = true;
         firstPersonController.paused = true;
-        _paused = true;
+        paused = true;
     }
 
     public void Resume()
@@ -41,7 +41,7 @@ public class PauseMenuController : MonoBehaviour
         Cursor.visible = false;
         pauseMenuCanvas.enabled = false;
         firstPersonController.paused = false;
-        _paused = false;
+        paused = false;
     }
 
     public void Restart()

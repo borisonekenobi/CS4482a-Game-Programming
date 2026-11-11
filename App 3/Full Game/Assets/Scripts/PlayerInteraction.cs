@@ -17,7 +17,7 @@ public class PlayerInteraction : MonoBehaviour
     [Header("UI")]
     [SerializeField] private GameObject interactionPrompt;
 
-    private IInteractable _currentInteractable;
+    private IInteractable currentInteractable;
 
     private void Update()
     {
@@ -38,7 +38,7 @@ public class PlayerInteraction : MonoBehaviour
 
     private void CheckForCollectible()
     {
-        _currentInteractable = null;
+        currentInteractable = null;
 
         var ray = new Ray(
             playerCamera.transform.position,
@@ -47,20 +47,20 @@ public class PlayerInteraction : MonoBehaviour
 
         if (Physics.Raycast(ray, out var hit, pickupDistance))
         {
-            _currentInteractable = hit.collider.GetComponentInParent<IInteractable>();
+            currentInteractable = hit.collider.GetComponentInParent<IInteractable>();
         }
 
-        var canInteract = _currentInteractable != null;
+        var canInteract = currentInteractable != null;
         interactionPrompt.SetActive(canInteract);
     }
 
     private void OnInteract(InputAction.CallbackContext context)
     {
-        if (_currentInteractable == null) return;
+        if (currentInteractable == null) return;
 
-        _currentInteractable.Interact(inventory);
+        currentInteractable.Interact(inventory);
 
-        _currentInteractable = null;
+        currentInteractable = null;
         interactionPrompt.SetActive(false);
     }
 }

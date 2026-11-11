@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour, IJournalPage
 {
-    private readonly Dictionary<Item, int> _items = new();
+    private readonly Dictionary<Item, int> items = new();
 
     public string Title => "Inventory";
 
@@ -15,7 +15,7 @@ public class Inventory : MonoBehaviour, IJournalPage
         get
         {
             var summary = new StringBuilder();
-            foreach (var kvp in _items) summary.AppendLine($"{ItemExtensions.ToString(kvp.Key)}: ×{kvp.Value}");
+            foreach (var kvp in items) summary.AppendLine($"{ItemExtensions.ToString(kvp.Key)}: ×{kvp.Value}");
             return summary.ToString();
         }
     }
@@ -24,27 +24,27 @@ public class Inventory : MonoBehaviour, IJournalPage
 
     public void AddItem(Item item)
     {
-        if (!_items.TryAdd(item, 1)) _items[item]++;
+        if (!items.TryAdd(item, 1)) items[item]++;
 
-        ItemAdded?.Invoke(item, _items[item]);
+        ItemAdded?.Invoke(item, items[item]);
     }
 
     public void RemoveItem(Item item)
     {
-        if (!_items.ContainsKey(item)) return;
+        if (!items.ContainsKey(item)) return;
 
-        _items[item]--;
-        if (_items[item] <= 0) _items.Remove(item);
+        items[item]--;
+        if (items[item] <= 0) items.Remove(item);
     }
 
     public int GetItemCount(Item item)
     {
-        return _items.GetValueOrDefault(item, 0);
+        return items.GetValueOrDefault(item, 0);
     }
 
     public int GetTotalItemCount()
     {
-        return _items.Values.Sum();
+        return items.Values.Sum();
     }
 
     public bool HasItem(Item item)
@@ -54,6 +54,6 @@ public class Inventory : MonoBehaviour, IJournalPage
 
     public void SaveToGameData()
     {
-        GameData.Inventory = new Dictionary<Item, int>(_items);
+        GameData.Inventory = new Dictionary<Item, int>(items);
     }
 }

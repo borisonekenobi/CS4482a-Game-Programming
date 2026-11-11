@@ -9,7 +9,7 @@ public class SceneFader : MonoBehaviour
     [SerializeField] private CanvasGroup fadeCanvasGroup;
     [SerializeField] private float fadeDuration = 1f;
 
-    private bool _isFading;
+    private bool isFading;
 
     private void Awake()
     {
@@ -26,12 +26,12 @@ public class SceneFader : MonoBehaviour
 
     public void FadeToScene(string sceneName)
     {
-        if (!_isFading) StartCoroutine(TransitionRoutine(sceneName));
+        if (!isFading) StartCoroutine(TransitionRoutine(sceneName));
     }
 
     private IEnumerator TransitionRoutine(string sceneName)
     {
-        _isFading = true;
+        isFading = true;
         fadeCanvasGroup.blocksRaycasts = true;
 
         yield return StartCoroutine(Fade(1f));
@@ -44,7 +44,7 @@ public class SceneFader : MonoBehaviour
         yield return StartCoroutine(Fade(0f));
 
         fadeCanvasGroup.blocksRaycasts = false;
-        _isFading = false;
+        isFading = false;
     }
 
     private IEnumerator Fade(float targetAlpha)

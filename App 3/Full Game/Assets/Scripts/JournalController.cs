@@ -22,14 +22,14 @@ public class JournalController : MonoBehaviour
     [SerializeField] private InputAction nextPageAction;
     [SerializeField] private InputAction prevPageAction;
 
-    private int _journalIndex;
-    private List<Tuple<string, Func<string>>> _journalPages;
-    private int MaxJournalPages => (_journalPages.Count + 1) / 2 - 1;
+    private int journalIndex;
+    private List<Tuple<string, Func<string>>> journalPages;
+    private int MaxJournalPages => (journalPages.Count + 1) / 2 - 1;
 
     private void Start()
     {
-        _journalIndex = 0;
-        _journalPages = new List<Tuple<string, Func<string>>>
+        journalIndex = 0;
+        journalPages = new List<Tuple<string, Func<string>>>
         {
             new(inventory.Title, () => inventory.Summary),
             new(objectiveManager.Title, () => objectiveManager.Summary)
@@ -54,12 +54,12 @@ public class JournalController : MonoBehaviour
 
     private void Update()
     {
-        if (nextPageAction.WasPressedThisFrame() && _journalIndex < MaxJournalPages) _journalIndex++;
-        if (prevPageAction.WasPressedThisFrame() && _journalIndex > 0) _journalIndex--;
+        if (nextPageAction.WasPressedThisFrame() && journalIndex < MaxJournalPages) journalIndex++;
+        if (prevPageAction.WasPressedThisFrame() && journalIndex > 0) journalIndex--;
 
-        var (leftJournalPageTitle, leftJournalPageContent) = _journalPages[_journalIndex * 2];
-        var (rightJournalPageTitle, rightJournalPageContent) = _journalIndex * 2 < _journalPages.Count - 1
-            ? _journalPages[_journalIndex * 2 + 1]
+        var (leftJournalPageTitle, leftJournalPageContent) = journalPages[journalIndex * 2];
+        var (rightJournalPageTitle, rightJournalPageContent) = journalIndex * 2 < journalPages.Count - 1
+            ? journalPages[journalIndex * 2 + 1]
             : new Tuple<string, Func<string>>(string.Empty, () => string.Empty);
 
         leftPageTitle.SetText(leftJournalPageTitle);
@@ -71,7 +71,7 @@ public class JournalController : MonoBehaviour
 
     public void AddJournalPage(Note note)
     {
-        _journalPages.Add(new Tuple<string, Func<string>>(note.noteTitle, () => note.noteContent));
+        journalPages.Add(new Tuple<string, Func<string>>(note.noteTitle, () => note.noteContent));
     }
 
     private void ToggleJournal(InputAction.CallbackContext context)
