@@ -8,6 +8,7 @@ public class JournalController : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private Inventory inventory;
+    [SerializeField] private ObjectiveManager objectiveManager;
     [SerializeField] private Animator animator;
     [SerializeField] private InputAction toggleJournalAction;
 
@@ -31,11 +32,11 @@ public class JournalController : MonoBehaviour
 
     private void Update()
     {
-        leftPageTitle.SetText("Inventory");
-        leftPage.SetText(inventory.GetSummary());
+        leftPageTitle.SetText(inventory.Title);
+        leftPage.SetText(inventory.Summary);
 
-        rightPageTitle.SetText("Objectives");
-        rightPage.SetText("");
+        rightPageTitle.SetText(objectiveManager.Title);
+        rightPage.SetText(objectiveManager.Summary);
     }
 
     private void ToggleJournal(InputAction.CallbackContext context)
