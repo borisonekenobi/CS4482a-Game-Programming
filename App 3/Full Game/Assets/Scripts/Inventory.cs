@@ -38,4 +38,9 @@ public class Inventory : MonoBehaviour, IJournalPage
     {
         return _items.Values.Sum();
     }
+
+    public bool HasItem(string itemName)
+    {
+        return GetItemCount(itemName) > 0;
+    }
 }
