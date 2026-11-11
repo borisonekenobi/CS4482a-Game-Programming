@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1577860368274209317}
   - component: {fileID: 3603258950968299247}
   - component: {fileID: 2954823824624447291}
+  - component: {fileID: 7948420828252343683}
   m_Layer: 0
   m_Name: PP_Hyacinth_04
   m_TagString: Untagged
@@ -114,6 +115,18 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 1803037753767285088, guid: 46d171de72518e343891c4b4c03e5103, type: 3}
+--- !u!114 &7948420828252343683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2954823824624447290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 477bb1d44b0f46d5b56d47c4ef2ff985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Hyacinth
 --- !u!1001 &6109892892131928468
 PrefabInstance:
   m_ObjectHideFlags: 0
