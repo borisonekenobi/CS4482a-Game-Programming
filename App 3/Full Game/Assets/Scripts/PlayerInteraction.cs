@@ -9,6 +9,7 @@ public class PlayerInteraction : MonoBehaviour
 
     [Header("Inventory")]
     [SerializeField] private Inventory inventory;
+    [SerializeField] private JournalController journalController;
 
     [Header("Input")]
     [SerializeField] private InputAction interactAction;
@@ -61,6 +62,7 @@ public class PlayerInteraction : MonoBehaviour
 
         inventory.AddItem(itemName);
 
+        if (_currentCollectible is Note note) journalController.AddJournalPage(note);
         if (_currentCollectible is MonoBehaviour behaviour) Destroy(behaviour.gameObject);
 
         _currentCollectible = null;

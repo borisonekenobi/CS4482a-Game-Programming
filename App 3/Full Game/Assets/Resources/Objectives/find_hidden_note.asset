@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: find_hidden_note
   m_EditorClassIdentifier: Assembly-CSharp::ObjectiveDefinition
   id: find_hidden_note
-  title: Find the Hidden Note
+  title: Find the Hidden Notes
   unlockedAtStart: 0
   unlockOnAnyCollection: 0
   unlockOnFirstCollectionOf: 
   prerequisites:
   - {fileID: 11400000, guid: 376a649dbaf1c43419dd6201de4563bb, type: 2}
   completedByAnyCollection: 0
-  requiredItemName: Hidden Note
-  requiredAmount: 1
+  requiredItemName: Note
+  requiredAmount: 9
