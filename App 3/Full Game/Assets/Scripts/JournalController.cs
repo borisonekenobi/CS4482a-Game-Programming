@@ -69,9 +69,9 @@ public class JournalController : MonoBehaviour
         rightPage.SetText(rightJournalPageContent());
     }
 
-    public void AddJournalPage(Note note)
+    public void AddJournalPage(IJournalPage note)
     {
-        journalPages.Add(new Tuple<string, Func<string>>(note.noteTitle, () => note.noteContent));
+        journalPages.Add(new Tuple<string, Func<string>>(note.Title, () => note.Summary));
     }
 
     private void ToggleJournal(InputAction.CallbackContext context)

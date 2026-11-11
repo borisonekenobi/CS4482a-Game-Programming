@@ -21,7 +21,7 @@ public class PlayerInteraction : MonoBehaviour
 
     private void Update()
     {
-        CheckForCollectible();
+        CheckForInteractable();
     }
 
     private void OnEnable()
@@ -36,7 +36,7 @@ public class PlayerInteraction : MonoBehaviour
         interactAction.Disable();
     }
 
-    private void CheckForCollectible()
+    private void CheckForInteractable()
     {
         currentInteractable = null;
 
@@ -50,7 +50,7 @@ public class PlayerInteraction : MonoBehaviour
             currentInteractable = hit.collider.GetComponentInParent<IInteractable>();
         }
 
-        var canInteract = currentInteractable != null;
+        var canInteract = currentInteractable is { CanInteract: true };
         interactionPrompt.SetActive(canInteract);
     }
 

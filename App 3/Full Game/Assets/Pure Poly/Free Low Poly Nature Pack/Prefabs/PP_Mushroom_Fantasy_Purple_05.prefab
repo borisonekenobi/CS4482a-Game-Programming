@@ -126,3 +126,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a685b95bdc64733b17ed2bc0b35869c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PurpleMushroom
+  audioClips:
+  - {fileID: 8300000, guid: 94e201cc5afe387488fe371587369601, type: 3}
+  - {fileID: 8300000, guid: 6a3bf545e33582c4ca7da879f77cdc52, type: 3}
+  - {fileID: 8300000, guid: 27f68546fb9cb254e9527efd2d4b3686, type: 3}
+  - {fileID: 8300000, guid: 9b91f74e98886cf45808b8b6545b9d1e, type: 3}
+  - {fileID: 8300000, guid: 508a52eabd530144bbf2d2d6c9793982, type: 3}
+  - {fileID: 8300000, guid: 7667350213ba11b4b95bb3c6f80ff769, type: 3}

@@ -4,7 +4,6 @@
 public class ObjectiveDefinition : ScriptableObject
 {
     [Header("Information")]
-    public string id;
     public string title;
     public int points;
 

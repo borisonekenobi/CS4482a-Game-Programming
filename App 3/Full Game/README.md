@@ -98,5 +98,7 @@ final score.
     - https://opengameart.org/content/nature-theme-sketch
     - https://opengameart.org/content/nature-sounds-pack
     - https://pixabay.com/sound-effects/film-special-effects-fire-whoosh-flame-ignite-sound-561959/
+    - https://pixabay.com/sound-effects/nature-fire-crackling-356123/
+    - https://opengameart.org/content/gem-collect-sfx
 - Other Assets:
     - https://www.1001fonts.com/monospace-font.html

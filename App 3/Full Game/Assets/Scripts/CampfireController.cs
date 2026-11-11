@@ -3,14 +3,25 @@ using UnityEngine;
 public class CampfireController : MonoBehaviour, IInteractable
 {
     [SerializeField] private ParticleSystem fireParticles;
-    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioSource whooshSource;
+    [SerializeField] private AudioSource fireSource;
     [SerializeField] private Inventory playerInventory;
     [SerializeField] private ObjectiveManager objectiveManager;
 
-    private void Update()
+    private void Start()
     {
-        if (CanInteract) fireParticles.Play();
-        else fireParticles.Stop();
+        if (CanInteract) return;
+
+        fireSource.Stop();
+        fireParticles.Stop();
+
+        playerInventory.ItemAdded += (item, _) =>
+        {
+            if (item != Item.Ruby) return;
+
+            fireSource.Play();
+            fireParticles.Play();
+        };
     }
 
     public bool CanInteract => playerInventory.HasItem(Item.Ruby);
@@ -22,8 +33,8 @@ public class CampfireController : MonoBehaviour, IInteractable
         inventory.RemoveItem(Item.Ruby);
         inventory.SaveToGameData();
         objectiveManager.SaveToGameData();
-        
-        audioSource.Play();
+
+        whooshSource.Play();
 
         SceneFader.Instance.FadeToScene("Scenes/Finish");
     }
