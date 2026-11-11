@@ -39486,11 +39486,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1778994357615247706, guid: ef62619642b0df743b22dd5120c6ac4d, type: 3}
   m_PrefabInstance: {fileID: 179146410}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &180135563 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6193238170341674930, guid: 3ae10fb5b692ef0408109c9583e3325a, type: 3}
-  m_PrefabInstance: {fileID: 1132640351}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &180611100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -263356,6 +263351,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1677427789}
   m_SourcePrefab: {fileID: 100100000, guid: 3ae10fb5b692ef0408109c9583e3325a, type: 3}
+--- !u!198 &1132640352 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4084776757373589977, guid: 3ae10fb5b692ef0408109c9583e3325a, type: 3}
+  m_PrefabInstance: {fileID: 1132640351}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1132676114
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -387069,7 +387069,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef251afdcbb5bbc40992acc95ff639df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CampfireController
-  fireParticles: {fileID: 180135563}
+  fireParticles: {fileID: 1132640352}
   playerInventory: {fileID: 1385876023}
 --- !u!1001 &1677623150
 PrefabInstance:

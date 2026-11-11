@@ -18,8 +18,10 @@ public class CampfireController : MonoBehaviour, IInteractable
         if (!CanInteract) return;
 
         inventory.RemoveItem(Item.Ruby);
+        inventory.SaveToGameData();
         
-        // TODO: play whoosh sound
-        // TODO: fade to black
+        // TODO: play campfire whoosh sound
+
+        SceneFader.Instance.FadeToScene("Scenes/Finish");
     }
 }

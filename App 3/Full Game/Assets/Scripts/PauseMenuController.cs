@@ -1,7 +1,6 @@
 using EasyPeasyFirstPersonController;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
 
 public class PauseMenuController : MonoBehaviour
 {
@@ -47,11 +46,11 @@ public class PauseMenuController : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene("Scenes/Level");
+        SceneFader.Instance.FadeToScene("Scenes/Level");
     }
 
     public void Quit()
     {
-        SceneManager.LoadScene("Scenes/MainMenu");
+        SceneFader.Instance.FadeToScene("Scenes/MainMenu");
     }
 }

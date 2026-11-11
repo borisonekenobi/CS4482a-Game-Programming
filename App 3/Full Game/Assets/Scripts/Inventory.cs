@@ -51,4 +51,9 @@ public class Inventory : MonoBehaviour, IJournalPage
     {
         return GetItemCount(item) > 0;
     }
+
+    public void SaveToGameData()
+    {
+        GameData.Inventory = new Dictionary<Item, int>(_items);
+    }
 }
