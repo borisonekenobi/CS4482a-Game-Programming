@@ -1,0 +1,7 @@
+﻿{
+  "name": "com.borisonekenobi.localization",
+  "version": "1.0.0",
+  "displayName": "Localization Tool",
+  "description": "A localization tool for Unity projects.",
+  "unity": "6000.6"
+}

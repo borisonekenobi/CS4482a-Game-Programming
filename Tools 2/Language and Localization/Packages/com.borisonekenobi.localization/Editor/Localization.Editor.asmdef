@@ -1,0 +1,18 @@
+﻿{
+  "name": "Localization.Editor",
+  "rootNamespace": "Borisonekenobi.Localization.Editor",
+  "references": [
+    "GUID:d41a3eebf7d74434a3a651eac4ded0a1"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}
