@@ -3,7 +3,7 @@ using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Editor
+namespace Borisonekenobi.Dialogue.Editor
 {
 	public static class NodeExtensions
 	{

@@ -1,0 +1,7 @@
+﻿{
+  "name": "com.borisonekenobi.dialogue",
+  "version": "1.0.0",
+  "displayName": "Dialogue Tool",
+  "description": "A node-based dialogue tool for Unity projects.",
+  "unity": "6000.6"
+}

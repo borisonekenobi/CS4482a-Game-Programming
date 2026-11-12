@@ -1,5 +1,11 @@
 {
   "dependencies": {
+    "com.borisonekenobi.dialogue": {
+      "version": "file:com.borisonekenobi.dialogue",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "com.borisonekenobi.localization": {
       "version": "file:E:/dev/CS4482a-Game-Programming/Tools 2/Language and Localization/Packages/com.borisonekenobi.localization",
       "depth": 0,
