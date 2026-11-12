@@ -9,36 +9,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d366623b29024e418ae124dcf0c3792, type: 3}
+  m_Script: {fileID: 11500000, guid: 1280ef1062924c8a8fa095130dbeec44, type: 3}
   m_Name: LocalizationDatabase
-  m_EditorClassIdentifier: Localization::LocalizationDatabase
+  m_EditorClassIdentifier: Borisonekenobi.Localization.LocalizationDatabase
   languages:
   - name: Bulgarian
     translations:
     - key: key_where_have_you_been
-      value: Къде беше?
+      value: "\u041A\u044A\u0434\u0435 \u0431\u0435\u0448\u0435?"
     - key: key_at_home
-      value: Бях си вкъщи и гледах Big Brother.
+      value: "\u0411\u044F\u0445 \u0441\u0438 \u0432\u043A\u044A\u0449\u0438 \u0438 \u0433\u043B\u0435\u0434\u0430\u0445 Big Brother."
     - key: key_here
-      value: Бях тук през цялото време!
+      value: "\u0411\u044F\u0445 \u0442\u0443\u043A \u043F\u0440\u0435\u0437 \u0446\u044F\u043B\u043E\u0442\u043E \u0432\u0440\u0435\u043C\u0435!"
     - key: key_who_got_voted
-      value: О, да, кой беше изгонен?
+      value: "\u041E, \u0434\u0430, \u043A\u043E\u0439 \u0431\u0435\u0448\u0435 \u0438\u0437\u0433\u043E\u043D\u0435\u043D?"
     - key: key_drama
-      value: Изгонен? Аз го гледам само заради драмата!
+      value: "\u0418\u0437\u0433\u043E\u043D\u0435\u043D? \u0410\u0437 \u0433\u043E \u0433\u043B\u0435\u0434\u0430\u043C \u0441\u0430\u043C\u043E \u0437\u0430\u0440\u0430\u0434\u0438 \u0434\u0440\u0430\u043C\u0430\u0442\u0430!"
     - key: key_blind
-      value: Да не съм сляп?
+      value: "\u0414\u0430 \u043D\u0435 \u0441\u044A\u043C \u0441\u043B\u044F\u043F?"
     - key: key_unnoticed
-      value: Всъщност се учудвам, че изобщо ме забелязваш.
+      value: "\u0412\u0441\u044A\u0449\u043D\u043E\u0441\u0442 \u0441\u0435 \u0443\u0447\u0443\u0434\u0432\u0430\u043C, \u0447\u0435 \u0438\u0437\u043E\u0431\u0449\u043E \u043C\u0435 \u0437\u0430\u0431\u0435\u043B\u044F\u0437\u0432\u0430\u0448."
     - key: key_prescription
-      value: Е, щях да ти кажа да си вземеш силен диоптър.
+      value: "\u0415, \u0449\u044F\u0445 \u0434\u0430 \u0442\u0438 \u043A\u0430\u0436\u0430 \u0434\u0430 \u0441\u0438 \u0432\u0437\u0435\u043C\u0435\u0448 \u0441\u0438\u043B\u0435\u043D \u0434\u0438\u043E\u043F\u0442\u044A\u0440."
     - key: key_sure_drama
-      value: Да, бе, сигурно е заради „драмата“.
+      value: "\u0414\u0430, \u0431\u0435, \u0441\u0438\u0433\u0443\u0440\u043D\u043E \u0435 \u0437\u0430\u0440\u0430\u0434\u0438 \u201E\u0434\u0440\u0430\u043C\u0430\u0442\u0430\u201C."
     - key: key_continue
-      value: <Продължи>
+      value: "<\u041F\u0440\u043E\u0434\u044A\u043B\u0436\u0438>"
     - key: key_uhhh
-      value: Ъъъ....
+      value: "\u042A\u044A\u044A...."
     - key: key_old
-      value: Хайде де, не съм чак *толкова* стар!
+      value: "\u0425\u0430\u0439\u0434\u0435 \u0434\u0435, \u043D\u0435 \u0441\u044A\u043C \u0447\u0430\u043A *\u0442\u043E\u043B\u043A\u043E\u0432\u0430* \u0441\u0442\u0430\u0440!"
   - name: English
     translations:
     - key: key_where_have_you_been
@@ -68,27 +68,26 @@ MonoBehaviour:
   - name: French
     translations:
     - key: key_where_have_you_been
-      value: Où étais-tu ?
+      value: "O\xF9 \xE9tais-tu ?"
     - key: key_at_home
-      value: J'étais à la maison en train de regarder Big Brother.
+      value: "J'\xE9tais \xE0 la maison en train de regarder Big Brother."
     - key: key_here
-      value: J'ai été là tout ce temps !
+      value: "J'ai \xE9t\xE9 l\xE0 tout ce temps !"
     - key: key_who_got_voted
-      value: Ah oui, qui a été éliminé ?
+      value: "Ah oui, qui a \xE9t\xE9 \xE9limin\xE9 ?"
     - key: key_drama
-      value: Éliminé ? Je regarde juste pour les histoires !
+      value: "\xC9limin\xE9 ? Je regarde juste pour les histoires !"
     - key: key_blind
       value: Est-ce que je suis aveugle ?
     - key: key_unnoticed
-      value: En fait, ça m'étonne que tu me remarques.
+      value: "En fait, \xE7a m'\xE9tonne que tu me remarques."
     - key: key_prescription
       value: Eh bien, j'allais te dire de t'acheter de bonnes lunettes.
     - key: key_sure_drama
-      value: C'est ça, pour les « histoires ».
+      value: "C'est \xE7a, pour les \xAB histoires \xBB."
     - key: key_continue
       value: <Continuer>
     - key: key_uhhh
       value: Euh....
     - key: key_old
-      value: Allez, je ne suis pas si vieux *que ça* !
-
+      value: "Allez, je ne suis pas si vieux *que \xE7a* !"

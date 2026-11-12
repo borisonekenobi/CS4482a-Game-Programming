@@ -1,3 +1,4 @@
+using Borisonekenobi.Localization;
 using UnityEngine;
 using UnityEngine.UI;
 
