@@ -1,7 +1,8 @@
-﻿## Full Game
+﻿## Localized Game
 
-This is a solo game project for **CS 4482A - Game Programming, App 3: Write a Full Game** at the Department of Computer
-Science, Western University.
+This is the localized version of The Ruby Valley. This combines the original App 3 game with the original Tools 3
+project. The game is localized in Bulgarian,English, and French. The player can select the language from the main menu
+or the puase menu.
 
 The game is a first-person exploration and collection game set in a forest valley. Explore the environment, collect
 plants and hidden notes, track progress in the journal, find the hidden ruby that, and bring it to the campfire to save
