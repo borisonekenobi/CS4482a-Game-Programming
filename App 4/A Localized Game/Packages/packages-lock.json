@@ -1,5 +1,17 @@
 {
   "dependencies": {
+    "com.borisonekenobi.dialogue": {
+      "version": "file:com.borisonekenobi.dialogue-1.0.0.tgz",
+      "depth": 0,
+      "source": "local-tarball",
+      "dependencies": {}
+    },
+    "com.borisonekenobi.localization": {
+      "version": "file:com.borisonekenobi.localization-1.0.0.tgz",
+      "depth": 0,
+      "source": "local-tarball",
+      "dependencies": {}
+    },
     "com.unity.ai.navigation": {
       "version": "2.0.14",
       "depth": 0,

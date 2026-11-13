@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7d756509e3b418cbd89ec1c02ed1ac1, type: 3}
+  m_Name: collect_orange_150
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectiveDefinition
+  id: collect_orange_150
+  title: Collect 150 Orange Mushrooms
+  points: 2500
+  unlockedAtStart: 0
+  unlockOnAnyCollection: 0
+  unlockOnFirstCollectionOf: 0
+  prerequisites:
+  - {fileID: 11400000, guid: 2ad377755a3779f409eeadf0bed467dc, type: 2}
+  completedByAnyCollection: 0
+  requiredItem: 4
+  requiredAmount: 150

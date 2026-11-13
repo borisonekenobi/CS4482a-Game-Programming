@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "com.borisonekenobi.dialogue": "file:com.borisonekenobi.dialogue-1.0.0.tgz",
+    "com.borisonekenobi.localization": "file:com.borisonekenobi.localization-1.0.0.tgz",
     "com.unity.ai.navigation": "2.0.14",
     "com.unity.collab-proxy": "2.13.6",
     "com.unity.ide.rider": "3.1.0",
