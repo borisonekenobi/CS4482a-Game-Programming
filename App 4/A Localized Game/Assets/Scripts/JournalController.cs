@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Borisonekenobi.Localization;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -62,10 +63,10 @@ public class JournalController : MonoBehaviour
             ? journalPages[journalIndex * 2 + 1]
             : new Tuple<string, Func<string>>(string.Empty, () => string.Empty);
 
-        leftPageTitle.SetText(leftJournalPageTitle);
+        leftPageTitle.SetText(Localization.Get(leftJournalPageTitle));
         leftPage.SetText(leftJournalPageContent());
 
-        rightPageTitle.SetText(rightJournalPageTitle);
+        rightPageTitle.SetText(Localization.Get(rightJournalPageTitle));
         rightPage.SetText(rightJournalPageContent());
     }
 

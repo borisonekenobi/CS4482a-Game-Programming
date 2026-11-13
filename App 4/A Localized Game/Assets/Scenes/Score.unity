@@ -787,7 +787,7 @@ GameObject:
   - component: {fileID: 6602809}
   - component: {fileID: 6602808}
   m_Layer: 5
-  m_Name: Score Subtitle
+  m_Name: Score Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4385,8 +4385,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449c98f4f31f412fb53f3d967631ef42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreSceneController
+  titleText: {fileID: 1351780987}
+  subtitleText: {fileID: 283983587}
+  scoreLabelText: {fileID: 6602808}
   scoreText: {fileID: 2062688759}
   highScoreText: {fileID: 2074051185}
+  leftTitleText: {fileID: 749870090}
+  rightTitleText: {fileID: 129307326}
   statisticsText: {fileID: 782563496}
   resultsText: {fileID: 1372430341}
 --- !u!4 &64507085
@@ -25507,9 +25512,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 64507084}
-        m_TargetAssemblyTypeName: ScoreSceneController, Assembly-CSharp
-        m_MethodName: GoToMainMenu
+      - m_Target: {fileID: 2025851513}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -25519,9 +25524,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 472131503}
-        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
-        m_MethodName: PlayRandomButtonSound
+      - m_Target: {fileID: 64507084}
+        m_TargetAssemblyTypeName: ScoreSceneController, Assembly-CSharp
+        m_MethodName: GoToMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -25584,10 +25589,6 @@ MonoBehaviour:
   normalSprite: {fileID: 21300000, guid: 1cdc4f859dfe30a42bc6e2a83d556164, type: 3}
   hoverSprite: {fileID: 21300000, guid: 1cdc4f859dfe30a42bc6e2a83d556164, type: 3}
   image: {fileID: 472131501}
-  buttonSounds:
-  - {fileID: 8300000, guid: 992cf3c4fb2be7e42a5beb21b96c096d, type: 3}
-  - {fileID: 8300000, guid: 08b7c0f4bd65cb843b12facc186af31b, type: 3}
-  audioSource: {fileID: 2025851513}
 --- !u!1001 &472509559
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -88914,10 +88915,6 @@ MonoBehaviour:
   normalSprite: {fileID: 21300000, guid: c57329ab14d816547a1bd758cc3c2943, type: 3}
   hoverSprite: {fileID: 21300000, guid: c57329ab14d816547a1bd758cc3c2943, type: 3}
   image: {fileID: 1876094500}
-  buttonSounds:
-  - {fileID: 8300000, guid: 992cf3c4fb2be7e42a5beb21b96c096d, type: 3}
-  - {fileID: 8300000, guid: 08b7c0f4bd65cb843b12facc186af31b, type: 3}
-  audioSource: {fileID: 2025851513}
 --- !u!114 &1876094499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88962,9 +88959,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 64507084}
-        m_TargetAssemblyTypeName: ScoreSceneController, Assembly-CSharp
-        m_MethodName: RestartGame
+      - m_Target: {fileID: 2025851513}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -88974,9 +88971,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1876094498}
-        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
-        m_MethodName: PlayRandomButtonSound
+      - m_Target: {fileID: 64507084}
+        m_TargetAssemblyTypeName: ScoreSceneController, Assembly-CSharp
+        m_MethodName: RestartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -97195,8 +97192,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_Resource: {fileID: 8300000, guid: 992cf3c4fb2be7e42a5beb21b96c096d, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

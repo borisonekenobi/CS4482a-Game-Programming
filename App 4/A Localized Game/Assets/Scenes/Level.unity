@@ -132429,7 +132429,7 @@ GameObject:
   - component: {fileID: 581139825}
   - component: {fileID: 581139824}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: Pause Menu Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -132449,6 +132449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   firstPersonController: {fileID: 1385876015}
   pauseMenuCanvas: {fileID: 1551621592}
+  languageMenuCanvas: {fileID: 941293802}
   pauseAction:
     m_Name: Pause
     m_Type: 1
@@ -132475,6 +132476,9 @@ MonoBehaviour:
       m_Flags: 0
     m_Flags: 0
     m_Priority: 0
+  resumeButtonText: {fileID: 2086609222}
+  restartButtonText: {fileID: 1798726229}
+  quitButtonText: {fileID: 652225507}
 --- !u!4 &581139825
 Transform:
   m_ObjectHideFlags: 0
@@ -139006,17 +139010,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2526986516301822189, guid: ee5378d66382d9442b386b59bc629b43, type: 3}
       propertyPath: noteTitle
-      value: Field Note #4
+      value: note_2_title
       objectReference: {fileID: 0}
     - target: {fileID: 2526986516301822189, guid: ee5378d66382d9442b386b59bc629b43, type: 3}
       propertyPath: noteContent
-      value: 'I''ve started collecting the mushrooms around here. At first, I thought they were just pretty little things, but I''ve noticed something strange.
-
-
-        The more I collect, the more I seem to discover.
-
-
-        Purple ones are particularly interesting. I wonder how many it would take to get someone''s attention...'
+      value: note_2_content
       objectReference: {fileID: 0}
     - target: {fileID: 2526986516301822189, guid: ee5378d66382d9442b386b59bc629b43, type: 3}
       propertyPath: journalController
@@ -166071,8 +166069,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_Resource: {fileID: 8300000, guid: 992cf3c4fb2be7e42a5beb21b96c096d, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -168932,6 +168930,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7887212436713778576, guid: fb4b616e7acaf3845b99b4a7364d26a7, type: 3}
   m_PrefabInstance: {fileID: 737652870}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &737673741
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 737673742}
+  - component: {fileID: 737673744}
+  - component: {fileID: 737673743}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &737673742
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737673741}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1474493807}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 4}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &737673743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737673741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 83a51486af64edf4e8a0c0351e9c2367, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &737673744
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737673741}
+  m_CullTransparentMesh: 1
 --- !u!1001 &738224683
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -196506,7 +196579,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: INVENTORY
+  m_text: OBJECTIVES
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: eaf7f007d9d0fe147944ecbe074bdb28, type: 2}
   m_sharedMaterial: {fileID: -5381693058139570004, guid: eaf7f007d9d0fe147944ecbe074bdb28, type: 2}
@@ -217240,6 +217313,168 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5873731980222087279, guid: 3f88ace088bf22d4697d58504ea1ce8f, type: 3}
   m_PrefabInstance: {fileID: 940694371}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &941293801
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 167091763744444234, guid: 8cb03f38cddb84f4fbec4c20d41bc915, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 581139824}
+    - target: {fileID: 167091763744444234, guid: 8cb03f38cddb84f4fbec4c20d41bc915, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: CloseLanguageMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 167091763744444234, guid: 8cb03f38cddb84f4fbec4c20d41bc915, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PauseMenuController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1985786162006015801, guid: 8cb03f38cddb84f4fbec4c20d41bc915, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 581139824}
+    - target: {fileID: 1985786162006015801, guid: 8cb03f38cddb84f4fbec4c20d41bc915, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: CloseLanguageMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 1985786162006015801, guid: 8cb03f38cddb84f4fbec4c20d41bc915, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: PauseMenuController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1985786162006015801, guid: 8cb03f38cddb84f4fbec4c20d41bc915, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8232674752187668388, guid: 8cb03f38cddb84f4fbec4c20d41bc915, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 581139824}
+    - target: {fileID: 8232674752187668388, guid: 8cb03f38cddb84f4fbec4c20d41bc915, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: CloseLanguageMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8232674752187668388, guid: 8cb03f38cddb84f4fbec4c20d41bc915, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: PauseMenuController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8232674752187668388, guid: 8cb03f38cddb84f4fbec4c20d41bc915, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8298643276906536482, guid: 8cb03f38cddb84f4fbec4c20d41bc915, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 581139824}
+    - target: {fileID: 8298643276906536482, guid: 8cb03f38cddb84f4fbec4c20d41bc915, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: CloseLanguageMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8298643276906536482, guid: 8cb03f38cddb84f4fbec4c20d41bc915, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: PauseMenuController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8298643276906536482, guid: 8cb03f38cddb84f4fbec4c20d41bc915, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8473995680867450688, guid: 8cb03f38cddb84f4fbec4c20d41bc915, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8473995680867450688, guid: 8cb03f38cddb84f4fbec4c20d41bc915, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8473995680867450688, guid: 8cb03f38cddb84f4fbec4c20d41bc915, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8473995680867450688, guid: 8cb03f38cddb84f4fbec4c20d41bc915, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8473995680867450688, guid: 8cb03f38cddb84f4fbec4c20d41bc915, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8473995680867450688, guid: 8cb03f38cddb84f4fbec4c20d41bc915, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8473995680867450688, guid: 8cb03f38cddb84f4fbec4c20d41bc915, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8473995680867450688, guid: 8cb03f38cddb84f4fbec4c20d41bc915, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8473995680867450688, guid: 8cb03f38cddb84f4fbec4c20d41bc915, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8473995680867450688, guid: 8cb03f38cddb84f4fbec4c20d41bc915, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8473995680867450688, guid: 8cb03f38cddb84f4fbec4c20d41bc915, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8473995680867450688, guid: 8cb03f38cddb84f4fbec4c20d41bc915, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8473995680867450688, guid: 8cb03f38cddb84f4fbec4c20d41bc915, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8473995680867450688, guid: 8cb03f38cddb84f4fbec4c20d41bc915, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8473995680867450688, guid: 8cb03f38cddb84f4fbec4c20d41bc915, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8473995680867450688, guid: 8cb03f38cddb84f4fbec4c20d41bc915, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8473995680867450688, guid: 8cb03f38cddb84f4fbec4c20d41bc915, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8473995680867450688, guid: 8cb03f38cddb84f4fbec4c20d41bc915, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8473995680867450688, guid: 8cb03f38cddb84f4fbec4c20d41bc915, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8473995680867450688, guid: 8cb03f38cddb84f4fbec4c20d41bc915, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8747391319945826122, guid: 8cb03f38cddb84f4fbec4c20d41bc915, type: 3}
+      propertyPath: m_Name
+      value: Language Menu
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8cb03f38cddb84f4fbec4c20d41bc915, type: 3}
+--- !u!223 &941293802 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 7793021228337202133, guid: 8cb03f38cddb84f4fbec4c20d41bc915, type: 3}
+  m_PrefabInstance: {fileID: 941293801}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &941443292
 PrefabInstance:
@@ -240728,20 +240963,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4332605409348492368, guid: b2d5356848110ff4a98efe4e463ecac4, type: 3}
       propertyPath: noteTitle
-      value: Day 23
+      value: note_8_title
       objectReference: {fileID: 0}
     - target: {fileID: 4332605409348492368, guid: b2d5356848110ff4a98efe4e463ecac4, type: 3}
       propertyPath: noteContent
-      value: 'I came here looking for adventure. I expected mountains, trees, and maybe a nice place to camp.
-
-
-        I didn''t expect to spend three weeks collecting mushrooms.
-
-
-        Sometimes I wonder whether the valley is testing me, or whether I''ve simply lost my mind.
-
-
-        Either way, I don''t think I''m ready to leave.'
+      value: note_8_content
       objectReference: {fileID: 0}
     - target: {fileID: 4332605409348492368, guid: b2d5356848110ff4a98efe4e463ecac4, type: 3}
       propertyPath: journalController
@@ -246163,28 +246389,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4332605409348492368, guid: b2d5356848110ff4a98efe4e463ecac4, type: 3}
       propertyPath: noteTitle
-      value: July 25
+      value: note_5_title
       objectReference: {fileID: 0}
     - target: {fileID: 4332605409348492368, guid: b2d5356848110ff4a98efe4e463ecac4, type: 3}
       propertyPath: noteContent
-      value: 'Dear Diary,
-
-
-        I have now collected 47 purple mushrooms.
-
-
-        Why 47? I have absolutely no idea.
-
-
-        I only wanted to get 10, but then I found another, and another, and another.
-
-
-        I think I may have a problem. At least they''re not poisonous...
-
-
-
-
-        Probably.'
+      value: note_5_content
       objectReference: {fileID: 0}
     - target: {fileID: 4332605409348492368, guid: b2d5356848110ff4a98efe4e463ecac4, type: 3}
       propertyPath: journalController
@@ -249746,20 +249955,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2526986516301822189, guid: ee5378d66382d9442b386b59bc629b43, type: 3}
       propertyPath: noteTitle
-      value: To Whoever Finds This
+      value: note_1_title
       objectReference: {fileID: 0}
     - target: {fileID: 2526986516301822189, guid: ee5378d66382d9442b386b59bc629b43, type: 3}
       propertyPath: noteContent
-      value: 'I don''t know how you ended up here, but if you''re reading this, you''re probably as lost as I was.
-
-
-        This valley is full of strange things. Flowers, mushrooms, plants I''ve never seen before (I don''t go outside though, so I guess I haven''t seen a lot of things). Don''t just walk past them. Take what you can.
-
-
-        I''ve learned that the valley seems to reward those who pay attention to what it has to offer.
-
-
-        Good luck. You''ll need it...'
+      value: note_1_content
       objectReference: {fileID: 0}
     - target: {fileID: 2526986516301822189, guid: ee5378d66382d9442b386b59bc629b43, type: 3}
       propertyPath: journalController
@@ -269460,17 +269660,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2526986516301822189, guid: ee5378d66382d9442b386b59bc629b43, type: 3}
       propertyPath: noteTitle
-      value: Something Shiny
+      value: note_3_title
       objectReference: {fileID: 0}
     - target: {fileID: 2526986516301822189, guid: ee5378d66382d9442b386b59bc629b43, type: 3}
       propertyPath: noteContent
-      value: 'I saw it again last night. A ruby, sitting on the pond bridge.
-
-
-        I tried looking for it during the day, but it was nowhere to be found.
-
-
-        It seems the thing only appears after the sun goes down. I suppose I''ll have to become a night explorer... '
+      value: note_3_content
       objectReference: {fileID: 0}
     - target: {fileID: 2526986516301822189, guid: ee5378d66382d9442b386b59bc629b43, type: 3}
       propertyPath: journalController
@@ -282338,17 +282532,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2526986516301822189, guid: ee5378d66382d9442b386b59bc629b43, type: 3}
       propertyPath: noteTitle
-      value: Another Observation
+      value: note_6_title
       objectReference: {fileID: 0}
     - target: {fileID: 2526986516301822189, guid: ee5378d66382d9442b386b59bc629b43, type: 3}
       propertyPath: noteContent
-      value: 'Purple mushrooms aren''t the only interesting ones here.
-
-
-        I''ve started noticing orange mushrooms growing in the warmer parts of the valley.
-
-
-        I wonder if collecting different kinds of plants is the key to uncovering everything this place has to offer...'
+      value: note_6_content
       objectReference: {fileID: 0}
     - target: {fileID: 2526986516301822189, guid: ee5378d66382d9442b386b59bc629b43, type: 3}
       propertyPath: journalController
@@ -297908,9 +298096,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 581139824}
-        m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
-        m_MethodName: Restart
+      - m_Target: {fileID: 730082441}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -297920,9 +298108,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1278145532}
-        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
-        m_MethodName: PlayRandomButtonSound
+      - m_Target: {fileID: 581139824}
+        m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
+        m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -297985,10 +298173,6 @@ MonoBehaviour:
   normalSprite: {fileID: 21300000, guid: 118d332865cd4b143a16c9bf98f3515e, type: 3}
   hoverSprite: {fileID: 21300000, guid: 9aab0effbae75a243bdb4c91c58ec1fd, type: 3}
   image: {fileID: 1278145530}
-  buttonSounds:
-  - {fileID: 8300000, guid: 992cf3c4fb2be7e42a5beb21b96c096d, type: 3}
-  - {fileID: 8300000, guid: 08b7c0f4bd65cb843b12facc186af31b, type: 3}
-  audioSource: {fileID: 730082441}
 --- !u!1001 &1278336974
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -331914,9 +332098,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 581139824}
-        m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
-        m_MethodName: Quit
+      - m_Target: {fileID: 730082441}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -331926,9 +332110,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ButtonAudio, Assembly-CSharp
-        m_MethodName: PlayRandomButtonSound
+      - m_Target: {fileID: 581139824}
+        m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
+        m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -331991,10 +332175,6 @@ MonoBehaviour:
   normalSprite: {fileID: 21300000, guid: b31c05a0851a4394189118731a0072d4, type: 3}
   hoverSprite: {fileID: 21300000, guid: d4947a3fc3b246f438457d79d20347d6, type: 3}
   image: {fileID: 1425381941}
-  buttonSounds:
-  - {fileID: 8300000, guid: 992cf3c4fb2be7e42a5beb21b96c096d, type: 3}
-  - {fileID: 8300000, guid: 08b7c0f4bd65cb843b12facc186af31b, type: 3}
-  audioSource: {fileID: 730082441}
 --- !u!1001 &1426247576
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -342526,6 +342706,167 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2685705423253822111, guid: d3ee913ed32937344b0587e70dc777a2, type: 3}
   m_PrefabInstance: {fileID: 1474016423}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1474493806
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1474493807}
+  - component: {fileID: 1474493810}
+  - component: {fileID: 1474493809}
+  - component: {fileID: 1474493808}
+  - component: {fileID: 1474493811}
+  m_Layer: 5
+  m_Name: Language Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1474493807
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474493806}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.67, y: 0.67, z: 0.67}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 737673742}
+  m_Father: {fileID: 1551621593}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -100, y: 100}
+  m_SizeDelta: {x: 128, y: 128}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1474493808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474493806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1474493809}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 730082441}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 581139824}
+        m_TargetAssemblyTypeName: PauseMenuController, Assembly-CSharp
+        m_MethodName: OpenLanguageMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1474493809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474493806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: ace2a480eaf754d44b30360c903da300, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1474493810
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474493806}
+  m_CullTransparentMesh: 1
+--- !u!114 &1474493811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474493806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c04fdc29d5f3474ca48e3ebf17bdada, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonController
+  normalSprite: {fileID: 21300000, guid: ace2a480eaf754d44b30360c903da300, type: 3}
+  hoverSprite: {fileID: 21300000, guid: 482e42beb5d771643bf3176c78c399aa, type: 3}
+  image: {fileID: 1474493809}
 --- !u!1001 &1474780427
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -346236,20 +346577,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2526986516301822189, guid: ee5378d66382d9442b386b59bc629b43, type: 3}
       propertyPath: noteTitle
-      value: My Greatest Discovery
+      value: note_4_title
       objectReference: {fileID: 0}
     - target: {fileID: 2526986516301822189, guid: ee5378d66382d9442b386b59bc629b43, type: 3}
       propertyPath: noteContent
-      value: 'I finally figured it out!
-
-
-        The old fireplace isn''t just decoration. I found some old writing that says it burns hot enough to burn anything, even gems!
-
-
-        I haven''t tried it myself, I''ve become too attached to my jewels.
-
-
-        But if you want to leave this place, perhaps that''s what you need to do... '
+      value: note_4_content
       objectReference: {fileID: 0}
     - target: {fileID: 2526986516301822189, guid: ee5378d66382d9442b386b59bc629b43, type: 3}
       propertyPath: journalController
@@ -359320,7 +359652,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1551621589}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -359352,6 +359684,7 @@ RectTransform:
   - {fileID: 1917263867}
   - {fileID: 1278145528}
   - {fileID: 1425381939}
+  - {fileID: 1474493807}
   - {fileID: 730082440}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -443585,9 +443918,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 581139824}
-        m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
-        m_MethodName: Resume
+      - m_Target: {fileID: 730082441}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -443597,9 +443930,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1917263871}
-        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
-        m_MethodName: PlayRandomButtonSound
+      - m_Target: {fileID: 581139824}
+        m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
+        m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -443662,10 +443995,6 @@ MonoBehaviour:
   normalSprite: {fileID: 21300000, guid: 555051af5e0e82941b8900510928348d, type: 3}
   hoverSprite: {fileID: 21300000, guid: 307500c5a4ceb21479e8b4a60fa398ed, type: 3}
   image: {fileID: 1917263869}
-  buttonSounds:
-  - {fileID: 8300000, guid: 992cf3c4fb2be7e42a5beb21b96c096d, type: 3}
-  - {fileID: 8300000, guid: 08b7c0f4bd65cb843b12facc186af31b, type: 3}
-  audioSource: {fileID: 730082441}
 --- !u!1001 &1917428794
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -460860,22 +461189,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4332605409348492368, guid: b2d5356848110ff4a98efe4e463ecac4, type: 3}
       propertyPath: noteTitle
-      value: Weather Report
+      value: note_7_title
       objectReference: {fileID: 0}
     - target: {fileID: 4332605409348492368, guid: b2d5356848110ff4a98efe4e463ecac4, type: 3}
       propertyPath: noteContent
-      value: 'It rained yesterday.
-
-
-        It rained today.
-
-
-        I suspect it will rain tomorrow.
-
-
-        I''ve decided that the valley has two seasons: rain and slightly less rain.
-
-        On the bright side, the flowers seem happy!'
+      value: note_7_content
       objectReference: {fileID: 0}
     - target: {fileID: 4332605409348492368, guid: b2d5356848110ff4a98efe4e463ecac4, type: 3}
       propertyPath: journalController
@@ -471431,17 +471749,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2526986516301822189, guid: ee5378d66382d9442b386b59bc629b43, type: 3}
       propertyPath: noteTitle
-      value: One Last Thing
+      value: note_9_title
       objectReference: {fileID: 0}
     - target: {fileID: 2526986516301822189, guid: ee5378d66382d9442b386b59bc629b43, type: 3}
       propertyPath: noteContent
-      value: 'It''s holding you here...
-
-
-        you must destroy it...
-
-
-        before it destroys you...'
+      value: note_9_content
       objectReference: {fileID: 0}
     - target: {fileID: 2526986516301822189, guid: ee5378d66382d9442b386b59bc629b43, type: 3}
       propertyPath: journalController
@@ -500251,6 +500563,7 @@ SceneRoots:
   - {fileID: 1096470919}
   - {fileID: 1179420026}
   - {fileID: 1551621593}
+  - {fileID: 941293801}
   - {fileID: 202912745}
   - {fileID: 581139825}
   - {fileID: 1629418454}

@@ -13,5 +13,309 @@ MonoBehaviour:
   m_Name: LocalizationDatabase
   m_EditorClassIdentifier: Localization::Borisonekenobi.Localization.LocalizationDatabase
   languages:
+  - name: "\u0411\u044A\u043B\u0433\u0430\u0440\u0441\u043A\u0438"
+    translations:
+    - key: main_menu_title
+      value: "\u041F\u044A\u0442\u0435\u043A\u0430\u0442\u0430 \u043D\u0430 \u0440\u0443\u0431\u0438\u043D\u0430"
+    - key: main_menu_start
+      value: "\u0418\u0433\u0440\u0430\u0439"
+    - key: main_menu_quit
+      value: "\u0418\u0437\u0445\u043E\u0434"
+    - key: pause_menu_resume
+      value: "\u041F\u0440\u043E\u0434\u044A\u043B\u0436\u0438"
+    - key: pause_menu_restart
+      value: "\u0417\u0430\u043F\u043E\u0447\u043D\u0438 \u043E\u0442\u043D\u0430\u0447\u0430\u043B\u043E"
+    - key: pause_menu_quit
+      value: "\u0418\u0437\u0445\u043E\u0434"
+    - key: finish_release
+      value: "\u0414\u043E\u043B\u0438\u043D\u0430\u0442\u0430 \u0442\u0435 \u043E\u0441\u0432\u043E\u0431\u043E\u0434\u0438..."
+    - key: score_title
+      value: "\u041F\u044A\u0442\u0435\u043A\u0430\u0442\u0430 \u043D\u0430 \u0440\u0443\u0431\u0438\u043D\u0430"
+    - key: score_journey_complete
+      value: "\u041F\u044A\u0442\u0435\u0448\u0435\u0441\u0442\u0432\u0438\u0435\u0442\u043E \u0437\u0430\u0432\u044A\u0440\u0448\u0438"
+    - key: score_exploration_score
+      value: "\u0422\u043E\u0447\u043A\u0438 \u0437\u0430 \u0438\u0437\u0441\u043B\u0435\u0434\u0432\u0430\u043D\u0435"
+    - key: score_high_score
+      value: "\u041D\u0430\u0439-\u0432\u0438\u0441\u043E\u043A \u0440\u0435\u0437\u0443\u043B\u0442\u0430\u0442"
+    - key: score_new_high_score
+      value: "\u041D\u043E\u0432 \u0440\u0435\u043A\u043E\u0440\u0434!"
+    - key: score_statistic
+      value: "\u0421\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043A\u0430"
+    - key: score_result
+      value: "\u0420\u0435\u0437\u0443\u043B\u0442\u0430\u0442"
+    - key: score_objectives_completed
+      value: "\u0418\u0437\u043F\u044A\u043B\u043D\u0435\u043D\u0438 \u0446\u0435\u043B\u0438"
+    - key: item_daffodil
+      value: "\u041D\u0430\u0440\u0446\u0438\u0441"
+    - key: item_hyacinth
+      value: "\u0417\u044E\u043C\u0431\u044E\u043B"
+    - key: item_note
+      value: "\u0417\u0430\u043F\u0438\u0441\u043A\u0430"
+    - key: item_orange_mushroom
+      value: "\u041E\u0440\u0430\u043D\u0436\u0435\u0432\u0430 \u0433\u044A\u0431\u0430"
+    - key: item_purple_mushroom
+      value: "\u041B\u0438\u043B\u0430\u0432\u0430 \u0433\u044A\u0431\u0430"
+    - key: item_ruby
+      value: "\u0420\u0443\u0431\u0438\u043D"
+    - key: item_sunflower
+      value: "\u0421\u043B\u044A\u043D\u0447\u043E\u0433\u043B\u0435\u0434"
+    - key: journal_inventory
+      value: "\u0418\u043D\u0432\u0435\u043D\u0442\u0430\u0440"
+    - key: journal_objectives
+      value: "\u0426\u0435\u043B\u0438"
+    - key: collect_orange_10
+      value: "\u0421\u044A\u0431\u0435\u0440\u0438 10 \u043E\u0440\u0430\u043D\u0436\u0435\u0432\u0438 \u0433\u044A\u0431\u0438"
+    - key: collect_orange_150
+      value: "\u0421\u044A\u0431\u0435\u0440\u0438 150 \u043E\u0440\u0430\u043D\u0436\u0435\u0432\u0438 \u0433\u044A\u0431\u0438"
+    - key: collect_purple_10
+      value: "\u0421\u044A\u0431\u0435\u0440\u0438 10 \u043B\u0438\u043B\u0430\u0432\u0438 \u0433\u044A\u0431\u0438"
+    - key: collect_purple_100
+      value: "\u0421\u044A\u0431\u0435\u0440\u0438 100 \u043B\u0438\u043B\u0430\u0432\u0438 \u0433\u044A\u0431\u0438"
+    - key: explore_valley
+      value: "\u0418\u0437\u0441\u043B\u0435\u0434\u0432\u0430\u0439 \u0434\u043E\u043B\u0438\u043D\u0430\u0442\u0430"
+    - key: find_hidden_notes
+      value: "\u041D\u0430\u043C\u0435\u0440\u0438 \u0441\u043A\u0440\u0438\u0442\u0438\u0442\u0435 \u0437\u0430\u043F\u0438\u0441\u043A\u0438"
+    - key: "\u041D\u0430\u043C\u0435\u0440\u0438 \u0440\u0443\u0431\u0438\u043D\u0430"
+      value: "\u041D\u0430\u043C\u0435\u0440\u0438 \u0440\u0443\u0431\u0438\u043D\u0430"
+    - key: save_yourself
+      value: "\u0421\u043F\u0430\u0441\u0438 \u0441\u0435!"
+    - key: note_1_title
+      value: "\u0414\u043E \u0442\u043E\u0437\u0438, \u043A\u043E\u0439\u0442\u043E \u043D\u0430\u043C\u0435\u0440\u0438 \u0442\u0430\u0437\u0438 \u0437\u0430\u043F\u0438\u0441\u043A\u0430"
+    - key: note_1_content
+      value: "\u041D\u0435 \u0437\u043D\u0430\u043C \u043A\u0430\u043A \u0441\u0438 \u043F\u043E\u043F\u0430\u0434\u043D\u0430\u043B \u0442\u0443\u043A, \u043D\u043E \u0449\u043E\u043C \u0447\u0435\u0442\u0435\u0448 \u0442\u043E\u0432\u0430, \u0432\u0435\u0440\u043E\u044F\u0442\u043D\u043E \u0441\u0438 \u0442\u043E\u043B\u043A\u043E\u0432\u0430 \u0438\u0437\u0433\u0443\u0431\u0435\u043D, \u043A\u043E\u043B\u043A\u043E\u0442\u043E \u0431\u044F\u0445 \u0438 \u0430\u0437.\n\n\u0412 \u0442\u0430\u0437\u0438 \u0434\u043E\u043B\u0438\u043D\u0430 \u0438\u043C\u0430 \u043C\u043D\u043E\u0433\u043E \u0441\u0442\u0440\u0430\u043D\u043D\u0438 \u043D\u0435\u0449\u0430. \u0426\u0432\u0435\u0442\u044F, \u0433\u044A\u0431\u0438, \u0440\u0430\u0441\u0442\u0435\u043D\u0438\u044F, \u043A\u0430\u043A\u0432\u0438\u0442\u043E \u043D\u0438\u043A\u043E\u0433\u0430 \u0434\u043E\u0441\u0435\u0433\u0430 \u043D\u0435 \u0441\u044A\u043C \u0432\u0438\u0436\u0434\u0430\u043B (\u043C\u0430\u043A\u0430\u0440 \u0447\u0435 \u0430\u0437 \u043D\u0435 \u0438\u0437\u043B\u0438\u0437\u0430\u043C \u043D\u0430\u0432\u044A\u043D, \u0442\u0430\u043A\u0430 \u0447\u0435 \u043C\u0430\u0439 \u043D\u0435 \u0441\u044A\u043C \u0432\u0438\u0436\u0434\u0430\u043B \u043A\u043E\u0439 \u0437\u043D\u0430\u0435 \u043A\u043E\u043B\u043A\u043E \u043D\u0435\u0449\u0430). \u041D\u0435 \u0433\u0438 \u043F\u043E\u0434\u043C\u0438\u043D\u0430\u0432\u0430\u0439 \u043F\u0440\u043E\u0441\u0442\u043E \u0442\u0430\u043A\u0430. \u0412\u0437\u0435\u043C\u0430\u0439 \u043A\u0430\u043A\u0432\u043E\u0442\u043E \u043C\u043E\u0436\u0435\u0448.\n\n\u0417\u0430\u0431\u0435\u043B\u044F\u0437\u0430\u0445, \u0447\u0435 \u0434\u043E\u043B\u0438\u043D\u0430\u0442\u0430 \u0441\u044F\u043A\u0430\u0448 \u0432\u044A\u0437\u043D\u0430\u0433\u0440\u0430\u0436\u0434\u0430\u0432\u0430 \u043E\u043D\u0435\u0437\u0438, \u043A\u043E\u0438\u0442\u043E \u043E\u0431\u0440\u044A\u0449\u0430\u0442 \u0432\u043D\u0438\u043C\u0430\u043D\u0438\u0435 \u043D\u0430 \u0442\u043E\u0432\u0430, \u043A\u043E\u0435\u0442\u043E \u0438\u043C \u043F\u0440\u0435\u0434\u043B\u0430\u0433\u0430.\n\n\u0423\u0441\u043F\u0435\u0445. \u0429\u0435 \u0442\u0438 \u0442\u0440\u044F\u0431\u0432\u0430..."
+    - key: note_2_title
+      value: "\u0417\u0430\u043F\u0438\u0441\u043A\u0430 \u043E\u0442 \u043F\u043E\u043B\u0435\u0442\u043E \u21164"
+    - key: note_2_content
+      value: "\u0417\u0430\u043F\u043E\u0447\u043D\u0430\u0445 \u0434\u0430 \u0441\u044A\u0431\u0438\u0440\u0430\u043C \u0433\u044A\u0431\u0438\u0442\u0435 \u043D\u0430\u043E\u043A\u043E\u043B\u043E. \u041E\u0442\u043D\u0430\u0447\u0430\u043B\u043E \u0441\u0438 \u043C\u0438\u0441\u043B\u0435\u0445, \u0447\u0435 \u0441\u0430 \u043F\u0440\u043E\u0441\u0442\u043E \u043A\u0440\u0430\u0441\u0438\u0432\u0438 \u043C\u0430\u043B\u043A\u0438 \u0440\u0430\u0441\u0442\u0435\u043D\u0438\u044F, \u043D\u043E \u0437\u0430\u0431\u0435\u043B\u044F\u0437\u0430\u0445 \u043D\u0435\u0449\u043E \u0441\u0442\u0440\u0430\u043D\u043D\u043E.\n\n\u041A\u043E\u043B\u043A\u043E\u0442\u043E \u043F\u043E\u0432\u0435\u0447\u0435 \u0441\u044A\u0431\u0438\u0440\u0430\u043C, \u0442\u043E\u043B\u043A\u043E\u0432\u0430 \u043F\u043E\u0432\u0435\u0447\u0435 \u0441\u044F\u043A\u0430\u0448 \u043E\u0442\u043A\u0440\u0438\u0432\u0430\u043C.\n\n\u041B\u0438\u043B\u0430\u0432\u0438\u0442\u0435 \u0441\u0430 \u043E\u0441\u043E\u0431\u0435\u043D\u043E \u0438\u043D\u0442\u0435\u0440\u0435\u0441\u043D\u0438. \u0427\u0443\u0434\u044F \u0441\u0435 \u043A\u043E\u043B\u043A\u043E \u043B\u0438 \u0449\u0435 \u0441\u0430 \u043D\u0443\u0436\u043D\u0438, \u0437\u0430 \u0434\u0430 \u043F\u0440\u0438\u0432\u043B\u0435\u043A\u0430 \u043D\u0435\u0447\u0438\u0435 \u0432\u043D\u0438\u043C\u0430\u043D\u0438\u0435..."
+    - key: note_3_title
+      value: "\u041D\u0435\u0449\u043E \u0431\u043B\u0435\u0441\u0442\u044F\u0449\u043E"
+    - key: note_3_content
+      value: "\u0421\u043D\u043E\u0449\u0438 \u043E\u0442\u043D\u043E\u0432\u043E \u0433\u043E \u0432\u0438\u0434\u044F\u0445. \u0420\u0443\u0431\u0438\u043D, \u043E\u0441\u0442\u0430\u0432\u0435\u043D \u043D\u0430 \u043C\u043E\u0441\u0442\u0430 \u043D\u0430\u0434 \u0435\u0437\u0435\u0440\u043E\u0442\u043E.\n\n\u041E\u043F\u0438\u0442\u0430\u0445 \u0441\u0435 \u0434\u0430 \u0433\u043E \u043D\u0430\u043C\u0435\u0440\u044F \u043F\u0440\u0435\u0437 \u0434\u0435\u043D\u044F, \u043D\u043E \u043D\u0435 \u0431\u0435\u0448\u0435 \u0438 \u0441\u043B\u0435\u0434\u0430 \u043E\u0442 \u043D\u0435\u0433\u043E.\n\n\u0418\u0437\u0433\u043B\u0435\u0436\u0434\u0430, \u0447\u0435 \u0442\u043E\u0432\u0430 \u043D\u0435\u0449\u043E \u0441\u0435 \u043F\u043E\u044F\u0432\u044F\u0432\u0430 \u0441\u0430\u043C\u043E \u0441\u043B\u0435\u0434 \u0437\u0430\u043B\u0435\u0437 \u0441\u043B\u044A\u043D\u0446\u0435. \u041C\u0430\u0439 \u0449\u0435 \u0442\u0440\u044F\u0431\u0432\u0430 \u0434\u0430 \u0441\u0442\u0430\u043D\u0430 \u0438\u0437\u0441\u043B\u0435\u0434\u043E\u0432\u0430\u0442\u0435\u043B \u043D\u0430 \u043D\u043E\u0449\u0442\u0430..."
+    - key: note_4_title
+      value: "\u041D\u0430\u0439-\u0433\u043E\u043B\u044F\u043C\u043E\u0442\u043E \u043C\u0438 \u043E\u0442\u043A\u0440\u0438\u0442\u0438\u0435"
+    - key: note_4_content
+      value: "\u041D\u0430\u0439-\u043D\u0430\u043A\u0440\u0430\u044F \u0440\u0430\u0437\u0431\u0440\u0430\u0445!\n\n\u0421\u0442\u0430\u0440\u0430\u0442\u0430 \u043A\u0430\u043C\u0438\u043D\u0430 \u043D\u0435 \u0435 \u043F\u0440\u043E\u0441\u0442\u043E \u0443\u043A\u0440\u0430\u0441\u0430. \u041D\u0430\u043C\u0435\u0440\u0438\u0445 \u0441\u0442\u0430\u0440 \u043D\u0430\u0434\u043F\u0438\u0441, \u0441\u043F\u043E\u0440\u0435\u0434 \u043A\u043E\u0439\u0442\u043E \u0442\u044F \u0433\u043E\u0440\u0438 \u0442\u043E\u043B\u043A\u043E\u0432\u0430 \u0441\u0438\u043B\u043D\u043E, \u0447\u0435 \u043C\u043E\u0436\u0435 \u0434\u0430 \u0438\u0437\u0433\u043E\u0440\u0438 \u0432\u0441\u0438\u0447\u043A\u043E, \u0434\u043E\u0440\u0438 \u0441\u043A\u044A\u043F\u043E\u0446\u0435\u043D\u043D\u0438 \u043A\u0430\u043C\u044A\u043D\u0438!\n\n\u041D\u0435 \u0441\u044A\u043C \u0433\u043E \u043F\u0440\u043E\u0431\u0432\u0430\u043B \u043B\u0438\u0447\u043D\u043E. \u0412\u0435\u0447\u0435 \u0442\u0432\u044A\u0440\u0434\u0435 \u043C\u043D\u043E\u0433\u043E \u0441\u044A\u043C \u0441\u0435 \u043F\u0440\u0438\u0432\u044A\u0440\u0437\u0430\u043B \u043A\u044A\u043C \u0441\u043A\u044A\u043F\u043E\u0446\u0435\u043D\u043D\u043E\u0441\u0442\u0438\u0442\u0435 \u0441\u0438.\n\n\u041D\u043E \u0430\u043A\u043E \u0438\u0441\u043A\u0430\u0448 \u0434\u0430 \u043D\u0430\u043F\u0443\u0441\u043D\u0435\u0448 \u0442\u043E\u0432\u0430 \u043C\u044F\u0441\u0442\u043E, \u043C\u043E\u0436\u0435 \u0431\u0438 \u0442\u043E\u0447\u043D\u043E \u0442\u043E\u0432\u0430 \u0442\u0440\u044F\u0431\u0432\u0430 \u0434\u0430 \u043D\u0430\u043F\u0440\u0430\u0432\u0438\u0448..."
+    - key: note_5_title
+      value: "25 \u044E\u043B\u0438"
+    - key: note_5_content
+      value: "\u0421\u043A\u044A\u043F\u0438 \u0434\u043D\u0435\u0432\u043D\u0438\u043A\u043E,\n\n\u0412\u0435\u0447\u0435 \u0441\u044A\u0431\u0440\u0430\u0445 47 \u043B\u0438\u043B\u0430\u0432\u0438 \u0433\u044A\u0431\u0438.\n\n\u0417\u0430\u0449\u043E 47? \u041D\u044F\u043C\u0430\u043C \u0430\u0431\u0441\u043E\u043B\u044E\u0442\u043D\u043E \u043D\u0438\u043A\u0430\u043A\u0432\u0430 \u043F\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u0430.\n\n\u0418\u0441\u043A\u0430\u0445 \u0434\u0430 \u0441\u044A\u0431\u0435\u0440\u0430 \u0441\u0430\u043C\u043E 10, \u043D\u043E \u043F\u043E\u0441\u043B\u0435 \u043D\u0430\u043C\u0435\u0440\u0438\u0445 \u043E\u0449\u0435 \u0435\u0434\u043D\u0430, \u0438 \u043E\u0449\u0435 \u0435\u0434\u043D\u0430, \u0438 \u043E\u0449\u0435 \u0435\u0434\u043D\u0430.\n\n\u041C\u0430\u0439 \u0438\u043C\u0430\u043C \u043F\u0440\u043E\u0431\u043B\u0435\u043C. \u041F\u043E\u043D\u0435 \u043D\u0435 \u0441\u0430 \u043E\u0442\u0440\u043E\u0432\u043D\u0438...\n\n\u0412\u0435\u0440\u043E\u044F\u0442\u043D\u043E."
+    - key: note_6_title
+      value: "\u041E\u0449\u0435 \u0435\u0434\u043D\u043E \u043D\u0430\u0431\u043B\u044E\u0434\u0435\u043D\u0438\u0435"
+    - key: note_6_content
+      value: "\u041B\u0438\u043B\u0430\u0432\u0438\u0442\u0435 \u0433\u044A\u0431\u0438 \u043D\u0435 \u0441\u0430 \u0435\u0434\u0438\u043D\u0441\u0442\u0432\u0435\u043D\u043E\u0442\u043E \u0438\u043D\u0442\u0435\u0440\u0435\u0441\u043D\u043E \u043D\u0435\u0449\u043E \u0442\u0443\u043A.\n\n\u0417\u0430\u043F\u043E\u0447\u043D\u0430\u0445 \u0434\u0430 \u0437\u0430\u0431\u0435\u043B\u044F\u0437\u0432\u0430\u043C \u043E\u0440\u0430\u043D\u0436\u0435\u0432\u0438 \u0433\u044A\u0431\u0438, \u043A\u043E\u0438\u0442\u043E \u0440\u0430\u0441\u0442\u0430\u0442 \u0432 \u043F\u043E-\u0442\u043E\u043F\u043B\u0438\u0442\u0435 \u0447\u0430\u0441\u0442\u0438 \u043D\u0430 \u0434\u043E\u043B\u0438\u043D\u0430\u0442\u0430.\n\n\u0427\u0443\u0434\u044F \u0441\u0435 \u0434\u0430\u043B\u0438 \u0441\u044A\u0431\u0438\u0440\u0430\u043D\u0435\u0442\u043E \u043D\u0430 \u0440\u0430\u0437\u043B\u0438\u0447\u043D\u0438 \u0432\u0438\u0434\u043E\u0432\u0435 \u0440\u0430\u0441\u0442\u0435\u043D\u0438\u044F \u0435 \u043A\u043B\u044E\u0447\u044A\u0442 \u043A\u044A\u043C \u0440\u0430\u0437\u043A\u0440\u0438\u0432\u0430\u043D\u0435\u0442\u043E \u043D\u0430 \u0432\u0441\u0438\u0447\u043A\u043E, \u043A\u043E\u0435\u0442\u043E \u0442\u043E\u0432\u0430 \u043C\u044F\u0441\u0442\u043E \u043C\u043E\u0436\u0435 \u0434\u0430 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0438..."
+    - key: note_7_title
+      value: "\u041F\u0440\u043E\u0433\u043D\u043E\u0437\u0430 \u0437\u0430 \u0432\u0440\u0435\u043C\u0435\u0442\u043E"
+    - key: note_7_content
+      value: "\u0412\u0447\u0435\u0440\u0430 \u0432\u0430\u043B\u044F \u0434\u044A\u0436\u0434.\n\n\u0414\u043D\u0435\u0441 \u0432\u0430\u043B\u044F \u0434\u044A\u0436\u0434.\n\n\u041F\u043E\u0434\u043E\u0437\u0438\u0440\u0430\u043C, \u0447\u0435 \u0438 \u0443\u0442\u0440\u0435 \u0449\u0435 \u0432\u0430\u043B\u0438.\n\n\u0420\u0435\u0448\u0438\u0445, \u0447\u0435 \u0434\u043E\u043B\u0438\u043D\u0430\u0442\u0430 \u0438\u043C\u0430 \u0434\u0432\u0430 \u0441\u0435\u0437\u043E\u043D\u0430: \u0434\u044A\u0436\u0434 \u0438 \u043C\u0430\u043B\u043A\u043E \u043F\u043E-\u043C\u0430\u043B\u043A\u043E \u0434\u044A\u0436\u0434.\n\n\u041F\u043E\u043D\u0435 \u0446\u0432\u0435\u0442\u044F\u0442\u0430 \u0438\u0437\u0433\u043B\u0435\u0436\u0434\u0430\u0442 \u0449\u0430\u0441\u0442\u043B\u0438\u0432\u0438!"
+    - key: note_8_title
+      value: "\u0414\u0435\u043D 23"
+    - key: note_8_content
+      value: "\u0414\u043E\u0439\u0434\u043E\u0445 \u0442\u0443\u043A \u0432 \u0442\u044A\u0440\u0441\u0435\u043D\u0435 \u043D\u0430 \u043F\u0440\u0438\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u044F. \u041E\u0447\u0430\u043A\u0432\u0430\u0445 \u043F\u043B\u0430\u043D\u0438\u043D\u0438, \u0434\u044A\u0440\u0432\u0435\u0442\u0430 \u0438 \u043C\u043E\u0436\u0435 \u0431\u0438 \u043D\u044F\u043A\u043E\u0435 \u043F\u0440\u0438\u044F\u0442\u043D\u043E \u043C\u044F\u0441\u0442\u043E \u0437\u0430 \u043B\u0430\u0433\u0435\u0440\u0443\u0432\u0430\u043D\u0435.\n\n\u041D\u0435 \u043E\u0447\u0430\u043A\u0432\u0430\u0445 \u0434\u0430 \u043F\u0440\u0435\u043A\u0430\u0440\u0430\u043C \u0442\u0440\u0438 \u0441\u0435\u0434\u043C\u0438\u0446\u0438 \u0432 \u0441\u044A\u0431\u0438\u0440\u0430\u043D\u0435 \u043D\u0430 \u0433\u044A\u0431\u0438.\n\n\u041F\u043E\u043D\u044F\u043A\u043E\u0433\u0430 \u0441\u0435 \u0447\u0443\u0434\u044F \u0434\u0430\u043B\u0438 \u0434\u043E\u043B\u0438\u043D\u0430\u0442\u0430 \u043C\u0435 \u043F\u043E\u0434\u043B\u0430\u0433\u0430 \u043D\u0430 \u0438\u0437\u043F\u0438\u0442\u0430\u043D\u0438\u0435, \u0438\u043B\u0438 \u043F\u0440\u043E\u0441\u0442\u043E \u0441\u044A\u043C \u0438\u0437\u0433\u0443\u0431\u0438\u043B \u0440\u0430\u0437\u0441\u044A\u0434\u044A\u043A\u0430 \u0441\u0438.\n\n\u041A\u0430\u043A\u0442\u043E \u0438 \u0434\u0430 \u0435, \u043D\u0435 \u043C\u0438\u0441\u043B\u044F, \u0447\u0435 \u0441\u044A\u043C \u0433\u043E\u0442\u043E\u0432 \u0434\u0430 \u0441\u0438 \u0442\u0440\u044A\u0433\u043D\u0430."
+    - key: note_9_title
+      value: "\u041E\u0449\u0435 \u043D\u0435\u0449\u043E"
+    - key: note_9_content
+      value: "\u0422\u043E \u0442\u0435 \u0434\u044A\u0440\u0436\u0438 \u0442\u0443\u043A...\n\n\u0422\u0440\u044F\u0431\u0432\u0430 \u0434\u0430 \u0433\u043E \u0443\u043D\u0438\u0449\u043E\u0436\u0438\u0448...\n\n\u041F\u0440\u0435\u0434\u0438 \u0442\u043E \u0434\u0430 \u0443\u043D\u0438\u0449\u043E\u0436\u0438 \u0442\u0435\u0431..."
   - name: English
-    translations: []
+    translations:
+    - key: main_menu_title
+      value: The Ruby Trail
+    - key: main_menu_start
+      value: Start
+    - key: main_menu_quit
+      value: Quit
+    - key: pause_menu_resume
+      value: Resume
+    - key: pause_menu_restart
+      value: Restart
+    - key: pause_menu_quit
+      value: Quit
+    - key: finish_release
+      value: The valley has released you...
+    - key: score_title
+      value: The Ruby Trail
+    - key: score_journey_complete
+      value: Journey Complete
+    - key: score_exploration_score
+      value: Exploration Score
+    - key: score_high_score
+      value: High Score
+    - key: score_new_high_score
+      value: New High Score!
+    - key: score_statistic
+      value: Statistic
+    - key: score_result
+      value: Result
+    - key: score_objectives_completed
+      value: Objectives Completed
+    - key: item_daffodil
+      value: Daffodil
+    - key: item_hyacinth
+      value: Hyacinth
+    - key: item_note
+      value: Note
+    - key: item_orange_mushroom
+      value: Orange Mushroom
+    - key: item_purple_mushroom
+      value: Purple Mushroom
+    - key: item_ruby
+      value: Ruby
+    - key: item_sunflower
+      value: Sunflower
+    - key: note_1_title
+      value: To Whoever Finds This
+    - key: journal_inventory
+      value: Inventory
+    - key: journal_objectives
+      value: Objectives
+    - key: collect_orange_10
+      value: Collect 10 Orange Mushrooms
+    - key: collect_orange_150
+      value: Collect 150 Orange Mushrooms
+    - key: collect_purple_10
+      value: Collect 10 Purple Mushrooms
+    - key: collect_purple_100
+      value: Collect 100 Purple Mushrooms
+    - key: explore_valley
+      value: Explore the Valley
+    - key: find_hidden_notes
+      value: Find the Hidden Notes
+    - key: "\u041D\u0430\u043C\u0435\u0440\u0438 \u0440\u0443\u0431\u0438\u043D\u0430"
+      value: Find the Ruby
+    - key: save_yourself
+      value: Save Yourself!
+    - key: note_1_content
+      value: I don't know how you ended up here, but if you're reading this, you're probably as lost as I was.\n\nThis valley is full of strange things. Flowers, mushrooms, plants I've never seen before (I don't go outside though, so I guess I haven't seen a lot of things). Don't just walk past them. Take what you can.\n\nI've learned that the valley seems to reward those who pay attention to what it has to offer.\n\nGood luck. You'll need it...
+    - key: note_2_title
+      value: Field Note #4
+    - key: note_2_content
+      value: I've started collecting the mushrooms around here. At first, I thought they were just pretty little things, but I've noticed something strange.\n\nThe more I collect, the more I seem to discover.\n\nPurple ones are particularly interesting. I wonder how many it would take to get someone's attention...
+    - key: note_3_title
+      value: Something Shiny
+    - key: note_3_content
+      value: I saw it again last night. A ruby, sitting on the pond bridge.\n\nI tried looking for it during the day, but it was nowhere to be found.\n\nIt seems the thing only appears after the sun goes down. I suppose I'll have to become a night explorer...
+    - key: note_4_title
+      value: My Greatest Discovery
+    - key: note_4_content
+      value: I finally figured it out!\n\nThe old fireplace isn't just decoration. I found some old writing that says it burns hot enough to burn anything, even gems!\n\nI haven't tried it myself, I've become too attached to my jewels.\n\nBut if you want to leave this place, perhaps that's what you need to do...
+    - key: note_5_title
+      value: July 25
+    - key: note_5_content
+      value: Dear Diary,\n\nI have now collected 47 purple mushrooms.\n\nWhy 47? I have absolutely no idea.\n\nI only wanted to get 10, but then I found another, and another, and another.\n\nI think I may have a problem. At least they're not poisonous...\n\nProbably.
+    - key: note_6_title
+      value: Another Observation
+    - key: note_6_content
+      value: Purple mushrooms aren't the only interesting ones here.\n\nI've started noticing orange mushrooms growing in the warmer parts of the valley.\n\nI wonder if collecting different kinds of plants is the key to uncovering everything this place has to offer...
+    - key: note_7_title
+      value: Weather Report
+    - key: note_7_content
+      value: 'It rained yesterday.\n\nIt rained today.\n\nI suspect it will rain tomorrow.\n\nI''ve decided that the valley has two seasons: rain and slightly less rain.\n\nOn the bright side, the flowers seem happy!'
+    - key: note_8_title
+      value: Day 23
+    - key: note_8_content
+      value: I came here looking for adventure. I expected mountains, trees, and maybe a nice place to camp.\n\nI didn't expect to spend three weeks collecting mushrooms.\n\nSometimes I wonder whether the valley is testing me, or whether I've simply lost my mind.\n\nEither way, I don't think I'm ready to leave.
+    - key: note_9_title
+      value: One Last Thing
+    - key: note_9_content
+      value: It's holding you here...\n\nyou must destroy it...\n\nbefore it destroys you...
+  - name: "Fran\xE7ais"
+    translations:
+    - key: main_menu_title
+      value: Le Sentier du Rubis
+    - key: main_menu_start
+      value: Jouer
+    - key: main_menu_quit
+      value: Quitter
+    - key: pause_menu_resume
+      value: Reprendre
+    - key: pause_menu_restart
+      value: Recommencer
+    - key: pause_menu_quit
+      value: Quitter
+    - key: finish_release
+      value: "La vall\xE9e t'a lib\xE9r\xE9..."
+    - key: score_title
+      value: Le Sentier du Rubis
+    - key: score_journey_complete
+      value: "Voyage termin\xE9"
+    - key: score_exploration_score
+      value: Score d'exploration
+    - key: score_high_score
+      value: Meilleur score
+    - key: score_new_high_score
+      value: Nouveau record!
+    - key: score_statistic
+      value: Statistique
+    - key: score_result
+      value: "R\xE9sultat"
+    - key: score_objectives_completed
+      value: Objectifs accomplis
+    - key: item_daffodil
+      value: Jonquille
+    - key: item_hyacinth
+      value: Jacinthe
+    - key: item_note
+      value: Note
+    - key: item_orange_mushroom
+      value: Champignon orange
+    - key: item_purple_mushroom
+      value: Champignon violet
+    - key: item_ruby
+      value: Rubis
+    - key: item_sunflower
+      value: Tournesol
+    - key: journal_inventory
+      value: Inventaire
+    - key: journal_objectives
+      value: Objectifs
+    - key: collect_orange_10
+      value: Ramasse 10 champignons orange
+    - key: collect_orange_150
+      value: Ramasse 150 champignons orange
+    - key: collect_purple_10
+      value: Ramasse 10 champignons violets
+    - key: collect_purple_100
+      value: Ramasse 100 champignons violets
+    - key: explore_valley
+      value: "Explore la vall\xE9e"
+    - key: find_hidden_notes
+      value: "Trouve les notes cach\xE9es"
+    - key: "\u041D\u0430\u043C\u0435\u0440\u0438 \u0440\u0443\u0431\u0438\u043D\u0430"
+      value: Trouve le rubis
+    - key: save_yourself
+      value: Sauve-toi !
+    - key: note_1_title
+      value: "\xC0 celui qui trouvera cette note"
+    - key: note_1_content
+      value: "Je ne sais pas comment tu as atterri ici, mais si tu lis ceci, tu es probablement aussi perdu que je l'\xE9tais.\n\nCette vall\xE9e regorge de choses \xE9tranges. Des fleurs, des champignons, des plantes que je n'ai jamais vues auparavant (en m\xEAme temps, je ne sors jamais, alors je suppose que je n'ai pas vu grand-chose). Ne passe pas simplement devant elles. Ramasse tout ce que tu peux.\n\nJ'ai compris que la vall\xE9e semble r\xE9compenser ceux qui pr\xEAtent attention \xE0 ce qu'elle a \xE0 offrir.\n\nBonne chance. Tu en auras besoin..."
+    - key: note_2_title
+      value: "Note de terrain n\xB0 4"
+    - key: note_2_content
+      value: "J'ai commenc\xE9 \xE0 ramasser les champignons dans les environs. Au d\xE9but, je pensais que ce n'\xE9taient que de jolies petites choses, mais j'ai remarqu\xE9 quelque chose d'\xE9trange.\n\nPlus j'en ramasse, plus j'ai l'impression de faire des d\xE9couvertes.\n\nLes violets sont particuli\xE8rement int\xE9ressants. Je me demande combien il en faudrait pour attirer l'attention de quelqu'un...\n\nI used \u0417\u0430\u043F\u0438\u0441\u043A\u0430 \u043E\u0442 \u043F\u043E\u043B\u0435\u0442\u043E for \u201CField Note\u201D to keep the journal-entry feel, rather than making it sound like a scientific report."
+    - key: note_3_title
+      value: Quelque chose de brillant
+    - key: note_3_content
+      value: "Je l'ai encore vu hier soir. Un rubis, pos\xE9 sur le pont de l'\xE9tang.\n\nJ'ai essay\xE9 de le retrouver pendant la journ\xE9e, mais il \xE9tait introuvable.\n\nOn dirait que cette chose n'appara\xEEt qu'apr\xE8s le coucher du soleil. Je suppose que je vais devoir devenir un explorateur nocturne..."
+    - key: note_4_title
+      value: "Ma plus grande d\xE9couverte"
+    - key: note_4_content
+      value: "J'ai enfin compris !\n\nLa vieille chemin\xE9e n'est pas l\xE0 juste pour faire joli. J'ai trouv\xE9 une ancienne inscription qui dit qu'elle br\xFBle assez fort pour tout consumer, m\xEAme les pierres pr\xE9cieuses !\n\nJe n'ai pas essay\xE9 moi-m\xEAme. Je me suis trop attach\xE9 \xE0 mes bijoux.\n\nMais si tu veux quitter cet endroit, c'est peut-\xEAtre ce que tu dois faire..."
+    - key: note_5_title
+      value: 25 juillet
+    - key: note_5_content
+      value: "Cher journal,\n\nJ'ai maintenant ramass\xE9 47 champignons violets.\n\nPourquoi 47 ? Je n'en ai absolument aucune id\xE9e.\n\nJe voulais seulement en ramasser 10, mais j'en ai trouv\xE9 un autre, puis encore un autre, et encore un autre.\n\nJe crois que j'ai peut-\xEAtre un probl\xE8me. Au moins, ils ne sont pas toxiques...\n\nEnfin, probablement."
+    - key: note_6_title
+      value: Une autre observation
+    - key: note_6_content
+      value: "Les champignons violets ne sont pas les seules choses int\xE9ressantes ici.\n\nJ'ai commenc\xE9 \xE0 remarquer des champignons orange qui poussent dans les parties les plus chaudes de la vall\xE9e.\n\nJe me demande si ramasser diff\xE9rentes sortes de plantes est la cl\xE9 pour d\xE9couvrir tout ce que cet endroit a \xE0 offrir..."
+    - key: note_7_title
+      value: "Bulletin m\xE9t\xE9o"
+    - key: note_7_content
+      value: "Il a plu hier.\n\nIl a plu aujourd'hui.\n\nJe soup\xE7onne qu'il pleuvra demain.\n\nJ'ai d\xE9cid\xE9 que la vall\xE9e avait deux saisons : la pluie et un peu moins de pluie.\n\nAu moins, les fleurs ont l'air heureuses !"
+    - key: note_8_title
+      value: Jour 23
+    - key: note_8_content
+      value: "Je suis venu ici en qu\xEAte d'aventure. Je m'attendais \xE0 trouver des montagnes, des arbres et peut-\xEAtre un joli coin o\xF9 camper.\n\nJe ne m'attendais pas \xE0 passer trois semaines \xE0 ramasser des champignons.\n\nParfois, je me demande si la vall\xE9e me met \xE0 l'\xE9preuve ou si j'ai tout simplement perdu la t\xEAte.\n\nQuoi qu'il en soit, je ne pense pas \xEAtre pr\xEAt \xE0 partir."
+    - key: note_9_title
+      value: "Une derni\xE8re chose"
+    - key: note_9_content
+      value: "C'est cette chose qui te retient ici...\n\nTu dois la d\xE9truire...\n\navant qu'elle ne te d\xE9truise..."

@@ -2,13 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Borisonekenobi.Localization;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour, IJournalPage
 {
     private readonly Dictionary<Item, int> items = new();
 
-    public string Title => "Inventory";
+    public string Title => "journal_inventory";
 
     public string Summary
     {

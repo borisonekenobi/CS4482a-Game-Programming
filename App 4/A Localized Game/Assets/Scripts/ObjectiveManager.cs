@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Borisonekenobi.Localization;
 using UnityEngine;
 
 public class ObjectiveManager : MonoBehaviour, IJournalPage
@@ -31,7 +32,7 @@ public class ObjectiveManager : MonoBehaviour, IJournalPage
         if (inventory != null) inventory.ItemAdded -= OnItemAdded;
     }
 
-    public string Title => "Objectives";
+    public string Title =>  "journal_objectives";
 
     public string Summary
     {
@@ -40,7 +41,7 @@ public class ObjectiveManager : MonoBehaviour, IJournalPage
             var summary = new StringBuilder();
             foreach (var objective in unlockedObjectives)
             {
-                summary.AppendLine($"{objective.title}: {GetProgress(objective)}/{objective.requiredAmount}");
+                summary.AppendLine($"{Localization.Get(objective.title)}: {GetProgress(objective)}/{objective.requiredAmount}");
                 summary.AppendLine();
             }
 

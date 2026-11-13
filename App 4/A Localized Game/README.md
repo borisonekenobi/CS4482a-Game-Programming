@@ -94,6 +94,7 @@ final score.
     - https://assetstore.unity.com/packages/tools/physics/easy-peasy-first-person-controller-317073
     - https://kenney-assets.itch.io/ui-pack
     - https://www.flaticon.com/free-icon/crosshair_2659018?term=crosshair&page=1&position=1&origin=tag&related_id=2659018
+    - https://www.flaticon.com/free-icon/language-skills_9583765?term=language&page=1&position=65&origin=search&related_id=9583765
 - Audio Assets:
     - https://opengameart.org/content/nature-theme-sketch
     - https://opengameart.org/content/nature-sounds-pack

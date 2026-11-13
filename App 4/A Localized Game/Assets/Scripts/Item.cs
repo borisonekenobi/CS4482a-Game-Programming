@@ -1,4 +1,6 @@
-﻿public enum Item
+﻿using Borisonekenobi.Localization;
+
+public enum Item
 {
     None,
     Daffodil,
@@ -17,13 +19,13 @@ public static class ItemExtensions
         return item switch
         {
             Item.None => null,
-            Item.Daffodil => "Daffodil",
-            Item.Hyacinth => "Hyacinth",
-            Item.Note => "Note",
-            Item.OrangeMushroom => "Orange Mushroom",
-            Item.PurpleMushroom => "Purple Mushroom",
-            Item.Ruby => "Ruby",
-            Item.Sunflower => "Sunflower",
+            Item.Daffodil => Localization.Get("item_daffodil"),
+            Item.Hyacinth => Localization.Get("item_hyacinth"),
+            Item.Note => Localization.Get("item_note"),
+            Item.OrangeMushroom => Localization.Get("item_orange_mushroom"),
+            Item.PurpleMushroom => Localization.Get("item_purple_mushroom"),
+            Item.Ruby => Localization.Get("item_ruby"),
+            Item.Sunflower => Localization.Get("item_sunflower"),
             _ => null
         };
     }
